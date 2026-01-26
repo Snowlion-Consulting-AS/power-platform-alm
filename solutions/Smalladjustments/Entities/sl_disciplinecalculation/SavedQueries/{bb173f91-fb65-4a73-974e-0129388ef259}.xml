@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{bb173f91-fb65-4a73-974e-0129388ef259}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sl_name" select="1" icon="1" preview="1">
+        <row name="result" id="sl_disciplinecalculationid">
+          <cell name="sl_name" width="300" />
+          <cell name="sl_quantity" width="50" />
+          <cell name="sl_uom_optionset" width="50" />
+          <cell name="sl_unitprice" width="80" />
+          <cell name="sl_unitprice_base" width="137" />
+          <cell name="sl_surcharge" width="102" />
+          <cell name="sl_type" width="70" />
+          <cell name="sl_description" width="300" />
+          <cell name="transactioncurrencyid" width="70" />
+          <cell name="sl_dicipline" width="100" />
+          <cell name="sl_header" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sl_disciplinecalculation">
+          <attribute name="sl_disciplinecalculationid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="sl_description" />
+          <attribute name="sl_unitprice" />
+          <attribute name="sl_quantity" />
+          <attribute name="sl_unitprice_base" />
+          <attribute name="transactioncurrencyid" />
+          <attribute name="sl_type" />
+          <attribute name="sl_uom_optionset" />
+          <attribute name="sl_name" />
+          <order attribute="sl_name" descending="false" />
+          <attribute name="sl_dicipline" />
+          <attribute name="sl_surcharge" />
+          <attribute name="sl_header" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Discipline calculations" languagecode="1033" />
+      <LocalizedName description="Aktive fagområdekalkulasjoner" languagecode="1044" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

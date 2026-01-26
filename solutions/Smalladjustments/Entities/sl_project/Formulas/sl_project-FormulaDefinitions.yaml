@@ -1,0 +1,4 @@
+sl_ak_btatotal: =sl_ak_btaplanu + sl_ak_btaplan1 + sl_ak_btaplan2 + sl_ak_btaplan3 + sl_ak_btaplan4
+sl_btatotal: =sl_btaplanu + sl_btaplan1 + sl_btaplan2 + sl_btaplan3 + sl_btaplan4
+sl_differanse: =Decimal(sl_netcost) - Decimal(sl_contractedamountsum) - Decimal(sl_risiko)
+sl_eb_btatotal: =sl_eb_btaplanu + sl_eb_btaplan1 + sl_eb_btaplan2 + sl_eb_btaplan3 + sl_eb_btaplan4

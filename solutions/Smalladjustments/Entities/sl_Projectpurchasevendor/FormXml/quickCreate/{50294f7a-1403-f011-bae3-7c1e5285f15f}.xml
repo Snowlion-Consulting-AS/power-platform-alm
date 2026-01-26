@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{50294f7a-1403-f011-bae3-7c1e5285f15f}</formid>
+    <IntroducedVersion>1.0.0.28</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="F931FFE2-B873-473F-8F95-9502F0AA3F5E" name="tab_1" showlabel="false" labelid="{2ad801e7-a0e7-4627-b758-e21c85d49bc9}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+            <label description="New Tab" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section id="0C655D4E-C6E3-424E-9AF5-71E72D30D12E" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{454311d6-3cfb-4eac-8696-edf7e3c16bd1}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="New Section" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="542FBFBE-0E4C-496C-8012-555DE6581923" labelid="{26422c51-46b8-4919-aa9c-5c93c1f175cc}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c9620042-2eb0-4fa5-895c-7df5d82fcc79}" locklevel="0" colspan="1" rowspan="1" labelid="{acb21c34-8608-43ff-ab30-ee91196db82f}">
+                        <labels>
+                          <label description="Vendor lookup" languagecode="1033" />
+                          <label description="Leverandør" languagecode="1044" />
+                        </labels>
+                        <control id="sl_vendorlookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_vendorlookup" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{501d3701-f964-42b4-aa6b-98e8bf1001b3}" locklevel="0" colspan="1" rowspan="1" labelid="{8e013ab7-9cca-4429-b430-4f1422b79a70}">
+                        <labels>
+                          <label description="Discipline contact" languagecode="1033" />
+                          <label description="Leverandør kontakt" languagecode="1044" />
+                        </labels>
+                        <control id="sl_disciplinecontact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_disciplinecontact" disabled="false">
+                          <parameters>
+                            <DependentAttributeName>sl_projectpurchasevendor.sl_vendorlookup</DependentAttributeName>
+                            <DependentAttributeType>account</DependentAttributeType>
+                            <FilterRelationshipName>contact_customer_accounts</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0795457d-71e7-40a4-9385-6b7172c465d8}" locklevel="0" colspan="1" rowspan="1" labelid="{e52b9fdc-c198-4e83-baa6-b6c510226c01}">
+                        <labels>
+                          <label description="Project purchase lookup" languagecode="1033" />
+                          <label description="Prosjekt innkjøp oppslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_projectpurchaselookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_projectpurchaselookup" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="02DECBA0-3AE2-484D-A19F-C5353AF4F4F2" name="tab_1_column_2_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{95ef516f-1e70-4901-a5ca-04da4b3ce745}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="New Section" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="266FE48D-4D04-4E9A-8C5A-7DEF9A2F059B" labelid="{ef93fcb5-6837-4919-b8c9-b14731429abb}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="46FD66EA-B686-41D9-AAE0-C565BD78EC1F" name="tab_1_column_3_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{a9a6bf17-7900-46ab-90eb-fb5fb6db69be}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="New Section" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="07C04A4E-A482-45CC-BAB7-7FCA3CD02938" labelid="{56501565-d7e6-40e0-810d-56326b3ea9b9}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Quick Create form" languagecode="1033" />
+      <LocalizedName description="Quick Create form" languagecode="1044" />
+    </LocalizedNames>
+  </systemform>
+</forms>

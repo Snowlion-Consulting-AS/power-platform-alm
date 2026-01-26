@@ -1,0 +1,12 @@
+function filterParentCustomerID(executionContext) {
+    var formContext = executionContext.getFormContext();  // Get formContext from executionContext
+    
+    // Get the control for the ParentCustomerID lookup field
+    var parentCustomerControl = formContext.getControl("parentcustomerid");
+
+    // Check if the control exists and apply the filter
+    if (parentCustomerControl) {
+        // Set the entity type filter to only show 'Account' entities
+        parentCustomerControl.setEntityTypes(["account"]);
+    }
+}

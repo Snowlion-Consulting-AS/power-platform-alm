@@ -1,0 +1,42 @@
+# Power Platform ALM .gitignore
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+
+# Solution zip files (we track unpacked sources, not zips)
+*.zip
+
+# Node modules (for PCF development)
+node_modules/
+pcf-components/**/node_modules/
+
+# PCF build outputs
+pcf-components/**/out/
+pcf-components/**/bin/
+pcf-components/**/obj/
+
+# .NET build outputs
+bin/
+obj/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment-specific secrets (never commit)
+*.env
+*.env.local
+credentials.json
+secrets.json
+
+# Log files
+*.log
+npm-debug.log*

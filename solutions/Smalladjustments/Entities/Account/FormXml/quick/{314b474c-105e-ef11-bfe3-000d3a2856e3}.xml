@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{314b474c-105e-ef11-bfe3-000d3a2856e3}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{b3d9ee60-5581-4dd0-b764-26428bfc9c47}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{2633441a-b724-4997-a903-558b88cb0dff}">
+                  <labels>
+                    <label description="Contacts" languagecode="1033" />
+                    <label description="Kontakter" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="C0550AC7-0F44-45A4-8EF5-D2911C0689D9" labelid="{33c4ee88-9532-48ea-94bb-1deda6b6c5ac}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cb1c5f7f-d828-479c-bb25-d2eddcb84660}" rowspan="4" colspan="1" auto="false" labelid="{59fefd87-9d4d-4130-ac19-6e6a363b7d08}" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1724060913255" languagecode="1033" />
+                          <label description="Kontakter" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>6</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <TargetEntityType>contact</TargetEntityType>
+                            <ViewId>{00000000-0000-0000-00AA-000010001004}</ViewId>
+                            <ViewIds>{00000000-0000-0000-00AA-000010001003},{00000000-0000-0000-00AA-000010001004}</ViewIds>
+                            <RelationshipName>contact_customer_accounts</RelationshipName>
+                            <VisualizationId>{E365462F-1DB9-46A8-928D-BEAB1A7A2375}</VisualizationId>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="2" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Account quick view form" languagecode="1033" />
+      <LocalizedName description="Account quick view form" languagecode="1044" />
+    </LocalizedNames>
+  </systemform>
+</forms>

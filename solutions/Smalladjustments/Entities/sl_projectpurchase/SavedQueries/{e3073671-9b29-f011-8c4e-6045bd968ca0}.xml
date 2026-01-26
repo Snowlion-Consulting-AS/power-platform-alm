@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{e3073671-9b29-f011-8c4e-6045bd968ca0}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sl_name" select="1" icon="1" preview="1">
+        <row name="result" id="sl_projectpurchaseid">
+          <cell name="sl_name" width="200" />
+          <cell name="sl_purchasestatus" width="132" />
+          <cell name="sl_vendorselected" width="180" />
+          <cell name="sl_netcost" width="120" />
+          <cell name="sl_contractedamount" width="161" />
+          <cell name="sl_risiko" width="100" />
+          <cell name="sl_differanse" width="100" />
+          <cell name="sl_invoiceakonto" width="142" />
+          <cell name="sl_approved" width="100" />
+          <cell name="sl_totalinvoiced" width="125" />
+          <cell name="sl_discipline" width="200" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sl_projectpurchase">
+          <attribute name="sl_projectpurchaseid" />
+          <attribute name="sl_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="in">
+              <value>0</value>
+              <value>0</value>
+            </condition>
+          </filter>
+          <attribute name="sl_purchasestatus" />
+          <attribute name="sl_netcost" />
+          <order attribute="sl_name" descending="false" />
+          <attribute name="sl_contractedamount" />
+          <attribute name="sl_approved" />
+          <attribute name="sl_vendorselected" />
+          <attribute name="sl_risiko" />
+          <attribute name="sl_differanse" />
+          <attribute name="sl_invoiceakonto" />
+          <attribute name="sl_totalinvoiced" />
+          <attribute name="sl_discipline" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.30</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Sluttkalkyle" languagecode="1033" />
+      <LocalizedName description="Sluttkalkyle" languagecode="1044" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Visning som er tilpasset kolonner du trenger i sluttkalkylen" languagecode="1033" />
+      <Description description="Visning som er tilpasset kolonner du trenger i sluttkalkylen" languagecode="1044" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

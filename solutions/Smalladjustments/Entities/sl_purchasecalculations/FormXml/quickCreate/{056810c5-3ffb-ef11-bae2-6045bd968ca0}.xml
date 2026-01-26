@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{056810c5-3ffb-ef11-bae2-6045bd968ca0}</formid>
+    <IntroducedVersion>1.0.0.28</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="F931FFE2-B873-473F-8F95-9502F0AA3F5E" name="tab_1" showlabel="false" labelid="{0eff9658-cc73-4f73-a0d7-e69144f275fb}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+            <label description="New Tab" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section id="0C655D4E-C6E3-424E-9AF5-71E72D30D12E" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{19e84748-c438-4b84-801a-b5f82762d980}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="New Section" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="542FBFBE-0E4C-496C-8012-555DE6581923" labelid="{eaca7547-c616-402b-8227-7890d61db309}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7d036488-9a14-4bff-923f-20dd1fe63797}" locklevel="0" colspan="1" rowspan="1" labelid="{d8b5d8b6-0f10-4b92-8326-b680110ceef2}">
+                        <labels>
+                          <label description="Navn" languagecode="1033" />
+                          <label description="Navn" languagecode="1044" />
+                        </labels>
+                        <control id="sl_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f5c19ccc-88ab-4dcd-96ea-82fe0c2f87e1}" locklevel="0" colspan="1" rowspan="1" labelid="{e91a245b-4180-46f0-b70f-a1590d2015a7}">
+                        <labels>
+                          <label description="Overskrift" languagecode="1033" />
+                          <label description="Overskrift" languagecode="1044" />
+                        </labels>
+                        <control id="sl_header" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="sl_header" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d940f7ab-ad8f-4780-a723-4fe09acfca22}" locklevel="0" colspan="1" rowspan="1" labelid="{786ebc83-92a0-4c58-a0ea-5a11a00308ae}">
+                        <labels>
+                          <label description="Antall" languagecode="1033" />
+                          <label description="Antall" languagecode="1044" />
+                        </labels>
+                        <control id="sl_quantity" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sl_quantity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{29681f1b-a52c-4593-86e1-2b2f591fa89d}" locklevel="0" colspan="1" rowspan="1" labelid="{fd489a8e-aa4d-4ef0-9c66-3c97daafb895}">
+                        <labels>
+                          <label description="Måleenhet" languagecode="1033" />
+                          <label description="Måleenhet" languagecode="1044" />
+                        </labels>
+                        <control id="sl_uom_optionset" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sl_uom_optionset" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e6a2c351-d1d9-46e5-9d26-2cec376ec9c3}" locklevel="0" colspan="1" rowspan="1" labelid="{74697544-328c-41f9-8042-fd7a25fc9011}">
+                        <labels>
+                          <label description="Påslag (%)" languagecode="1033" />
+                          <label description="Påslag (%)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_surcharge" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_surcharge" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{693ba755-7b26-4507-a8ac-1fd4c00f2eb6}" locklevel="0" colspan="1" rowspan="1" labelid="{0b225f1d-da6f-43fd-9792-b54b01aa26ba}">
+                        <labels>
+                          <label description="Enhetspris" languagecode="1033" />
+                          <label description="Enhetspris" languagecode="1044" />
+                        </labels>
+                        <control id="sl_unitprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_unitprice" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c5852953-1787-46db-a46a-5c6e7befb86e}" locklevel="0" colspan="1" rowspan="1" labelid="{26cb91b5-94ed-4dd9-b08e-c4ea0f14f33c}">
+                        <labels>
+                          <label description="Type" languagecode="1033" />
+                          <label description="Type" languagecode="1044" />
+                        </labels>
+                        <control id="sl_type" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sl_type" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b9236aba-4558-4151-b3db-a729e24dedd3}" locklevel="0" colspan="1" rowspan="1" labelid="{73b53bd2-aa9a-4909-baaa-a06b9b4c99a2}">
+                        <labels>
+                          <label description="Lookup project purchase" languagecode="1033" />
+                          <label description="Prosjektinnkjøp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_lookupprojectpurchase" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_lookupprojectpurchase" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="02DECBA0-3AE2-484D-A19F-C5353AF4F4F2" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{a4a7ed48-76af-45d2-b72b-250fca37a2ba}">
+                  <labels>
+                    <label description="Beskrivelse" languagecode="1033" />
+                    <label description="Beskrivelse" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="266FE48D-4D04-4E9A-8C5A-7DEF9A2F059B" labelid="{87ac255f-e3cd-454f-baea-ac39af4a7452}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e614f235-44ea-4440-9c20-df82f0a5c647}" locklevel="0" colspan="1" rowspan="1" showlabel="false" labelid="{f200530e-4a11-451c-93fd-809210cbc36d}">
+                        <labels>
+                          <label description="Beskrivelse" languagecode="1033" />
+                          <label description="Beskrivelse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_description" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_description" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="46FD66EA-B686-41D9-AAE0-C565BD78EC1F" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{7c879863-65ef-40b5-8aaf-6a335aad4189}">
+                  <labels>
+                    <label description="Valuta" languagecode="1033" />
+                    <label description="Valuta" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="07C04A4E-A482-45CC-BAB7-7FCA3CD02938" labelid="{938af47f-2f0a-4c39-9888-05fabdc45cb7}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{83941ebb-a410-4088-8ded-49c0963ee1a9}" locklevel="0" colspan="1" rowspan="1" showlabel="false" labelid="{da248987-787a-4007-af28-f29f9e95fbfb}">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                          <label description="Valuta" languagecode="1044" />
+                        </labels>
+                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Quick create innkjøpskalkyle" languagecode="1033" />
+      <LocalizedName description="Quick create innkjøpskalkyle" languagecode="1044" />
+    </LocalizedNames>
+  </systemform>
+</forms>

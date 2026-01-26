@@ -1,0 +1,191 @@
+//------ This is the function that you will call when you create the button, I name them accordingly. ------//
+function LoadProject(e) {
+    var formContext = e;
+    var thisId = formContext.data.entity.getId().replace("{", "").replace("}", "");
+    //debugger;
+
+    //Get the selected records entity name
+    var entityName = formContext.data.entity.getEntityName();
+
+    // Centered Dialog
+
+    var pageInput = {
+
+        //------ This is how the button knows what you are trying to access. There is documentation on microsoft docs (google: xrm.navigation) on the pageType(s) that you can use, in this instance I am launching a custom page -----//
+        //------ The key information is the name, and table name.  You want to give it the name seen in the solution, note: once this is set you can't change it ------//
+        //------ The entity name is the entity in which this item is referring to ------//
+        //------ The Record ID is taken from var formContext above, this is how you will link it to that individual record in the table. ------//
+
+
+        pageType: "custom",
+        name: "sl_addsalesproducts_42b7d",
+        entityName: "sl_project",
+        recordId: thisId
+
+    };
+
+    //------ Set the navigation options. Note: Position defaults to 1 (modal) but you can choose 2 (side pane, right hand side). -------//
+    //------ Also note that you can use percentages for the width and height units.  This is handy for this application, It means that it will change depending on screen size ------//
+    //------ The title will be what is displayed in the top bar ------//
+
+    var navigationOptions = {
+
+        target: 2,
+        position: 1,
+        width: {
+            value: 90,
+            unit: "%"
+        },
+
+        height: {
+            value: 90,
+            unit: "%"
+        },
+
+        title: "Add Products to Project"
+    };
+
+    //------ This is where the magic happens. Documentation available on microsoft docs, I google xrm.navigation and it was the first result. ------//
+
+    Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+        function success() {
+            // Run code on success
+            console.log("Success");
+        },
+        function error() {
+            // Handle errors
+            console.log("Error");
+        }
+    );
+    debugger;
+}
+//------ This is the function that you will call when you create the button, I name them accordingly. ------//
+
+
+//------ This is the function that you will call when you create the button, I name them accordingly. ------//
+function LoadOffer(e) {
+    var formContext = e;
+    var thisId = formContext.data.entity.getId().replace("{", "").replace("}", "");
+    //debugger;
+
+    //Get the selected records entity name
+    var entityName = formContext.data.entity.getEntityName();
+
+    // Centered Dialog
+
+    var pageInput = {
+
+        //------ This is how the button knows what you are trying to access. There is documentation on microsoft docs (google: xrm.navigation) on the pageType(s) that you can use, in this instance I am launching a custom page -----//
+        //------ The key information is the name, and table name.  You want to give it the name seen in the solution, note: once this is set you can't change it ------//
+        //------ The entity name is the entity in which this item is referring to ------//
+        //------ The Record ID is taken from var formContext above, this is how you will link it to that individual record in the table. ------//
+
+
+        pageType: "custom",
+        name: "sl_addsalesproducts_42b7d",
+        entityName: "sl_offer",
+        recordId: thisId
+
+    };
+
+    //------ Set the navigation options. Note: Position defaults to 1 (modal) but you can choose 2 (side pane, right hand side). -------//
+    //------ Also note that you can use percentages for the width and height units.  This is handy for this application, It means that it will change depending on screen size ------//
+    //------ The title will be what is displayed in the top bar ------//
+
+    var navigationOptions = {
+
+        target: 2,
+        position: 1,
+        width: {
+            value: 90,
+            unit: "%"
+        },
+
+        height: {
+            value: 90,
+            unit: "%"
+        },
+
+        title: "Add Products to Offer"
+    };
+
+    //------ This is where the magic happens. Documentation available on microsoft docs, I google xrm.navigation and it was the first result. ------//
+
+    Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+        function success() {
+            // Run code on success
+            console.log("Success");
+        },
+        function error() {
+            // Handle errors
+            console.log("Error");
+        }
+    );
+    debugger;
+}
+//------ This is the function that you will call when you create the button, I name them accordingly. ------//
+
+
+
+//------ This is the function that you will call when you create the button, I name them accordingly. ------//
+function LoadOrder(e) {
+    var formContext = e;
+    var thisId = formContext.data.entity.getId().replace("{", "").replace("}", "");
+    //debugger;
+
+    //Get the selected records entity name
+    var entityName = formContext.data.entity.getEntityName();
+
+    // Centered Dialog
+
+    var pageInput = {
+
+        //------ This is how the button knows what you are trying to access. There is documentation on microsoft docs (google: xrm.navigation) on the pageType(s) that you can use, in this instance I am launching a custom page -----//
+        //------ The key information is the name, and table name.  You want to give it the name seen in the solution, note: once this is set you can't change it ------//
+        //------ The entity name is the entity in which this item is referring to ------//
+        //------ The Record ID is taken from var formContext above, this is how you will link it to that individual record in the table. ------//
+
+
+        pageType: "custom",
+        name: "sl_addsalesproducts_42b7d",
+        entityName: "sl_order",
+        recordId: thisId
+
+    };
+
+    //------ Set the navigation options. Note: Position defaults to 1 (modal) but you can choose 2 (side pane, right hand side). -------//
+    //------ Also note that you can use percentages for the width and height units.  This is handy for this application, It means that it will change depending on screen size ------//
+    //------ The title will be what is displayed in the top bar ------//
+
+    var navigationOptions = {
+
+        target: 2,
+        position: 1,
+        width: {
+            value: 90,
+            unit: "%"
+        },
+
+        height: {
+            value: 90,
+            unit: "%"
+        },
+
+        title: "Add Products to Order"
+    };
+
+    //------ This is where the magic happens. Documentation available on microsoft docs, I google xrm.navigation and it was the first result. ------//
+
+    Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+        function success() {
+            // Run code on success
+            console.log("Success");
+        },
+        function error() {
+            // Handle errors
+            console.log("Error");
+        }
+    );
+    debugger;
+}
+//------ This is the function that you will call when you create the button, I name them accordingly. ------//

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="sl_konsulentereksterne" localizedName="Konsulenter eksterne" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.24</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Konsulenter eksterne" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="102690000" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="ARK" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690001" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIB-Betong" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690002" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIB-Prefab" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690003" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIB-Stål" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690004" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Rib-pel" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690005" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIBr" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690006" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIV-Rør" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690007" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIV-Vent" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690008" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIV-SPR" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690009" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIE" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690010" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIBfys" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690011" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIAku" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690012" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIM" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690013" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIG" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690014" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RIVa" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690015" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="LARK" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690016" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RITr" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690017" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Ansvarlig søker" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690018" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="BIM-Koordinator" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690019" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Uavhengig kontroll" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690020" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RI-landmåler" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="102690021" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Arborist" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

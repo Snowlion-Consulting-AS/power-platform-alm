@@ -1,0 +1,42 @@
+function registerEventTrigger(executionContext)
+{
+	var formContext = executionContext.getFormContext();
+	formContext.data.process.addOnStageChange(function ()
+	{
+		switchTabs(executionContext);
+	});
+	// Optionally: switch to the correct tab on load
+	switchTabs(executionContext);
+}
+
+function switchTabs(executionContext)
+{
+	// get formContext
+	var formContext = executionContext.getFormContext();
+	var process = formContext.data.process;
+	console.log("Process:");
+	console.log(process);
+	if (!process) return;
+	// Get the current active BPF stage
+	var activeStage = process.getActiveStage();
+	console.log("Active Stage:");
+	console.log(activeStage);
+	if (!activeStage) return;
+	var stageName = activeStage.getName();
+	console.log("Active BPF Stage: " + stageName);
+	// Optional: Normalize stage names (trim, lowercase etc.)
+	var stageToTabMap = {
+		"Kalkulasjon": "tab_calculation",
+		"Forespørsler": "general",
+		"Forhandling": "general",
+		"Kontrahert": "tab_7",
+		"I arbeid": "tab_7",
+		"Garanti": "tab_7"
+	};
+	var tabName = stageToTabMap[stageName];
+	if (tabName && formContext.ui.tabs.get(tabName))
+	{
+		// Focus the tab
+		formContext.ui.tabs.get(tabName).setFocus();
+	}
+}

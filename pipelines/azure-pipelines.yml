@@ -1,0 +1,156 @@
+# Azure DevOps Pipeline for Power Platform ALM
+# Triggers on PR and push to main
+
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - solutions/**
+
+pr:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - solutions/**
+
+variables:
+  solutionName: 'ExampleSolution'
+  # Set these in Azure DevOps Pipeline Variables (or Variable Groups):
+  # PowerPlatformClientId
+  # PowerPlatformTenantId
+  # PowerPlatformClientSecret (secret)
+  # TestEnvironmentUrl
+
+stages:
+  - stage: Validate
+    displayName: 'Validate Solution'
+    jobs:
+      - job: ValidateSolution
+        displayName: 'Validate & Check'
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - task: PowerPlatformToolInstaller@2
+            displayName: 'Install Power Platform Tools'
+
+          - task: PowerPlatformPackSolution@2
+            displayName: 'Pack Solution (Unmanaged)'
+            inputs:
+              SolutionSourceFolder: '$(Build.SourcesDirectory)/solutions/$(solutionName)'
+              SolutionOutputFile: '$(Build.ArtifactStagingDirectory)/$(solutionName).zip'
+              SolutionType: 'Unmanaged'
+
+          - task: PowerPlatformChecker@2
+            displayName: 'Run Solution Checker'
+            inputs:
+              authenticationType: 'PowerPlatformSPN'
+              PowerPlatformSPN: 'PowerPlatformServiceConnection'
+              FilesToAnalyze: '$(Build.ArtifactStagingDirectory)/$(solutionName).zip'
+              RuleSet: 'Solution Checker'
+            continueOnError: true
+
+          - task: PublishBuildArtifacts@1
+            displayName: 'Publish Checker Results'
+            inputs:
+              PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+              ArtifactName: 'checker-results'
+
+  - stage: BuildManaged
+    displayName: 'Build Managed Solution'
+    dependsOn: Validate
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - job: BuildManagedSolution
+        displayName: 'Pack Managed'
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - task: PowerPlatformToolInstaller@2
+            displayName: 'Install Power Platform Tools'
+
+          - task: PowerPlatformPackSolution@2
+            displayName: 'Pack Solution (Managed)'
+            inputs:
+              SolutionSourceFolder: '$(Build.SourcesDirectory)/solutions/$(solutionName)'
+              SolutionOutputFile: '$(Build.ArtifactStagingDirectory)/$(solutionName)_managed.zip'
+              SolutionType: 'Managed'
+
+          - task: PublishBuildArtifacts@1
+            displayName: 'Publish Managed Solution'
+            inputs:
+              PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(solutionName)_managed.zip'
+              ArtifactName: 'managed-solution'
+
+  - stage: DeployTest
+    displayName: 'Deploy to Test'
+    dependsOn: BuildManaged
+    condition: succeeded()
+    jobs:
+      - deployment: DeployToTest
+        displayName: 'Deploy Managed to Test'
+        pool:
+          vmImage: 'ubuntu-latest'
+        environment: 'Test'  # Requires approval
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: PowerPlatformToolInstaller@2
+                  displayName: 'Install Power Platform Tools'
+
+                - task: DownloadBuildArtifacts@1
+                  displayName: 'Download Managed Solution'
+                  inputs:
+                    buildType: 'current'
+                    downloadType: 'single'
+                    artifactName: 'managed-solution'
+                    downloadPath: '$(Pipeline.Workspace)'
+
+                - task: PowerPlatformImportSolution@2
+                  displayName: 'Import to Test Environment'
+                  inputs:
+                    authenticationType: 'PowerPlatformSPN'
+                    PowerPlatformSPN: 'PowerPlatformServiceConnection'
+                    Environment: '$(TestEnvironmentUrl)'
+                    SolutionInputFile: '$(Pipeline.Workspace)/managed-solution/$(solutionName)_managed.zip'
+                    AsyncOperation: true
+                    MaxAsyncWaitTime: '60'
+
+  - stage: DeployProd
+    displayName: 'Deploy to Production'
+    dependsOn: DeployTest
+    condition: succeeded()
+    jobs:
+      - deployment: DeployToProd
+        displayName: 'Deploy Managed to Prod'
+        pool:
+          vmImage: 'ubuntu-latest'
+        environment: 'Production'  # Requires approval
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: PowerPlatformToolInstaller@2
+                  displayName: 'Install Power Platform Tools'
+
+                - task: DownloadBuildArtifacts@1
+                  displayName: 'Download Managed Solution'
+                  inputs:
+                    buildType: 'current'
+                    downloadType: 'single'
+                    artifactName: 'managed-solution'
+                    downloadPath: '$(Pipeline.Workspace)'
+
+                - task: PowerPlatformImportSolution@2
+                  displayName: 'Import to Production'
+                  inputs:
+                    authenticationType: 'PowerPlatformSPN'
+                    PowerPlatformSPN: 'PowerPlatformServiceConnection-Prod'
+                    Environment: '$(ProdEnvironmentUrl)'
+                    SolutionInputFile: '$(Pipeline.Workspace)/managed-solution/$(solutionName)_managed.zip'
+                    AsyncOperation: true
+                    MaxAsyncWaitTime: '60'

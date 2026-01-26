@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>sl_addsalesproducts_42b7d</Name>
+  <AppVersion>2025-01-15T19:52:06Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.25012.4.0</CreatedByClientVersion>
+  <MinClientVersion>3.25012.4.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.25012.4","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","offlineLargeFilesSupport":"false","sienaVersion":"20241216T174227Z-3.24122.9.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>Add Sales Products</DisplayName>
+  <Description>Fix project account</Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Sales Price list items":{"entitySetName":"sl_salespricelistitems","logicalName":"sl_salespricelistitem"},"Sales Price lists":{"entitySetName":"sl_salespricelists","logicalName":"sl_salespricelist"},"Offers":{"entitySetName":"sl_offers","logicalName":"sl_offer"},"Item Categories":{"entitySetName":"sl_itemcategories","logicalName":"sl_itemcategory"},"Items":{"entitySetName":"sl_items","logicalName":"sl_item"},"Orders":{"entitySetName":"sl_orders","logicalName":"sl_order"},"Offer items":{"entitySetName":"sl_offeritems","logicalName":"sl_offeritem"},"Accounts":{"entitySetName":"accounts","logicalName":"account"},"Projects":{"entitySetName":"sl_projects","logicalName":"sl_project"},"Project items":{"entitySetName":"sl_projectitems","logicalName":"sl_projectitem"},"Order items":{"entitySetName":"sl_orderitems","logicalName":"sl_orderitem"},"Resources":{"entitySetName":"sl_resources","logicalName":"sl_resource"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>2</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"sl_salespricelistitem","componenttype":1},{"logicalname":"sl_salespricelist","componenttype":1},{"logicalname":"sl_offer","componenttype":1},{"logicalname":"sl_itemcategory","componenttype":1},{"logicalname":"sl_item","componenttype":1},{"logicalname":"sl_order","componenttype":1},{"logicalname":"sl_offeritem","componenttype":1},{"logicalname":"account","componenttype":1},{"logicalname":"sl_project","componenttype":1},{"logicalname":"sl_projectitem","componenttype":1},{"logicalname":"sl_orderitem","componenttype":1},{"logicalname":"sl_resource","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/sl_addsalesproducts_42b7d_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/sl_addsalesproducts_42b7d_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/sl_addsalesproducts_42b7d_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

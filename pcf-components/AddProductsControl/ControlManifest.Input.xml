@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="SnowlionControls" constructor="AddProductsControl" version="1.0.0" display-name-key="Add Products Control" description-key="Product selection control with cart functionality for Projects, Offers, and Orders" control-type="virtual">
+
+    <external-service-usage enabled="false">
+    </external-service-usage>
+
+    <!-- Input Properties -->
+    <property name="recordId" display-name-key="Record ID" description-key="The GUID of the parent record (Project, Offer, or Order)" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="entityName" display-name-key="Entity Name" description-key="The entity type (sl_project, sl_offer, sl_order)" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="headerColor" display-name-key="Header Color" description-key="Header background color (e.g., #0078D4 for blue)" of-type="SingleLine.Text" usage="input" required="false" default-value="#0078D4" />
+
+    <!-- Output Properties -->
+    <property name="selectedProducts" display-name-key="Selected Products" description-key="JSON string of selected products" of-type="SingleLine.Text" usage="output" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.14.0" />
+      <css path="css/AddProductsControl.css" order="1" />
+    </resources>
+
+    <feature-usage>
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+
+  </control>
+</manifest>

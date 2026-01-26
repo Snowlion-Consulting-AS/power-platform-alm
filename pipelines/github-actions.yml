@@ -1,0 +1,127 @@
+# GitHub Actions workflow for Power Platform ALM
+# Triggers on PR and push to main
+
+name: Power Platform CI/CD
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'solutions/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'solutions/**'
+
+env:
+  SOLUTION_NAME: ExampleSolution
+  # Set these in GitHub Secrets:
+  # POWER_PLATFORM_CLIENT_ID
+  # POWER_PLATFORM_TENANT_ID
+  # POWER_PLATFORM_CLIENT_SECRET
+  # TEST_ENVIRONMENT_URL
+
+jobs:
+  validate:
+    name: Validate Solution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PAC CLI
+        run: |
+          dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Pack Solution (validation)
+        run: |
+          pac solution pack \
+            --zipfile "${{ runner.temp }}/${{ env.SOLUTION_NAME }}.zip" \
+            --folder "solutions/${{ env.SOLUTION_NAME }}" \
+            --packagetype Unmanaged
+
+      - name: Authenticate to Power Platform
+        run: |
+          pac auth create \
+            --applicationId ${{ secrets.POWER_PLATFORM_CLIENT_ID }} \
+            --clientSecret ${{ secrets.POWER_PLATFORM_CLIENT_SECRET }} \
+            --tenant ${{ secrets.POWER_PLATFORM_TENANT_ID }}
+
+      - name: Run Solution Checker
+        run: |
+          pac solution check \
+            --path "${{ runner.temp }}/${{ env.SOLUTION_NAME }}.zip" \
+            --outputDirectory "${{ runner.temp }}/checker-results"
+        continue-on-error: true  # Don't fail build on warnings
+
+      - name: Upload Checker Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: solution-checker-results
+          path: ${{ runner.temp }}/checker-results/
+
+  build-managed:
+    name: Build Managed Solution
+    runs-on: ubuntu-latest
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PAC CLI
+        run: |
+          dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Pack as Managed
+        run: |
+          pac solution pack \
+            --zipfile "${{ runner.temp }}/${{ env.SOLUTION_NAME }}_managed.zip" \
+            --folder "solutions/${{ env.SOLUTION_NAME }}" \
+            --packagetype Managed
+
+      - name: Upload Managed Solution
+        uses: actions/upload-artifact@v4
+        with:
+          name: managed-solution
+          path: ${{ runner.temp }}/${{ env.SOLUTION_NAME }}_managed.zip
+
+  deploy-test:
+    name: Deploy to Test
+    runs-on: ubuntu-latest
+    needs: build-managed
+    environment: test  # Requires approval in GitHub
+    steps:
+      - name: Download Managed Solution
+        uses: actions/download-artifact@v4
+        with:
+          name: managed-solution
+          path: ${{ runner.temp }}
+
+      - name: Install PAC CLI
+        run: |
+          dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Authenticate to Power Platform
+        run: |
+          pac auth create \
+            --applicationId ${{ secrets.POWER_PLATFORM_CLIENT_ID }} \
+            --clientSecret ${{ secrets.POWER_PLATFORM_CLIENT_SECRET }} \
+            --tenant ${{ secrets.POWER_PLATFORM_TENANT_ID }}
+
+      - name: Select Test Environment
+        run: |
+          pac org select --environment "${{ secrets.TEST_ENVIRONMENT_URL }}"
+
+      - name: Import Managed Solution
+        run: |
+          pac solution import \
+            --path "${{ runner.temp }}/${{ env.SOLUTION_NAME }}_managed.zip" \
+            --force-overwrite true \
+            --activate-plugins true \
+            --async true
+
+      - name: Verify Import
+        run: |
+          pac solution list | grep "${{ env.SOLUTION_NAME }}"

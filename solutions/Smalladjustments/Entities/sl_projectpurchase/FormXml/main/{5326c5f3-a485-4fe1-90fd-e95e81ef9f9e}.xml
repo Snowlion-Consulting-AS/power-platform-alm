@@ -1,0 +1,2922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{5326c5f3-a485-4fe1-90fd-e95e81ef9f9e}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{474a243c-0c6e-4e79-b897-7ed4f8128c82}" IsUserDefined="1" name="general">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Detaljer" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3eaa" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac16e5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1ce1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b257667f}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf600}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a6895f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad900e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eedcc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c89}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af89}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd284259e}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa222f4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a564}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e662}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd236}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c26}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd6e6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71dfac}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea245134b}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921fc6}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199564}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="generalleft_section_7" id="6b4a7950-34db-4213-8ccd-7af979108e33" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="New Section" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f463e110-14bc-40f2-851a-62e93839f56e}" colspan="1" rowspan="1" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Navn" languagecode="1044" />
+                        </labels>
+                        <control id="sl_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sl_name" uniqueid="{80e7c386-87d1-886b-5321-46777c6323be}" disabled="true" />
+                      </cell>
+                      <cell id="{98a278a8-d06d-462d-83ce-802d0bc3831d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                          <label description="Valuta" languagecode="1044" />
+                        </labels>
+                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{868d1960-3349-43a7-8970-bcdcdf63b044}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Fagområde " languagecode="1033" />
+                          <label description="Fagområde " languagecode="1044" />
+                        </labels>
+                        <control id="sl_discipline" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_discipline" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                            <DisableViewPicker>true</DisableViewPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{4d58ac1c-e476-4932-aa36-125e4384b6cf}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Show more" languagecode="1033" />
+                        </labels>
+                        <control id="sl_showmore" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="sl_showmore" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bc47da27-db4e-4aae-8095-52fdcec54f0c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dagmulktbelagte frister i UE kontrakt" languagecode="1033" />
+                          <label description="Oppstartsdato fagområde" languagecode="1044" />
+                        </labels>
+                        <control id="sl_oppstartsdatofagomrade" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_oppstartsdatofagomrade" disabled="false" />
+                      </cell>
+                      <cell id="{9df8f405-505a-4d5c-825d-b08b9c916d9a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Forkortelse" languagecode="1033" />
+                          <label description="Forkortelse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_shortname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_shortname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{baaca98c-ebd5-41b2-aeaa-945c78c290d7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Standard kontrakt" languagecode="1033" />
+                          <label description="Standard kontrakt" languagecode="1044" />
+                        </labels>
+                        <control id="sl_standardcontract" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_standardcontract" disabled="false" />
+                      </cell>
+                      <cell id="{3ceceebc-24de-48c6-911a-6fff8ffe4a99}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fagområde kode " languagecode="1033" />
+                          <label description="Fagområde kode " languagecode="1044" />
+                        </labels>
+                        <control id="sl_disciplinecode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_disciplinecode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{face76b1-2adf-4387-ab6e-871e5c9c4f45}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{e3fb4603-af30-4152-8ae6-6b3f07eac90c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Project reference" languagecode="1033" />
+                          <label description="Prosjekt referanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_projectreference_project" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_projectreference_project" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="generalleft_section_5" id="21643920-e5a8-4bbc-aaab-12bcd7269ceb" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Main" languagecode="1033" />
+                    <label description="Main" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2411ceec-d922-4d31-b5fd-6dd26e279dab}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Send RFQ" languagecode="1033" />
+                          <label description="Send forespørsel" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sendrfq" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_sendrfq" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1cee3f3b-962f-46f7-a1aa-12eee74692c4}" locklevel="0" colspan="1" rowspan="1" showlabel="true" visible="false">
+                        <labels>
+                          <label description="Project task reference" languagecode="1033" />
+                          <label description="Prosjekt oppgave" languagecode="1044" />
+                        </labels>
+                        <control id="sl_projecttaskreference" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_projecttaskreference" disabled="false" uniqueid="{15b02a46-205e-8d79-a9a1-5551897cbad7}">
+                          <parameters>
+                            <DependentAttributeName>sl_projectpurchase.sl_project</DependentAttributeName>
+                            <DependentAttributeType>msdyn_project</DependentAttributeType>
+                            <FilterRelationshipName>msdyn_msdyn_project_msdyn_projecttask_project</FilterRelationshipName>
+                            <AutoResolve>true</AutoResolve>
+                            <DisableMru>true</DisableMru>
+                            <DisableQuickFind>false</DisableQuickFind>
+                            <DisableViewPicker>false</DisableViewPicker>
+                            <DefaultViewId>{4F12E5A8-C14C-4EAB-8A72-AA6C198790F2}</DefaultViewId>
+                            <AllowFilterOff>true</AllowFilterOff>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{4d29a261-2fa3-420f-b738-bcaf8ec00565}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="general_section_9" id="aa5b4da9-da18-4e20-bf84-660dbe20140d" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="UE status" languagecode="1033" />
+                    <label description="UE status" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{49c4a369-e6a6-4fe8-a263-6cc20860468e}" locklevel="0" colspan="1" rowspan="1" showlabel="true">
+                        <labels>
+                          <label description="Purchase Status" languagecode="1033" />
+                          <label description="Innkjøps status" languagecode="1044" />
+                        </labels>
+                        <control id="sl_purchasestatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sl_purchasestatus" disabled="false" uniqueid="{467448a3-4886-3a94-481c-10b857e40221}" />
+                      </cell>
+                      <cell id="{18e5d404-8298-4236-b5f4-7f5ae6d7bf30}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Tilbudsfrist" languagecode="1033" />
+                          <label description="Tilbudsfrist" languagecode="1044" />
+                        </labels>
+                        <control id="sl_tilbudsfrist" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_tilbudsfrist" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6c9ae170-3795-4a8f-90da-4aef090cbb1b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valgt UE" languagecode="1033" />
+                          <label description="Valgt UE" languagecode="1044" />
+                        </labels>
+                        <control id="sl_vendorselected" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_vendorselected" disabled="false">
+                          <parameters>
+                            <DefaultViewId>{BBFA6F95-095E-EF11-BFE3-6045BDF418DC}</DefaultViewId>
+                            <AvailableViewIds>{E4A23B58-AC5F-EF11-BFE3-000D3ABC0F4E},{BBFA6F95-095E-EF11-BFE3-6045BDF418DC},{00000000-0000-0000-00AA-000010001002},{5FFD4690-3DF0-EF11-9341-002248888085},{C295D85D-5FE4-EF11-9341-000D3A45737F},{65FFAF9A-E8C5-432D-860B-32F841B00D87},{49FB9771-09E1-4E70-B193-198752493577},{CFBCD7AF-AEE5-4E45-8ECC-C040D4020581},{15C63745-0A6E-4322-8416-A62C84D90279},{00000000-0000-0000-00AA-000010001031},{00000000-0000-0000-00AA-000010001001},{D234426E-1F37-4944-9255-50E19B541C4C},{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</AvailableViewIds>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{fcb55af3-fd61-491c-a91f-601366ad87fa}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="RFQ Sendt" languagecode="1033" />
+                          <label description="Forespørsel sendt" languagecode="1044" />
+                        </labels>
+                        <control id="sl_rfqsendt" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_rfqsendt" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{e99a5698-4965-4cb1-a1b4-24572e038df3}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{99cff324-1dcf-4d80-b017-efc916f61161}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Signed date" languagecode="1033" />
+                          <label description="Signert dato" languagecode="1044" />
+                        </labels>
+                        <control id="sl_signeddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_signeddate" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="generalleft_section_8" id="76acd070-b1df-4354-a9a3-25fa3d2abb66" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Generell beskrivelse leverandør" languagecode="1033" />
+                    <label description="Generell beskrivelse til leverandør" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b7b45b26-74a6-4e98-a902-ac582b86d946}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{a010592b-c359-4a8b-a7e6-b04d84c634c1}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{89010bc1-8bed-4318-88d5-8d52a3b3dbba}" locklevel="0" colspan="1" rowspan="8" showlabel="true">
+                        <labels>
+                          <label description="Generell Beskrivelse" languagecode="1033" />
+                          <label description="Generell Beskrivelse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_generaldescription" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="sl_generaldescription" disabled="false" />
+                      </cell>
+                      <cell id="{100c4947-0eec-49ac-9e3d-f878eb932220}" locklevel="0" colspan="1" rowspan="8">
+                        <labels>
+                          <label description="Internal notes" languagecode="1033" />
+                          <label description="Interne notater" languagecode="1044" />
+                        </labels>
+                        <control id="sl_internalnotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="sl_internalnotes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{5936623a-cd69-419a-b11e-dbdf91d8fc79}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{d1ee34e2-38d9-42f6-9d17-831c370e4f21}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{0e305182-2a12-4220-95aa-e89b098c4554}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{d4b961d0-95f6-458e-85e8-04c63f909f7d}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{d8aa9350-ed49-47e0-8cf4-7f9c7ae4312e}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{209292a0-ef3c-4fef-8ba4-3295073a409e}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{3b181f68-7b56-4a04-8b95-1f9d11f77578}">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="generalleft_section_4" id="61014297-ba56-4fed-8238-8ad1e9149fcd" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Providers" languagecode="1033" />
+                    <label description="Leverandører" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{45ef39bd-4866-4ff9-b010-f661e406ea8c}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{6af6d7e6-db86-42f8-9df4-e514fa7f39c7}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1719917004544" languagecode="1033" />
+                          <label description="Ny SG-kontroll 1719917004544" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sl_projectpurchasevendor</TargetEntityType>
+                            <ViewId>{4EA14A07-2CC2-428E-9631-835C1B17D6BF}</ViewId>
+                            <ViewIds>{4EA14A07-2CC2-428E-9631-835C1B17D6BF}</ViewIds>
+                            <RelationshipName>sl_projectpurchasevendor_Projectpurchaselookup_sl_projectpurchase</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="generalleft_section_4" id="0d58460b-aafe-4646-a6c6-adea2dbd45a0" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Timeline" languagecode="1033" />
+                    <label description="Tidslinje" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b90b8c20-335d-4426-95a7-ec69b9956316}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{2ffb712a-3ae0-4ec3-ab9b-f6c0e020de48}" rowspan="15" colspan="1">
+                        <labels>
+                          <label description="Note Text" languagecode="1033" />
+                          <label description="Notat" languagecode="1044" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false">
+                          <parameters>
+                            <UClientShowTimelineLabel>true</UClientShowTimelineLabel>
+                            <UClientActivities>appointment,email,phonecall,recurringappointmentmaster,socialactivity,task,chat</UClientActivities>
+                            <UClientDisplayActivityUsing>defaultfields</UClientDisplayActivityUsing>
+                            <UClientActivityCardMap>appointment:4201:,email:4202:,fax:4204:,letter:4207:,phonecall:4210:,recurringappointmentmaster:4251:,socialactivity:4216:,task:4212:,adx_inviteredemption:10265:,adx_portalcomment:10266:,chat:10135:,msdyn_bookingalert:10621:,</UClientActivityCardMap>
+                            <UClientActivitiesConfigurationJSON>{"msdyn_bookingalert":{"showTopDate":true,"showStatus":true,"canCreate":true,"createUsing":"default","openUsing":"default"},"adx_portalcomment":{"showTopDate":true,"showStatus":true,"canCreate":true,"createUsing":"default","openUsing":"default"},"adx_inviteredemption":{"showTopDate":true,"showStatus":true,"canCreate":true,"createUsing":"default","openUsing":"default"}}</UClientActivitiesConfigurationJSON>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="generalleft_section_88" id="a3c14f3c-d260-4aa6-a358-ab4d6e7a2948" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="New Section" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{8fe5987c-91a9-42ae-8907-13f04c5c0574}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1719842478019" languagecode="1033" />
+                          <label description="Ny QV-kontroll 1719842478019" languagecode="1044" />
+                        </labels>
+                        <control id="QuickviewControl1719842478019" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="sl_projecttaskreference">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>true</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="msdyn_projecttask"&gt;5f7cdd97-b237-ef11-8409-7c1e522625ee&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_12" id="9b46fc8a-1311-47a4-bb0b-bba3e634093f" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Kontraktskalkyle" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_12_section_1" id="7a929887-16cd-44c4-8afb-d762687277e4" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Kalkyler fra plan" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{62f3b924-c3dd-4c47-8c80-43d910602de8}" rowspan="4" colspan="1" auto="true" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1767619555665" languagecode="1033" />
+                          <label description="Leverandør" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_11" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Auto</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>sl_calculationdetail_ProjectPurchase_sl_projectpurchase</RelationshipName>
+                            <TargetEntityType>sl_calculationdetail</TargetEntityType>
+                            <ViewId>{F9EE78C5-3FEA-F011-8544-7CED8D595FF4}</ViewId>
+                            <ViewIds>{40EFD52A-5CC1-4A4A-BB5B-F79943AEE24E},{F9EE78C5-3FEA-F011-8544-7CED8D595FF4}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Prosjektkalkyle" id="c95b2d23-08ff-4c1b-b2b7-0b1a04e5d6fc" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+          <labels>
+            <label description="Prosjektkalkyle" languagecode="1033" />
+            <label description="Kalkulasjon" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3e11" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac1611}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1c11}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b2576611}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf611}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a68911}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad9011}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eed11}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c11}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af11}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd2842511}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa22211}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a511}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e611}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd211}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c11}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd611}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71df11}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea2451311}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921f11}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199511}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_11_section_3" id="57a9adb7-352e-42b2-b89c-401cfdf6a6f2" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="New Section" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{6de42c9c-5f04-4e82-83c7-60c5e1584da0}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Leverandør" languagecode="1033" />
+                          <label description="New SG control 1766048853628" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_10" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{8b781ce4-5200-4fe5-9a58-f37da1deee6d}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+                            <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+                            <ViewId>{C2D30733-4150-4568-B08C-A066159DDC81}</ViewId>
+                            <ViewIds>{C2D30733-4150-4568-B08C-A066159DDC81}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_calculation" id="c4eb1c35-85bc-4be2-b17f-0ac416515752" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Kalkulasjon" languagecode="1033" />
+            <label description="Summer" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3ecc" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac16cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1ccc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b25766cc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf6cc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a689cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad90cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eedcc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926ccc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60afcc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd28425cc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa222cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a5cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e6cc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd2cc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55ccc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd6cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71dfcc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea24513cc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921fcc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc0771995cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Calculations" id="a678738e-5a05-41cc-97aa-f4c9ca514b9a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="Calculate" languagecode="1033" />
+                    <label description="Calculate " languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{84805850-b2a3-4ad5-aee0-447215e00301}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{a66dcee8-d877-482c-ace5-fef1ddd654b4}" colspan="1" rowspan="6" auto="true" showlabel="true">
+                        <labels>
+                          <label description="Project purchase vendors" languagecode="1033" />
+                          <label description="UE" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="cc_1727422798655" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{5e4c0062-83db-4239-b384-397a8ea1ed31}">
+                          <parameters>
+                            <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+                            <ViewId>{747E4815-38FB-EF11-BAE2-7C1E525E51AB}</ViewId>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <IsUserView>false</IsUserView>
+                            <RecordsPerPage>130</RecordsPerPage>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <AutoExpand>Auto</AutoExpand>
+                            <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+                            <ViewIds>{C2D30733-4150-4568-B08C-A066159DDC81},{747E4815-38FB-EF11-BAE2-7C1E525E51AB}</ViewIds>
+                            <EnableQuickFind>true</EnableQuickFind>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_9" id="520d05a5-f98f-48a1-8021-0995be3ee550" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Leverandør" languagecode="1033" />
+            <label description="Leverandør valg" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3e09" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac1609}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1c09}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b2576609}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf609}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a68909}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad9009}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eed09}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c09}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af09}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd2842509}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa22209}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a509}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e609}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd209}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c09}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd609}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71df09}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea2451309}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921f09}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199509}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_9_section_1" id="c2d61451-270b-41b5-b2b0-315f087b56e6" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Innkjøp" languagecode="1033" />
+                    <label description="Innkjøp" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{35e92b91-4990-41ac-a244-0018249feb08}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valgt UE" languagecode="1033" />
+                          <label description="Valgt UE" languagecode="1044" />
+                        </labels>
+                        <control id="sl_vendorselected" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_vendorselected" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{5b8bf568-5a4f-475e-8950-114196120cf0}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{2b8a80f3-9be3-43a9-a8e0-8c621d2f122f}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1751895253091" languagecode="1044" />
+                        </labels>
+                        <control id="QuickviewControl1751895253091" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" />
+                      </cell>
+                      <cell locklevel="0" id="{37d4f036-779e-4cea-8710-c666af4f8757}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{c8f0f864-a197-4841-abed-9585ff5a9928}" rowspan="4" colspan="2" auto="false">
+                        <labels>
+                          <label description="Leverandør" languagecode="1033" />
+                          <label description="Prosjektinnkjøp" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_9" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{dd1d5813-d2ea-446b-a2ab-65794b18a65e}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>sl_projectpurchasevendor_Projectpurchaselookup_sl_projectpurchase</RelationshipName>
+                            <TargetEntityType>sl_projectpurchasevendor</TargetEntityType>
+                            <ViewId>{4EA14A07-2CC2-428E-9631-835C1B17D6BF}</ViewId>
+                            <ViewIds>{4EA14A07-2CC2-428E-9631-835C1B17D6BF}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_8" id="31c486ef-fa26-48b6-b0c2-e9cf188fa140" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false">
+          <labels>
+            <label description="Change Request" languagecode="1033" />
+            <label description="Endrings meldinger" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3e08" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac1608}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1c08}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b2576608}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf608}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a68908}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad9008}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eed08}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c08}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af08}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd2842508}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa22208}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a508}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e608}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd208}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c08}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd608}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71df08}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea2451308}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921f08}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199508}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_8_section_3" id="717da72f-fdcb-4f5c-ae8f-05d97a0bb15f" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="111" labelwidth="115">
+                  <labels>
+                    <label description="Totalt" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{3d91cb0d-4726-4f91-a02a-45137606b912}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{933efd3e-be3b-42b4-be3b-51e170f372b1}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8251507c-e8bd-4081-a668-dddfedae8e7e}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{93d87529-b15e-4a2e-8bd1-a668d4e5ad5a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kostnad endringsvarsel" languagecode="1033" />
+                          <label description="Kostnad endringsvarsel" languagecode="1044" />
+                        </labels>
+                        <control id="sl_costnoticeofchange" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_costnoticeofchange" disabled="true" />
+                      </cell>
+                      <cell id="{5a7f229e-416e-4d72-8847-f7029e500df4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fakturert" languagecode="1033" />
+                          <label description="Fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiced" disabled="true" />
+                      </cell>
+                      <cell id="{190693a6-e497-4277-9c5f-af8d0c940e09}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Godkjent EM" languagecode="1033" />
+                          <label description="Godkjent EM" languagecode="1044" />
+                        </labels>
+                        <control id="sl_approved" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_approved" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{30642e05-2100-4144-a9c9-6c7c558519eb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Trukket beløp" languagecode="1033" />
+                          <label description="Trukket beløp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_amountwithdrawn" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_amountwithdrawn" disabled="true" />
+                      </cell>
+                      <cell id="{c37223db-fb27-40b2-96cc-bae419c1e5ef}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Omtvistet EM" languagecode="1033" />
+                          <label description="Omtvistet beløp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_disputedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_disputedamount" disabled="true" />
+                      </cell>
+                      <cell locklevel="0" id="{3e4d2e7b-8a3c-4d1d-a997-7f7f3ed2450d}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_8_section_1" id="c47abd5f-a9a7-4ede-a928-a5ffa572faa1" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="Endringsmeldinger" languagecode="1033" />
+                    <label description="Aktive endringsforespørsler" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{045fa5fe-3cd0-4a7d-adef-c4c3bc220df5}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{72f895b2-3397-4111-9d53-61ae9a455aee}" colspan="1" rowspan="6" auto="true" showlabel="false">
+                        <labels>
+                          <label description="Change Requests" languagecode="1033" />
+                          <label description="Endringsmeldinger " languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="cc_1727426197966" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{ff4d6b55-8552-4e89-9345-a1f68c750b0a}">
+                          <parameters>
+                            <TargetEntityType>sl_changerequest</TargetEntityType>
+                            <ViewId>{F07C3D9D-B9F6-F011-8406-7CED8D14B758}</ViewId>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <IsUserView>false</IsUserView>
+                            <RecordsPerPage>20</RecordsPerPage>
+                            <RelationshipName>sl_changerequest_projectpurchase_sl_projectpurchase</RelationshipName>
+                            <ViewIds>{B62A62EB-84F6-F011-8406-6045BD8E1567},{60F020BC-9DF6-F011-8406-7CED8D5CA78F},{786810F2-9DF6-F011-8406-7CED8D0BAF3F},{25E564BC-B1F6-F011-8406-7CED8D14B758},{A666F3B7-B2F6-F011-8406-7CED8D14B758},{6E9FC7ED-B2F6-F011-8406-7CED8D97B958},{DDF786BF-B3F6-F011-8406-7CED8D97B958},{FE202335-B4F6-F011-8406-7CED8D97B958},{9B0C5417-B6F6-F011-8406-7CED8D97B958},{6E79AC31-9FF6-F011-8406-7CED8D0BAF3F},{7C32618B-9EF6-F011-8406-6045BD8E1567},{DA2503BE-9EF6-F011-8406-7CED8D0BAF3F},{F07C3D9D-B9F6-F011-8406-7CED8D14B758},{7A349E1C-BAF6-F011-8406-7CED8D97B958}</ViewIds>
+                            <ChartGridMode>Chart</ChartGridMode>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <AutoExpand>Auto</AutoExpand>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_6" id="96ac46c6-1a79-4434-aa41-9bc72cb81c39" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false" visible="false">
+          <labels>
+            <label description="Manage" languagecode="1033" />
+            <label description="Administrere" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3e06" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac1606}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1c06}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b2576606}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf606}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a68906}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad9006}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eed06}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c06}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af06}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd2842506}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa22206}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a506}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e606}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd206}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c06}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd606}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71df06}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea2451306}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921f06}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199506}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_6_section_1" id="a6aa92e6-32b2-4b90-aac1-4fb6ccbc5646" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Sum" languagecode="1033" />
+                    <label description="Sum" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3284b1c5-932e-4769-acf9-b9e2c18611a6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{0e3e1b9e-7bbe-459b-bf58-9882319ada7f}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_6_section_6" id="815b2708-0268-4b65-810f-a36c0130d2e5" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="111" labelwidth="115">
+                  <labels>
+                    <label description="Endringsmeldinger  " languagecode="1033" />
+                    <label description="Endringsmeldinger  " languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{d6eb2284-482d-4b1b-94a9-a8acac2d0957}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{048ebfac-4acc-42f2-b853-6acc9ad7a303}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{00541c64-0936-4163-9adc-67e9c3436d41}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f47fffca-ab79-454a-a17f-fe650e3b039c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kostnad endringsvarsel" languagecode="1033" />
+                          <label description="Kostnad endringsvarsel" languagecode="1044" />
+                        </labels>
+                        <control id="sl_costnoticeofchange" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_costnoticeofchange" disabled="true" />
+                      </cell>
+                      <cell id="{78a1bbaf-00c8-4830-9857-2fcfb56072cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fakturert" languagecode="1033" />
+                          <label description="Fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiced" disabled="true" />
+                      </cell>
+                      <cell id="{3641c8e2-7780-4f92-9a4d-42a0d63770e3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Godkjent EM" languagecode="1033" />
+                          <label description="Godkjent EM" languagecode="1044" />
+                        </labels>
+                        <control id="sl_approved" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_approved" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{27576f91-c76d-4f28-941d-72b7a7b3966e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Trukket beløp" languagecode="1033" />
+                          <label description="Trukket beløp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_amountwithdrawn" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_amountwithdrawn" disabled="true" />
+                      </cell>
+                      <cell id="{ed7e3c58-0a06-4dba-be42-9a5690507cf7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Omtvistet EM" languagecode="1033" />
+                          <label description="Omtvistet beløp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_disputedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_disputedamount" disabled="true" />
+                      </cell>
+                      <cell locklevel="0" id="{5596e0a2-6d14-4fb0-ae3f-26dd433f56f1}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_6_section_4" id="f6c6ac32-b5bd-475e-b431-bb66542f1c3e" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Faktuererte kontraktsarbeider" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{6895fa81-1f7e-420f-95f7-79ac7c1e5808}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{2df5d39c-7131-458c-a851-0bf6e74d2185}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1726145596101" languagecode="1033" />
+                          <label description="Leverandører" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_6" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sl_purchaseinvoice</TargetEntityType>
+                            <ViewId>{ACD998A8-3C1F-4BA1-8935-D3C0516B567F}</ViewId>
+                            <ViewIds>{ACD998A8-3C1F-4BA1-8935-D3C0516B567F}</ViewIds>
+                            <RelationshipName>sl_purchaseinvoice_Purchaselinelookup_sl_projectpurchase</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_6_section_4" id="fd0a0d86-6140-4596-97fd-76fc8ee82156" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Endringsmeldinger" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9b378579-e962-4e5a-bfd4-430febd8a067}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{e7dd1740-af33-4746-8ff5-0658b3a750c3}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Change Requests" languagecode="1033" />
+                          <label description="Endringsmelding" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_7" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <TargetEntityType>sl_changerequest</TargetEntityType>
+                            <ViewId>{35985238-FAD7-4978-B28F-BBB5197607A7}</ViewId>
+                            <ViewIds>{35985238-FAD7-4978-B28F-BBB5197607A7}</ViewIds>
+                            <RelationshipName>sl_changerequest_projectpurchase_sl_projectpurchase</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_6_section_5" id="80007616-b2c2-4cea-838a-9d86464a51ac" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Sluttoppstilling" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{44fbc298-d5a5-4c03-abcd-cedadbe748a7}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Faktura" id="57e09cbe-79a8-46d7-a9b0-0ec1539bf4cf" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false">
+          <labels>
+            <label description="Faktura" languagecode="1033" />
+            <label description="Faktura" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3e07" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac1607}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1c07}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b2576607}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf607}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a68907}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad9007}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eed07}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c07}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af07}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd2842507}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa22207}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a507}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e607}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd207}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c07}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd607}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71df07}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea2451307}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921f07}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199507}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_7_section_1" id="bcb62049-85b3-4d7e-8036-3f94f35b5901" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f3ee840a-f9d5-4930-9b5c-a6af39ebd564}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{11d338b9-fbdb-4420-ae13-f625a5968ea5}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Purchase calculations" languagecode="1033" />
+                          <label description="Innkjøps kalkyle" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_8" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>true</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sl_purchaseinvoice</TargetEntityType>
+                            <ViewId>{8F051E08-83EC-F011-8544-7CED8D595FF4}</ViewId>
+                            <ViewIds>{ACD998A8-3C1F-4BA1-8935-D3C0516B567F},{8F051E08-83EC-F011-8544-7CED8D595FF4},{A3EBE17B-FDF1-F011-8406-7CED8D90CC7A},{307D41A0-FDF1-F011-8406-7CED8D90CC7A},{530F4839-0FD1-F011-BBD3-7CED8D595777},{6CF3053D-47C4-F011-BBD3-7CED8D595FF4},{21CAA707-FEF1-F011-8406-7CED8D8BBBAF},{1CEEA9D0-B9EF-F011-8406-000D3AAFF5F5}</ViewIds>
+                            <RelationshipName>sl_purchaseinvoice_Purchaselinelookup_sl_projectpurchase</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Objectives" id="2f816950-15d3-4bf8-9adb-6e1363d65bf8" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false">
+          <labels>
+            <label description="Objectives" languagecode="1033" />
+            <label description="Saker" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3e04" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac1604}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1c04}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b2576604}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf604}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a68904}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad9004}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eed04}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c04}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af04}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd2842504}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa22204}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a504}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e604}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd204}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c04}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd604}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71df04}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea2451304}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921f04}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199504}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_4_section_1" id="6eaacaf4-7cc6-4523-886b-2d21b3c2043b" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Objectives" languagecode="1033" />
+                    <label description="Saker" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3b5b7c9e-616e-49eb-a27e-7a2d73067c7b}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{a4446c8f-7c4a-4aa3-bff7-0f5b70c811ff}" rowspan="4" colspan="1" auto="false" showlabel="true">
+                        <labels>
+                          <label description="New SG control 1724244470408" languagecode="1033" />
+                          <label description="Saker" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_3" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sl_object</TargetEntityType>
+                            <ViewId>{668F1BAF-26D9-41C4-B53E-AD845F732E3A}</ViewId>
+                            <ViewIds>{668F1BAF-26D9-41C4-B53E-AD845F732E3A}</ViewIds>
+                            <RelationshipName>sl_object_projectpurchase_sl_projectpurchase</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="a067aeb5-f75d-4af6-a1e9-db9990c78ff8" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false">
+          <labels>
+            <label description="Activity" languagecode="1033" />
+            <label description="Aktivitet" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3e02" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac1602}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1c02}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b2576602}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf602}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a68902}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad9002}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eed02}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c02}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af02}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd2842502}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa22202}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a502}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e602}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd202}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c02}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd602}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71df02}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea2451302}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921f02}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199502}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_2_section_1" id="ae7f5e2e-1ffa-471e-b0a5-7f7cd24b0d0a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Timeline" languagecode="1033" />
+                    <label description="Tidslinje" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c32c8dde-a6c4-41ee-995b-43ff8636322e}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{51b15579-9736-42e8-91af-7d52d464b3bb}" rowspan="15" colspan="1">
+                        <labels>
+                          <label description="Note Text" languagecode="1033" />
+                          <label description="Notat tekst" languagecode="1044" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false">
+                          <parameters>
+                            <UClientShowTimelineLabel>true</UClientShowTimelineLabel>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_3" id="2c807b21-f686-4c95-93ac-28ab186b0463" IsUserDefined="0" locklevel="0" showlabel="true" visible="false">
+          <labels>
+            <label description="Documents" languagecode="1033" />
+            <label description="Dokumenter" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Summary" id="2c7adc4b-59da-4d1e-b606-b22271bf3e03" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                    <label description="Summary" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af7ea547-e64e-4df3-85ae-0fd2adac1603}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Nettokostnad" languagecode="1033" />
+                          <label description="Kalkyle" languagecode="1044" />
+                        </labels>
+                        <control id="sl_netcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_netcost" disabled="true" />
+                      </cell>
+                      <cell id="{455b705e-574c-48ce-b252-c361f05c1c03}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kontrakt UE" languagecode="1033" />
+                          <label description="Kontraktssum" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contractedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_contractedamount" disabled="false" />
+                      </cell>
+                      <cell id="{a1d45456-8d30-4a6b-a533-b4a1b2576603}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{b82d05a7-4f26-4850-a173-210ab9acf603}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c20cd57-7f65-4f1e-b9e5-1aecd8a68903}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris (kalkyle)" languagecode="1033" />
+                          <label description="Beløp (fra kalkyle)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_sum" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_sum" disabled="true" />
+                      </cell>
+                      <cell id="{75dc2d2d-2a72-4146-85f1-249fb0ad9003}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dekning" languagecode="1033" />
+                          <label description="Påslag" languagecode="1044" />
+                        </labels>
+                        <control id="sl_coverage" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_coverage" disabled="true" />
+                      </cell>
+                      <cell id="{cfaaa048-13b8-4d14-acab-f719319eed03}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Risiko" languagecode="1033" />
+                          <label description="Risiko" languagecode="1044" />
+                        </labels>
+                        <control id="sl_risiko" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_risiko" disabled="false" />
+                      </cell>
+                      <cell id="{9ceb500c-7dff-4444-b8fe-0be06e926c03}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4b67cd-4c0a-44dd-88c5-537dfa60af03}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Kundepris" languagecode="1033" />
+                          <label description="Kundepris (kalk)" languagecode="1044" />
+                        </labels>
+                        <control id="sl_kundepris" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_kundepris" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b7790667-6cb0-4f15-936a-ba0bd2842503}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{322abf9f-0466-427e-b635-b92e3fa22203}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Netto A-konto" languagecode="1033" />
+                          <label description="Netto A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_nettoakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_nettoakonto" disabled="true" />
+                      </cell>
+                      <cell id="{9b8afe0b-0910-45e5-9b1c-05f3acd4a503}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Differanse" languagecode="1033" />
+                          <label description="Differanse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_differanse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_differanse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f13b61e1-4edc-4c3a-bd6f-27eb66f9e603}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{8db54d1a-6950-4fb9-b8aa-eb837a1fd203}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{dbff6a18-1a68-4b27-82e4-fc902ef55c03}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{8ae1f575-be70-4632-864a-96ead53dd603}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="A-konto fakturert UE" languagecode="1033" />
+                          <label description="Fakturert A-konto" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiceakonto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiceakonto" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cf89f553-3a04-4081-a1c6-fe9b8e71df03}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{219857bd-9144-4747-b8ed-a22ea2451303}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ba5d911f-315b-4d69-a188-1d4853921f03}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0292d36-2e0d-4e99-8656-5fc077199503}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Totalt fakturert" languagecode="1033" />
+                          <label description="Totalt fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_totalinvoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_totalinvoiced" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_3_section_1" id="4345fa4e-5990-41ba-9893-7d13e1ae097e" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="SharePoint" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d6a5fa03-0d10-4ef4-9f7f-51102b7c0e00}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1044" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{21abab2b-bcaf-405c-99c3-5c6650c3c88b}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1724061250317" languagecode="1033" />
+                          <label description="Leverandører" languagecode="1044" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sharepointdocument</TargetEntityType>
+                            <ViewId>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewId>
+                            <ViewIds>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewIds>
+                            <RelationshipName>sl_projectpurchase_SharePointDocuments</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{e56eb184-fb18-4343-9107-06ccedd097ba}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{acb1b791-7068-48f8-b97f-84eb4707bef8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1044" />
+              </labels>
+            </cell>
+            <cell id="{cd4ca3e8-33cd-4553-8a4f-7aa1f971c037}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1044" />
+              </labels>
+            </cell>
+            <cell id="{6cb81e2a-9f02-4019-8d4f-e99546a0a816}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1044" />
+              </labels>
+            </cell>
+            <cell id="{d50185de-f7a6-4fa1-bd82-fa5e74dcf768}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Status" languagecode="1033" />
+                <label description="Status" languagecode="1044" />
+              </labels>
+              <control id="header_statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+            </cell>
+            <cell id="{9fcfe08a-4f42-4fbb-b3c4-7c3f4083e6d9}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Statusårsak" languagecode="1033" />
+                <label description="Statusårsak" languagecode="1044" />
+              </labels>
+              <control id="header_statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+            </cell>
+            <cell id="{52655686-2e95-462a-a4ee-a41dc777b363}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner (Buyer)" languagecode="1033" />
+                <label description="Eier innkjøper" languagecode="1044" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{09192d92-bbe1-46cf-b6ae-d9c69fecd1bf}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{8ca34534-12d3-4bc4-b153-a00aa674a522}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1044" />
+              </labels>
+            </cell>
+            <cell id="{67435ac1-a9db-4900-92d0-52c4d5b30aa9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1044" />
+              </labels>
+            </cell>
+            <cell id="{9bd43482-edf7-4160-8854-44e9740c7742}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1044" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar>
+          <NavBarByRelationshipItem Area="Info" Show="false" RelationshipName="sl_projectpurchasevendor_Projectpurchaselookup_sl_projectpurchase" Id="nav_sl_projectpurchasevendor_Projectpurchaselookup_sl_projectpurchase" Sequence="9003">
+            <Titles>
+              <Title Text="Project purchase vendors" LCID="1033" />
+              <Title LCID="1044" Text="Project purchase vendors" />
+            </Titles>
+          </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+              <Title LCID="1044" Text="Felles" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+              <Title LCID="1044" Text="Salg" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+              <Title LCID="1044" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+              <Title LCID="1044" Text="Markedsføring" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+              <Title LCID="1044" Text="Prosessøkter" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{ff4d6b55-8552-4e89-9345-a1f68c750b0a}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters>
+              <TargetEntityType>sl_changerequest</TargetEntityType>
+              <ViewId>{F07C3D9D-B9F6-F011-8406-7CED8D14B758}</ViewId>
+              <EnableViewPicker>true</EnableViewPicker>
+              <IsUserView>false</IsUserView>
+              <RecordsPerPage>4</RecordsPerPage>
+            </parameters>
+          </customControl>
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters>
+              <TargetEntityType>sl_changerequest</TargetEntityType>
+              <ViewId>{F07C3D9D-B9F6-F011-8406-7CED8D14B758}</ViewId>
+              <EnableViewPicker>true</EnableViewPicker>
+              <IsUserView>false</IsUserView>
+              <RecordsPerPage>4</RecordsPerPage>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{F07C3D9D-B9F6-F011-8406-7CED8D14B758}</ViewId>
+                <TargetEntityType>sl_changerequest</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_changerequest_projectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds />
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{F07C3D9D-B9F6-F011-8406-7CED8D14B758}</ViewId>
+                <TargetEntityType>sl_changerequest</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_changerequest_projectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds />
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{F07C3D9D-B9F6-F011-8406-7CED8D14B758}</ViewId>
+                <TargetEntityType>sl_changerequest</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_changerequest_projectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds />
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5e4c0062-83db-4239-b384-397a8ea1ed31}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{747E4815-38FB-EF11-BAE2-7C1E525E51AB}</ViewId>
+                <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{C2D30733-4150-4568-B08C-A066159DDC81}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">no</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{747E4815-38FB-EF11-BAE2-7C1E525E51AB}</ViewId>
+                <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{C2D30733-4150-4568-B08C-A066159DDC81}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">no</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{747E4815-38FB-EF11-BAE2-7C1E525E51AB}</ViewId>
+                <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{C2D30733-4150-4568-B08C-A066159DDC81}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">no</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{dd1d5813-d2ea-446b-a2ab-65794b18a65e}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{4ea14a07-2cc2-428e-9631-835c1b17d6bf}</ViewId>
+                <TargetEntityType>sl_projectpurchasevendor</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_projectpurchasevendor_Projectpurchaselookup_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{4EA14A07-2CC2-428E-9631-835C1B17D6BF}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">yes</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{4ea14a07-2cc2-428e-9631-835c1b17d6bf}</ViewId>
+                <TargetEntityType>sl_projectpurchasevendor</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_projectpurchasevendor_Projectpurchaselookup_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{4EA14A07-2CC2-428E-9631-835C1B17D6BF}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">yes</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{4ea14a07-2cc2-428e-9631-835c1b17d6bf}</ViewId>
+                <TargetEntityType>sl_projectpurchasevendor</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>sl_projectpurchasevendor_Projectpurchaselookup_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{4EA14A07-2CC2-428E-9631-835C1B17D6BF}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">yes</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{8b781ce4-5200-4fe5-9a58-f37da1deee6d}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters>
+              <RecordsPerPage>4</RecordsPerPage>
+              <AutoExpand>Fixed</AutoExpand>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableViewPicker>false</EnableViewPicker>
+              <EnableChartPicker>true</EnableChartPicker>
+              <ChartGridMode>All</ChartGridMode>
+              <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+              <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+              <ViewId>{C2D30733-4150-4568-B08C-A066159DDC81}</ViewId>
+              <ViewIds>{C2D30733-4150-4568-B08C-A066159DDC81}</ViewIds>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="n360_SampleNamespace.Calculations">
+            <parameters>
+              <data-set name="sampleDataSet">
+                <ViewId>{c2d30733-4150-4568-b08c-a066159ddc81}</ViewId>
+                <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{C2D30733-4150-4568-B08C-A066159DDC81}</FilteredViewIds>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="n360_SampleNamespace.Calculations">
+            <parameters>
+              <data-set name="sampleDataSet">
+                <ViewId>{c2d30733-4150-4568-b08c-a066159ddc81}</ViewId>
+                <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{C2D30733-4150-4568-B08C-A066159DDC81}</FilteredViewIds>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="n360_SampleNamespace.Calculations">
+            <parameters>
+              <data-set name="sampleDataSet">
+                <ViewId>{c2d30733-4150-4568-b08c-a066159ddc81}</ViewId>
+                <TargetEntityType>sl_purchasecalculations</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>sl_purchasecalculations_lookupprojectpurchase_sl_projectpurchase</RelationshipName>
+                <FilteredViewIds>{C2D30733-4150-4568-B08C-A066159DDC81}</FilteredViewIds>
+              </data-set>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <formLibraries>
+        <Library name="sl_functionopenDocument" libraryUniqueId="{6e70efe4-0291-49c2-a9c4-e43aef547164}" />
+        <Library name="sl_functionTabsSwitcher" libraryUniqueId="{c43df6f4-75a2-4315-b474-253e770093cb}" />
+        <Library name="sl_Projectpurchasetabdisplay" libraryUniqueId="{d74953de-2414-4a16-bd86-ee11a768ab6f}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="openDocument" libraryName="sl_functionopenDocument" handlerUniqueId="{ef560858-7d25-4f04-914f-5a753ba669e8}" enabled="false" parameters="" passExecutionContext="true" />
+            <Handler functionName="registerEventTrigger" libraryName="sl_functionTabsSwitcher" handlerUniqueId="{add3a2c1-4148-4736-9605-b3700ba69a8a}" enabled="false" parameters="" passExecutionContext="true" />
+            <Handler functionName="onFormLoad" libraryName="sl_functionopenDocument" handlerUniqueId="{991c75ef-c8cd-4d4e-8ae0-cff889ebae92}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informasjon" languagecode="1044" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Et skjema for denne tabellen." languagecode="1044" />
+    </Descriptions>
+  </systemform>
+</forms>

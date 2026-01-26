@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{f54066e4-237f-ef11-ac20-000d3a2ee9df}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="F931FFE2-B873-473F-8F95-9502F0AA3F5E" name="tab_1" showlabel="false" labelid="{1dc164e7-9abb-4746-85cd-9ac3a097bd8a}">
+          <labels>
+            <label description="Main" languagecode="1033" />
+            <label description="New Tab" languagecode="1044" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section id="0C655D4E-C6E3-424E-9AF5-71E72D30D12E" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{a84aa5f1-fd2a-4696-99b0-94b15be7c48b}">
+                  <labels>
+                    <label description="Information" languagecode="1033" />
+                    <label description="Informasjon" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{85ee5189-dcad-4474-a956-c92a04d1c19c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EM ID" languagecode="1033" />
+                          <label description="EM ID" languagecode="1044" />
+                        </labels>
+                        <control id="sl_autonumber" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_autonumber" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d7f22174-d5e4-488d-a2b1-c443c029c392}" locklevel="0" colspan="1" rowspan="1" labelid="{e42f9c1b-fd82-41c7-96f6-c14d41a12471}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Name" languagecode="1044" />
+                        </labels>
+                        <control id="sl_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{63fc5682-aa9c-4b87-b2e8-715112452436}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Type" languagecode="1033" />
+                          <label description="Type" languagecode="1044" />
+                        </labels>
+                        <control id="sl_type" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sl_type" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{097e1bd2-f3cb-4ae8-aa9e-a1acc610a1bf}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Project" languagecode="1033" />
+                          <label description="Prosjekt" languagecode="1044" />
+                        </labels>
+                        <control id="sl_project" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_project" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{970c4060-b518-4dc1-a169-e5eeafde8c93}" locklevel="0" colspan="1" rowspan="1" labelid="{9e2aa52f-d772-4fe0-85af-78db1403bbef}">
+                        <labels>
+                          <label description="Project Purchase" languagecode="1033" />
+                          <label description="Prosjektinnkjøp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_projectpurchase" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_projectpurchase" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                            <DependentAttributeName>sl_changerequest.sl_project</DependentAttributeName>
+                            <DependentAttributeType>sl_project</DependentAttributeType>
+                            <FilterRelationshipName>sl_projectpurchase_projectreference_project_sl_project</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bae35beb-7fbb-4d3c-aa0d-beb42284a4f4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Leverandør" languagecode="1033" />
+                          <label description="Forretningsforbindelse" languagecode="1044" />
+                        </labels>
+                        <control id="sl_account" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_account" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a1f0a8a9-b57a-4d43-91d2-171aa2880f49}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contact" languagecode="1033" />
+                          <label description="Kontakt" languagecode="1044" />
+                        </labels>
+                        <control id="sl_contact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_contact" disabled="false">
+                          <parameters>
+                            <DependentAttributeName>sl_changerequest.sl_account</DependentAttributeName>
+                            <DependentAttributeType>account</DependentAttributeType>
+                            <FilterRelationshipName>contact_customer_accounts</FilterRelationshipName>
+                            <AllowFilterOff>true</AllowFilterOff>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f13c7cdb-7264-4571-b5bb-fc47dcc03dd5}" locklevel="0" colspan="1" rowspan="1" labelid="{3b3b05de-6f75-4ae4-8d05-f0e67dcf179b}">
+                        <labels>
+                          <label description="Date" languagecode="1033" />
+                          <label description="Dato" languagecode="1044" />
+                        </labels>
+                        <control id="sl_date" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_date" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{32308d98-6d3b-4193-9893-644c25065a46}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                          <label description="Status" languagecode="1044" />
+                        </labels>
+                        <control id="sl_status" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sl_status" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="02DECBA0-3AE2-484D-A19F-C5353AF4F4F2" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{85745a41-e8bd-42c6-8ba6-66b6825a1a88}" locklevel="0" celllabelalignment="Left" celllabelposition="Left">
+                  <labels>
+                    <label description="Financials" languagecode="1033" />
+                    <label description="Kommentar" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{51006915-5bd6-bb34-5512-d1e393cce7c0}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                          <label description="Valuta" languagecode="1044" />
+                        </labels>
+                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d7ccad96-cead-ba4a-0617-02c53d82d482}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="EM Beløp" languagecode="1033" />
+                          <label description="Kostnad endringsvarsel" languagecode="1044" />
+                        </labels>
+                        <control id="sl_costnoticeofchange" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_costnoticeofchange" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ded31d73-3a4b-20e8-2643-c2e2ae655649}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Approved amount" languagecode="1033" />
+                          <label description="Godkjent beløp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_approved" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_approved" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5b0229a8-5d8d-9c98-a503-7d13b5aeea86}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Avvik" languagecode="1033" />
+                          <label description="Omtvistet beløp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_disputedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_disputedamount" disabled="false" uniqueid="{3c799894-bb7c-a09a-b515-1724d4749030}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8c8b3362-ec64-9a44-e2e1-0388ab85e0c7}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="BH Fakturert" languagecode="1033" />
+                          <label description="Fakturert" languagecode="1044" />
+                        </labels>
+                        <control id="sl_invoiced" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_invoiced" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{71074a94-bda9-3751-1279-11a67284b3d3}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="EM Godkjent" languagecode="1033" />
+                          <label description="Trukket beløp" languagecode="1044" />
+                        </labels>
+                        <control id="sl_amountwithdrawn" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_amountwithdrawn" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="46FD66EA-B686-41D9-AAE0-C565BD78EC1F" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{62244889-17ac-4fa9-b6b4-6e2421e2efef}" locklevel="0" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                  <labels>
+                    <label description="Comments" languagecode="1033" />
+                    <label description="New Section" languagecode="1044" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dfae9718-4594-4787-b626-6b8d09333640}" locklevel="0" colspan="1" rowspan="8" labelid="{d047ed4c-b40d-44ed-a0e6-15f5fca7b4a3}" showlabel="false">
+                        <labels>
+                          <label description="Comment" languagecode="1033" />
+                          <label description="Kommentar" languagecode="1044" />
+                        </labels>
+                        <control id="sl_comment" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="sl_comment" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+      <formLibraries>
+        <Library name="sl_ChoiceLookupViewFilter" libraryUniqueId="{8c019fc3-a1b2-4ee4-ba4c-a51c03635836}" />
+        <Library name="sl_changerequest_form_newrecord" libraryUniqueId="{4a4a4df6-b029-4c07-8b57-e796fd45b9e1}" />
+        <Library name="sl_sl_changerequest_newrecord" libraryUniqueId="{92497693-0241-407f-b01a-fb96296435d9}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="LookupViewFilter.onLoad" libraryName="sl_ChoiceLookupViewFilter" handlerUniqueId="{e47d1e0a-967a-499e-8870-915498cd50da}" enabled="true" parameters="" passExecutionContext="true" />
+            <Handler functionName="Snowlion.ChangeRequest.NewRecord.onLoad" libraryName="sl_sl_changerequest_newrecord" handlerUniqueId="{fb847ea0-9001-4ec7-a75a-622568ff8cf4}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Change Request quick create form" languagecode="1033" />
+      <LocalizedName description="Change Request quick create form" languagecode="1044" />
+    </LocalizedNames>
+  </systemform>
+</forms>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{661157fe-2fc9-4eaa-835f-5bfa2f7b64f7}</formid>
+    <IntroducedVersion>6.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form maxWidth="1900">
+      <tabs>
+        <tab id="{ee019344-2ac2-4ade-b2b8-630ff38801b1}" name="tab_1" showlabel="false" IsUserDefined="0" ordinalvalue="0">
+          <columns>
+            <column width="33%" id="0">
+              <sections>
+                <section id="{be7e5181-f67d-4fac-9420-ed9e2ac588fd}" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{64cb3028-1866-28da-8268-c5487ce86317}" showlabel="true" locklevel="0" ordinalvalue="10004" solutionaction="Modified" />
+                    </row>
+                    <row>
+                      <cell id="{8e4f615f-d451-4747-a4b5-de6c532bf498}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10003" solutionaction="Added">
+                        <labels>
+                          <label description="Fagområde" languagecode="1033" />
+                          <label description="Fagområde" languagecode="1044" />
+                        </labels>
+                        <control id="cre31_fagomrade" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="cre31_fagomrade" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="1">
+              <sections>
+                <section id="{b5f2a6a1-d1e1-439d-ab76-fbb48f1381d4}" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{abb75da6-8727-e2a0-dccb-9ce591c107b7}" showlabel="true" locklevel="0" rowspan="1" ordinalvalue="10003" solutionaction="Removed" />
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="2">
+              <sections>
+                <section id="{4e35e9f6-ac81-44cf-b8d6-91149b679634}" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{9E47DA5C-45B2-4D9B-8C83-2633E2FB68A5}" showlabel="true" locklevel="0" ordinalvalue="10000">
+                        <labels>
+                          <label description="Gate 1" languagecode="1044" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{67473FA2-07D2-485B-BC63-7B05D02D5230}" showlabel="true" locklevel="0" ordinalvalue="10001">
+                        <labels>
+                          <label description="Gate 2" languagecode="1044" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{F43497C8-73CC-4853-9736-964446900C81}" showlabel="true" locklevel="0" ordinalvalue="10003" solutionaction="Modified">
+                        <labels>
+                          <label description="By" languagecode="1044" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2AC67B8F-6335-4448-9E85-1601793BF072}" showlabel="true" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10002" solutionaction="Modified" />
+                    </row>
+                    <row>
+                      <cell id="{b8687105-56ff-481a-9c9a-e41fdbfdfb15}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10004" solutionaction="Added">
+                        <labels>
+                          <label description="Address 1: Country/Region" languagecode="1033" />
+                          <label description="Land" languagecode="1044" />
+                        </labels>
+                        <control id="address1_country" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="address1_country" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <formLibraries solutionaction="Added">
+        <Library name="sl_filterParentCustomerID" libraryUniqueId="{c27b85b6-6a82-4403-b81f-933149647a0f}" />
+      </formLibraries>
+      <events solutionaction="Added">
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="filterParentCustomerID" libraryName="sl_filterParentCustomerID" handlerUniqueId="{b077f0ec-347e-460f-9e23-d9891d4c5e6f}" enabled="true" parameters="" passExecutionContext="true" ordinalvalue="0" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Contact Quick Create" languagecode="1033" />
+      <LocalizedName description="Hurtigoppretting av kontakt" languagecode="1044" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Default quick create form for Contact" languagecode="1033" />
+      <Description description="Standard hurtigopprettingsskjema for kontakt" languagecode="1044" />
+    </Descriptions>
+  </systemform>
+</forms>

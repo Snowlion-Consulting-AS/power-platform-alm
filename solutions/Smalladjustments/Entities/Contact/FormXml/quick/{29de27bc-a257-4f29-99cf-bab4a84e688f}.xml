@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{29de27bc-a257-4f29-99cf-bab4a84e688f}</formid>
+    <IntroducedVersion>6.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form hasmargin="false" shownavigationbar="false">
+      <tabs showlabels="false">
+        <tab name="general" verticallayout="true" id="{537CCF41-58A1-4C92-B528-605FEE6E338F}" IsUserDefined="0" ordinalvalue="0">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="information" labelwidth="90" id="{B6C3E043-6717-4697-9B42-EB1A4AEA62C6}" IsUserDefined="0" showlabel="false" showbar="false" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{946CEFEF-66B1-4515-8127-680BC9BB4F2E}" showlabel="true" locklevel="0" ordinalvalue="10001" solutionaction="Modified" />
+                    </row>
+                    <row>
+                      <cell id="{6F275DBE-AEE3-48C4-A5E8-3E2C96129D6F}" showlabel="true" locklevel="0" ordinalvalue="10001" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{0f8b439f-d16a-4a56-a09e-145e9a238b7f}" locklevel="0" colspan="1" rowspan="1" showlabel="true" ordinalvalue="10000" solutionaction="Added">
+                        <labels>
+                          <label description="Job Title" languagecode="1033" />
+                          <label description="Stilling" languagecode="1044" />
+                        </labels>
+                        <control id="jobtitle" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="jobtitle" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dd5a0aa9-1f83-4374-bccb-43f2d4b2a060}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10002" solutionaction="Added">
+                        <labels>
+                          <label description="Mobile Phone" languagecode="1033" />
+                          <label description="Mobiltelefon" languagecode="1044" />
+                        </labels>
+                        <control id="mobilephone" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="mobilephone" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f33a41a6-dd39-4386-be84-2d36989ba527}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10003" solutionaction="Added">
+                        <labels>
+                          <label description="Fagområde" languagecode="1033" />
+                          <label description="Fagområde" languagecode="1044" />
+                        </labels>
+                        <control id="cre31_fagomrade" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="cre31_fagomrade" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true" solutionaction="Added">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="account contact card" languagecode="1033" />
+      <LocalizedName description="kontaktkort for forretningsforbindelse" languagecode="1044" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form that displays the contact card in account." languagecode="1033" />
+      <Description description="Et skjema som viser kontaktkortet i forretningsforbindelsen." languagecode="1044" />
+    </Descriptions>
+  </systemform>
+</forms>
