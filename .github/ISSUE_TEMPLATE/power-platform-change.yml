@@ -1,0 +1,69 @@
+name: Power Platform Change Request
+description: Request a change to Dynamics 365 / Dataverse (for Claude to implement)
+title: "[PP] "
+labels: ["power-platform", "claude"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the change you want to make. Claude will create a PR with the solution file changes.
+        After review and merge, the changes will be automatically deployed to Dataverse.
+
+  - type: dropdown
+    id: solution
+    attributes:
+      label: Solution
+      description: Which solution should be modified?
+      options:
+        - SnowlionBusinessApplication
+        - Smalladjustments
+        - AddProductsCustomPage
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Change Type
+      description: What kind of change?
+      options:
+        - Add field/column to table
+        - Modify form layout
+        - Add/modify view
+        - Edit JavaScript web resource
+        - Modify Cloud Flow
+        - Add business rule
+        - Security role change
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the change in detail
+      placeholder: |
+        Example: Add a "Priority Score" field to the sl_project table
+        - Field type: Whole number (1-100)
+        - Add to main form under "Details" section
+        - Add to "Active Projects" view
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this is done?
+      placeholder: |
+        - [ ] Field visible on form
+        - [ ] Field in view
+        - [ ] Can save values 1-100
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Screenshots, references, or other details

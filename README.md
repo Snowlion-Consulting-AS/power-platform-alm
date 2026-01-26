@@ -149,6 +149,43 @@ DEV (Unmanaged)  →  Git Repo  →  TEST (Managed)  →  PROD (Managed)
   Developers              CI validates & builds    CD deploys
 ```
 
+## Using with Claude for GitHub (Async)
+
+You can also use Claude for GitHub to make changes asynchronously:
+
+1. **Create an issue** using the "Power Platform Change Request" template
+2. **Assign to Claude** - Claude will create a PR with the solution file changes
+3. **Review and merge** - Changes auto-deploy to Dataverse via GitHub Actions
+
+### GitHub Actions Setup
+
+To enable auto-deploy on merge, configure these secrets in your repository:
+
+| Secret | Description |
+|--------|-------------|
+| `PP_CLIENT_ID` | Azure AD App Registration Client ID |
+| `PP_CLIENT_SECRET` | Azure AD App Registration Secret |
+| `PP_TENANT_ID` | Azure AD Tenant ID |
+| `PP_ENVIRONMENT_URL` | Dataverse URL (e.g., `https://org.crm4.dynamics.com`) |
+
+**Creating the Service Principal:**
+
+```bash
+# 1. Create App Registration in Azure AD
+#    - Go to Azure Portal > Azure Active Directory > App registrations
+#    - New registration > Name: "Power Platform Deploy"
+#    - Create a client secret
+
+# 2. Grant Power Platform permissions
+#    - In Power Platform Admin Center
+#    - Add the app as an Application User
+#    - Assign System Administrator role (or appropriate role)
+
+# 3. Add secrets to GitHub
+#    - Go to repo Settings > Secrets and variables > Actions
+#    - Add each secret
+```
+
 ## License
 
 MIT
