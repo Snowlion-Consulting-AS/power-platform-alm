@@ -132,8 +132,102 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 3. **Form `contenttype="singleComponent"`** - This attribute makes tabs show only one control full-screen; remove it to show multiple fields
 4. **GUIDs** - Form elements need unique GUIDs; generate new ones for new elements
 5. **Publish after import** - Changes don't take effect until published
-6. **Canvas Apps** - `.msapp` files need special handling (unzip/rezip)
+6. **Canvas Apps** - `.msapp` files need special handling (see Canvas App Editing section below)
 7. **Solution import time** - Large solutions with Canvas apps can take 5-10 minutes to import
+
+## Canvas App Editing (.msapp files)
+
+Canvas apps are stored as `.msapp` files in `CanvasApps/`. These are ZIP archives containing JSON files that define the app's controls, data sources, themes, etc.
+
+### CRITICAL: Compression Requirements
+
+**NEVER use `unzip`/`zip` commands to modify .msapp files.** The standard `zip` command creates uncompressed (STORED) archives, which corrupts the .msapp. Power Platform requires DEFLATE-compressed .msapp files.
+
+**Always use Python's `zipfile` module** to modify .msapp files, preserving the original compression type for each entry:
+
+```python
+python3 -c "
+import zipfile, json, io, shutil
+
+MSAPP_PATH = 'path/to/app.msapp'
+
+# 1. Read original
+with open(MSAPP_PATH, 'rb') as f:
+    original_data = f.read()
+
+original_zip = zipfile.ZipFile(io.BytesIO(original_data), 'r')
+
+# 2. Read all files
+files = []
+for info in original_zip.infolist():
+    files.append({
+        'info': info,
+        'data': original_zip.read(info.filename) if not info.is_dir() else b''
+    })
+
+# 3. Modify the target file (e.g., Controls/4.json)
+for entry in files:
+    if entry['info'].filename == 'Controls/4.json':
+        content = json.loads(entry['data'])
+        # ... make your changes to content ...
+        entry['modified_data'] = json.dumps(content, ensure_ascii=False).encode('utf-8')
+
+# 4. Write new .msapp preserving compression
+with zipfile.ZipFile(MSAPP_PATH, 'w') as out_zip:
+    for entry in files:
+        info = entry['info']
+        if info.is_dir():
+            dir_info = zipfile.ZipInfo(info.filename)
+            dir_info.compress_type = zipfile.ZIP_STORED
+            out_zip.writestr(dir_info, b'')
+            continue
+        new_info = zipfile.ZipInfo(info.filename)
+        new_info.compress_type = info.compress_type  # PRESERVE original compression
+        data = entry.get('modified_data', entry['data'])
+        out_zip.writestr(new_info, data)
+
+original_zip.close()
+"
+```
+
+### .msapp Structure
+
+```
+app.msapp (ZIP with DEFLATE compression)
+├── Header.json                    # App metadata
+├── Properties.json                # App properties
+├── References/
+│   ├── DataSources.json          # Data connections
+│   ├── Resources.json            # Media resources
+│   ├── Templates.json            # Control templates
+│   └── Themes.json               # Theme definitions
+├── Controls/
+│   ├── 1.json                    # Screen definitions
+│   ├── 2.json, 3.json, ...      # More screens/controls
+│   └── N.json                    # Each contains control tree
+└── AppCheckerResult.sarif         # App checker results
+```
+
+### Control Properties in JSON
+
+Controls have `Rules` arrays that define property values:
+```json
+{
+  "Name": "shp_headerBackground",
+  "Rules": [
+    { "Property": "Fill", "InvariantScript": "RGBA(0, 120, 212, 1)" },
+    { "Property": "Height", "InvariantScript": "80" }
+  ],
+  "Children": [...]
+}
+```
+
+To change a color, find the control by Name, then update the `InvariantScript` for the `Fill` property.
+
+### Common Color Values
+- Theme primary: `App.Theme.Colors.Primary` (resolves at runtime)
+- Explicit RGBA: `RGBA(255, 255, 0, 1)` (yellow), `RGBA(0, 120, 212, 1)` (blue)
+- Use explicit RGBA values for reliable results
 
 ## Git Workflow
 
