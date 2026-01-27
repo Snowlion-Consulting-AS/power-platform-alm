@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{16a1332d-ef55-4761-a7a7-c7ef93546b9e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sl_name" select="1" icon="1" preview="1">
+        <row name="result" id="sl_projectitemid">
+          <cell name="a_f01976f260ee4df781022c04659a8e9c.sl_productnumber" width="80" />
+          <cell name="sl_name" width="300" />
+          <cell name="sl_localizedname" width="182" />
+          <cell name="sl_priceperunit" width="120" />
+          <cell name="sl_quantity" width="100" />
+          <cell name="sl_discount" width="106" />
+          <cell name="sl_linenumber" width="25" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sl_projectitem">
+          <attribute name="sl_projectitemid" />
+          <attribute name="sl_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="sl_quantity" />
+          <attribute name="sl_priceperunit" />
+          <attribute name="sl_discount" />
+          <link-entity alias="a_f01976f260ee4df781022c04659a8e9c" name="sl_item" to="sl_item" from="sl_itemid" link-type="outer" visible="false">
+            <attribute name="sl_productnumber" />
+          </link-entity>
+          <attribute name="sl_linenumber" />
+          <attribute name="sl_localizedname" />
+          <order attribute="sl_linenumber" descending="false" />
+          <order attribute="sl_name" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Project items" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

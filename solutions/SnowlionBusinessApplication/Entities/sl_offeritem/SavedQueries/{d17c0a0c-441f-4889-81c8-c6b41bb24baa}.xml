@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d17c0a0c-441f-4889-81c8-c6b41bb24baa}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sl_name" select="1" icon="1" preview="1">
+        <row name="result" id="sl_offeritemid">
+          <cell name="a_bb9d0a0d78a14e809c41a475bbec7ca6.sl_productnumber" width="105" />
+          <cell name="sl_name" width="300" />
+          <cell name="sl_localizedname" width="133" />
+          <cell name="sl_priceperunit" width="120" />
+          <cell name="sl_quantity" width="100" />
+          <cell name="sl_discountpercent" width="106" />
+          <cell name="sl_extendedamount" width="143" />
+          <cell name="sl_linenumber" width="25" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sl_offeritem">
+          <attribute name="sl_offeritemid" />
+          <attribute name="sl_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="sl_priceperunit" />
+          <attribute name="sl_quantity" />
+          <attribute name="sl_discountpercent" />
+          <attribute name="sl_extendedamount" />
+          <link-entity alias="a_bb9d0a0d78a14e809c41a475bbec7ca6" name="sl_item" to="sl_item" from="sl_itemid" link-type="outer" visible="false">
+            <attribute name="sl_productnumber" />
+          </link-entity>
+          <attribute name="sl_localizedname" />
+          <attribute name="sl_linenumber" />
+          <order attribute="sl_linenumber" descending="false" />
+          <order attribute="sl_name" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Offer items" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

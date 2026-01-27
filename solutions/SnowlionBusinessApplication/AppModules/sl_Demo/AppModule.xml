@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>sl_Demo</UniqueName>
+  <IntroducedVersion>1.0.0.5</IntroducedVersion>
+  <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="1" schemaName="account" />
+    <AppModuleComponent type="1" schemaName="contact" />
+    <AppModuleComponent type="1" schemaName="sl_item" />
+    <AppModuleComponent type="1" schemaName="sl_object" />
+    <AppModuleComponent type="1" schemaName="sl_offer" />
+    <AppModuleComponent type="1" schemaName="sl_offeritem" />
+    <AppModuleComponent type="1" schemaName="sl_order" />
+    <AppModuleComponent type="1" schemaName="sl_orderitem" />
+    <AppModuleComponent type="1" schemaName="sl_paymentterm" />
+    <AppModuleComponent type="1" schemaName="sl_project" />
+    <AppModuleComponent type="1" schemaName="sl_projectitem" />
+    <AppModuleComponent type="1" schemaName="sl_salesinvoice" />
+    <AppModuleComponent type="1" schemaName="sl_salesinvoiceitem" />
+    <AppModuleComponent type="1" schemaName="sl_salespeople" />
+    <AppModuleComponent type="1" schemaName="sl_salespricelist" />
+    <AppModuleComponent type="1" schemaName="sl_salespricelistitem" />
+    <AppModuleComponent type="1" schemaName="sl_shipmentmethod" />
+    <AppModuleComponent type="1" schemaName="sl_unitofmeasure" />
+    <AppModuleComponent type="1" schemaName="sl_vat" />
+    <AppModuleComponent type="1" schemaName="transactioncurrency" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000000666000}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000000666400}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001001}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001002}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001003}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001004}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001031}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001033}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001200}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001210}" />
+    <AppModuleComponent type="26" id="{59e57080-0cc2-e211-9b83-00155d89b902}" />
+    <AppModuleComponent type="26" id="{38a21ffb-4e32-4038-beb9-03172a0dd034}" />
+    <AppModuleComponent type="26" id="{65ffaf9a-e8c5-432d-860b-32f841b00d87}" />
+    <AppModuleComponent type="26" id="{2d1187c4-23fe-4bb5-9647-43bb1c6ddbd1}" />
+    <AppModuleComponent type="26" id="{14ea1914-0e2c-4918-8eca-60930324f18f}" />
+    <AppModuleComponent type="26" id="{a2d479c5-53e3-4c69-addd-802327e67a0d}" />
+    <AppModuleComponent type="26" id="{0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105}" />
+    <AppModuleComponent type="26" id="{a9af0ab8-861d-4cfa-92a5-c6281fed7fab}" />
+    <AppModuleComponent type="26" id="{58fb20ff-d5be-406f-908e-c777e9dedf5f}" />
+    <AppModuleComponent type="26" id="{8df19b44-a073-40c3-9d6d-ee1355d8c4ba}" />
+    <AppModuleComponent type="26" id="{eda26f1e-dbcc-40ad-91f2-ff2878d1d8d8}" />
+    <AppModuleComponent type="60" id="{2a074a23-59e0-ee11-904d-000d3ab1baf6}" />
+    <AppModuleComponent type="60" id="{69cff312-cfb6-4289-9631-249ab85d2c62}" />
+    <AppModuleComponent type="60" id="{7cad3d27-d14a-4e2a-a04c-24e5d0fc2759}" />
+    <AppModuleComponent type="60" id="{2205c86d-ed88-4a2f-a447-3b86a8781f2e}" />
+    <AppModuleComponent type="60" id="{098ae145-1567-41ec-8398-86dbaac70c9b}" />
+    <AppModuleComponent type="60" id="{b028db32-3619-48a5-ac51-cf3f947b0ef3}" />
+    <AppModuleComponent type="60" id="{c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b}" />
+    <AppModuleComponent type="60" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+    <AppModuleComponent type="62" schemaName="sl_Demo" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="Demo" languagecode="1033" />
+  </LocalizedNames>
+  <appelements>
+    <appelement uniquename="sl_sl_Demo_canvasappid_sl_addsalesproducts_42b7d">
+      <canvasappid>
+        <name>sl_addsalesproducts_42b7d</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>sl_sl_Demo_canvasappid_sl_addsalesproducts_42b7d</name>
+    </appelement>
+    <appelement uniquename="sl_sl_Demo_canvasappid_sl_brregpage_2be5f">
+      <canvasappid>
+        <name>sl_brregpage_2be5f</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>sl_sl_Demo_canvasappid_sl_brregpage_2be5f</name>
+    </appelement>
+    <appelement uniquename="sl_sl_Demo_canvasappid_sl_demodefaultcommandlibrary_d8db4">
+      <canvasappid>
+        <name>sl_demodefaultcommandlibrary_d8db4</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>sl_sl_Demo_canvasappid_sl_demodefaultcommandlibrary_d8db4</name>
+    </appelement>
+    <appelement uniquename="sl_sl_Demo_canvasappid_sl_manageproductspage_22e55">
+      <canvasappid>
+        <name>sl_manageproductspage_22e55</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>sl_sl_Demo_canvasappid_sl_manageproductspage_22e55</name>
+    </appelement>
+  </appelements>
+  <appsettings>
+    <appsetting settingdefinitionid.uniquename="AllowNotificationsEarlyAccess">
+      <iscustomizable>1</iscustomizable>
+      <value>true</value>
+    </appsetting>
+    <appsetting settingdefinitionid.uniquename="AppChannel">
+      <iscustomizable>1</iscustomizable>
+      <value>1</value>
+    </appsetting>
+  </appsettings>
+</AppModule>

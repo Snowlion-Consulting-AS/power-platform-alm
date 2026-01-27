@@ -1,0 +1,37 @@
+<appaction uniquename="sl__LockOffer!ba5ac05979504783b637c6e7b028309c!sl_Demo!sl_offer!0">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Lock Offer">
+    <label description="Lock Offer" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>sl_offer</logicalname>
+  </contextentity>
+  <contextvalue>sl_offer</contextvalue>
+  <fonticon>Lock</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>LockOffer!ba5ac05979504783b637c6e7b028309c</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>sl_demodefaultcommandlibrary_d8db4</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>9508059723d847b6bc4fab14ed96c877</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100015.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>sl_demodefaultcommandlibrary_d8db4</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>9508059723d847b6bc4fab14ed96c877</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{7df66ac3-493c-475d-9cf2-461e7ca2ec40}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sl_name" select="1" icon="1" preview="1">
+        <row name="result" id="sl_salespricelistid">
+          <cell name="sl_name" width="300" />
+          <cell name="sl_code" width="100" />
+          <cell name="transactioncurrencyid" width="100" />
+          <cell name="sl_startingdate" width="115" />
+          <cell name="sl_endingdate" width="111" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sl_salespricelist">
+          <attribute name="sl_salespricelistid" />
+          <attribute name="sl_name" />
+          <order attribute="sl_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="sl_code" />
+          <attribute name="transactioncurrencyid" />
+          <attribute name="sl_startingdate" />
+          <attribute name="sl_endingdate" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Sales Price lists" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

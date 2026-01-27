@@ -1,0 +1,32 @@
+<appaction uniquename="sl__ManageProducts!aa6a77a994574026a3a28d26430e6209!sl_Demo!sl_projectitem!2">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Manage Products">
+    <label description="Manage Products" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>sl_projectitem</logicalname>
+  </contextentity>
+  <contextvalue>sl_projectitem</contextvalue>
+  <fonticon>SortButton</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>2</location>
+  <name>ManageProducts!aa6a77a994574026a3a28d26430e6209</name>
+  <onclickeventjavascriptfunctionname>loadFromProjects</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>2eb0226b-e2a7-ef11-a72d-002248a063f2</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100017.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

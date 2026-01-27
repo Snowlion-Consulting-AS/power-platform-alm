@@ -1,0 +1,32 @@
+<appaction uniquename="sl__CopyOffer!ed12fce25b084d63a5ad35f3e3f4d4c4!sl_Demo!sl_offer!0">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Copy Offer">
+    <label description="Copy Offer" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>sl_offer</logicalname>
+  </contextentity>
+  <contextvalue>sl_offer</contextvalue>
+  <fonticon>Copy</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>CopyOffer!ed12fce25b084d63a5ad35f3e3f4d4c4</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>sl_demodefaultcommandlibrary_d8db4</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>9b4bb37b6a4249c089acc2a41369b41e</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100012.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

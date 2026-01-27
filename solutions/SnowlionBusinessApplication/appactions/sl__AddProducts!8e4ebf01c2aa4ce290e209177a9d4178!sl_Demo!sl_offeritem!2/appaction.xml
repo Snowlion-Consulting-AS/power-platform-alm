@@ -1,0 +1,32 @@
+<appaction uniquename="sl__AddProducts!8e4ebf01c2aa4ce290e209177a9d4178!sl_Demo!sl_offeritem!2">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Add Products">
+    <label description="Add Products" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>sl_offeritem</logicalname>
+  </contextentity>
+  <contextvalue>sl_offeritem</contextvalue>
+  <fonticon>$clientsvg:AddProduct</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>2</location>
+  <name>AddProducts!8e4ebf01c2aa4ce290e209177a9d4178</name>
+  <onclickeventjavascriptfunctionname>LoadOffer</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>fe051cd8-a803-ef11-9f89-6045bd9dd44b</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100015.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

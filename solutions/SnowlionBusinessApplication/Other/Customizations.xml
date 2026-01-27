@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26012.138" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26013.00135">
+  <Entities />
+  <Roles />
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityImageConfigs>
+    <EntityImageConfig>
+      <parententitylogicalname>sl_item</parententitylogicalname>
+      <primaryimageattribute>sl_itempicture</primaryimageattribute>
+    </EntityImageConfig>
+  </EntityImageConfigs>
+  <AttributeImageConfigs>
+    <AttributeImageConfig>
+      <attributelogicalname>sl_itempicture</attributelogicalname>
+      <parententitylogicalname>sl_item</parententitylogicalname>
+      <canstorefullimage>1</canstorefullimage>
+    </AttributeImageConfig>
+  </AttributeImageConfigs>
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <WebResources />
+  <CustomControls />
+  <AppModuleSiteMaps />
+  <AppModules />
+  <EntityDataProviders />
+  <CanvasApps />
+  <appaction_appactionrule_classicrulesset>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.HideAddressEntities!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.HideNewForChildEntities!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.IsNotActivityPointer!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" appactionruleid.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.HideAddressEntities!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.HideNewForChildEntities!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.IsNotActivityPointer!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" appactionruleid.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.HideAddressEntities!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.HideNewForChildEntities!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.IsNotActivityPointer!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+    <appaction_appactionrule_classicrules appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" appactionruleid.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1">
+      <iscustomizable>1</iscustomizable>
+    </appaction_appactionrule_classicrules>
+  </appaction_appactionrule_classicrulesset>
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="sl_sharedcommondataserviceforapps_4b781">
+      <connectionreferencedisplayname>Microsoft Dataverse B360PowerApps-4b781</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

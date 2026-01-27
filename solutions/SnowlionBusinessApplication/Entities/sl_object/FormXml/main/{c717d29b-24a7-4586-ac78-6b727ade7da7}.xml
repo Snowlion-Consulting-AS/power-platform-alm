@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c717d29b-24a7-4586-ac78-6b727ade7da7}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{93cf36e7-d66e-4cb5-ba11-7d393c06ba34}" IsUserDefined="1" name="general">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="66%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{f1d84153-0312-4adc-93b4-d5479f5a59c9}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{bc7de557-f1fd-42ea-9321-82d9f443a2e7}" rowspan="15" colspan="1">
+                        <labels>
+                          <label description="Note Text" languagecode="1033" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false">
+                          <parameters>
+                            <UClientActivities>appointment,email,phonecall,task</UClientActivities>
+                            <UClientDisplayActivityUsing>defaultfields</UClientDisplayActivityUsing>
+                            <UClientActivityCardMap>appointment:4201:,email:4202:,fax:4204:,letter:4207:,phonecall:4210:,recurringappointmentmaster:4251:,socialactivity:4216:,task:4212:,adx_inviteredemption:10253:,adx_portalcomment:10254:,chat:10118:,</UClientActivityCardMap>
+                            <UClientActivitiesConfigurationJSON>{"recurringappointmentmaster":{"showTopDate":true,"showStatus":true,"canCreate":false,"createUsing":"default","openUsing":"default"},"socialactivity":{"showTopDate":true,"showStatus":true,"canCreate":false,"createUsing":"default","openUsing":"default"},"adx_inviteredemption":{"showTopDate":true,"showStatus":true,"canCreate":true,"createUsing":"default","openUsing":"default"},"adx_portalcomment":{"showTopDate":true,"showStatus":true,"canCreate":true,"createUsing":"default","openUsing":"default"},"chat":{"showTopDate":true,"showStatus":false,"canCreate":false,"createUsing":"default","openUsing":"default"}}</UClientActivitiesConfigurationJSON>
+                            <UClientEnableWhatsNewFilter>true</UClientEnableWhatsNewFilter>
+                            <UClientExpandRecord>true</UClientExpandRecord>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section name="_section_790" id="170d9d7c-3325-4d72-af33-7c56d78d0e12" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Information " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{d99289f1-013f-4b60-9b16-a1ee410f8f6e}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="sl_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sl_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0139e9df-c709-441d-98bf-c6fc9c097f5e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Project" languagecode="1033" />
+                        </labels>
+                        <control id="sl_project" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_project" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9e7e599d-0217-4448-852d-ae91a6a6bf5a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contact" languagecode="1033" />
+                        </labels>
+                        <control id="sl_contact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_contact" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6dc5ea0d-0179-4763-bd1f-621a616086d0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Country" languagecode="1033" />
+                        </labels>
+                        <control id="sl_country" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sl_country" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0dd6f874-1029-41eb-8407-5050ac4d6110}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Warranty Customer" languagecode="1033" />
+                        </labels>
+                        <control id="sl_warrantycustomer" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_warrantycustomer" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3bde703c-3cde-4e84-adc0-63cf0b9168bc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Warranty Number" languagecode="1033" />
+                        </labels>
+                        <control id="sl_warrantynumber" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_warrantynumber" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{05d2589a-2a81-4553-abf3-65b5cb53eaad}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Type" languagecode="1033" />
+                        </labels>
+                        <control id="sl_objecttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sl_objecttype" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="general_section_5" id="31f7c719-8d84-43dd-b3a0-0fd3daef272a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Delivery " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{080e1128-73d9-4bb9-bbd8-5a167587817e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Delivery Contact" languagecode="1033" />
+                        </labels>
+                        <control id="sl_deliverycontact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_deliverycontact" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3f01e682-56ea-4f46-b334-e980a3c197ed}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Shipped Date" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shippeddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_shippeddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a9072416-82c2-476a-a98e-9936ca2a426d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Received" languagecode="1033" />
+                        </labels>
+                        <control id="sl_received" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_received" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4e866bcb-704a-4fca-bf63-912c3f07cb98}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Assembled/Delivered Date" languagecode="1033" />
+                        </labels>
+                        <control id="sl_assembleddelivereddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_assembleddelivereddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4b6ec8b1-6502-4bc4-84f8-6675d22db1e8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Number Of Articles Sent" languagecode="1033" />
+                        </labels>
+                        <control id="sl_numberofarticlessent" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sl_numberofarticlessent" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="general_section_5" id="5a8eb579-c71f-44b0-a4b9-dcc6dba66953" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Description " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{2186220f-8a5d-4d42-903f-2f67b8a1b380}" locklevel="0" colspan="1" rowspan="1" showlabel="false">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="sl_description" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="sl_description" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="8d562999-eabb-4814-9867-3142fb8afc0e" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Products" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="3319b6bf-003f-4ba1-9b26-7022b95993b7" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_3" id="f9a2528d-6432-469a-ac4f-a3b7cf1738f4" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Details " languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_3_section_1" id="ba141fc6-eae1-48e4-9531-29c76209230b" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{b9b295a9-bdd3-4f89-b4a7-5f4cdd41b749}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Comment" languagecode="1033" />
+                        </labels>
+                        <control id="sl_comment" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="sl_comment" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4de67f18-036a-4de1-afb6-d13917f1aa15}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approved By" languagecode="1033" />
+                        </labels>
+                        <control id="sl_approvedbyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_approvedbyid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{24e08a11-ac73-4545-a27f-a3dddb3be1f7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pictures" languagecode="1033" />
+                        </labels>
+                        <control id="sl_pictures" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="sl_pictures" disabled="false" uniqueid="{f304a6b1-1c6d-428a-b1ca-026130411504}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f9a2300-3bcd-491f-b6aa-3384c1c21cc6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Customer Return Of Broken Goods" languagecode="1033" />
+                        </labels>
+                        <control id="sl_customerreturnofbrokengoods" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="sl_customerreturnofbrokengoods" disabled="false" uniqueid="{f95a8528-2344-4531-8d3d-3ab4d8fa3f8d}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_4" id="42a3fcb2-15d2-482d-a05e-42574c748928" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Documents " languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_4_section_1" id="912eaebc-54ca-48f0-b29d-d314702bebd8" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{3c28f7ac-2bd5-41a3-ace6-baa7e1efbf3e}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{b04e9009-1c29-4f29-ad2d-ef00451055f4}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{f7679fec-9cbf-45ac-86a2-27f510e3609b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5afd0178-5db8-486f-98aa-bb6352546d1a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell locklevel="0" id="{aa5760c4-79b9-4048-8435-118c7eabe9ef}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c9cfd5a2-77d4-4e44-bc5e-1b783f29f850}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+            <cell id="{7af6519d-52c0-45d6-8bc5-dc879ba8fec3}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Status" languagecode="1033" />
+              </labels>
+              <control id="header_statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+            </cell>
+            <cell id="{c30d3704-8f5f-4d71-bfbb-8d5b31472dfc}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Status Reason" languagecode="1033" />
+              </labels>
+              <control id="header_statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{9e25bd06-d080-4c96-b8b7-ae8ee055dca9}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{6e9bc533-9dd7-48c9-99db-645a660afd2b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{53d4a557-c875-4f1c-8182-d92c62d03d11}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{a71a983f-42ae-45a2-9f15-2667be38c0ec}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{f304a6b1-1c6d-428a-b1ca-026130411504}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>sl_pictures</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sl_pictures</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sl_pictures</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sl_pictures</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{f95a8528-2344-4531-8d3d-3ab4d8fa3f8d}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>sl_customerreturnofbrokengoods</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sl_customerreturnofbrokengoods</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sl_customerreturnofbrokengoods</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sl_customerreturnofbrokengoods</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
