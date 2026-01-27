@@ -74,30 +74,34 @@ jobs:
           powerapps_token = json.loads(urllib.request.urlopen(token_req).read())['access_token']
           print('Got PowerApps token')
 
-          # Step 2: Get token for Dataverse (to query environment ID)
-          dv_token_data = urllib.parse.urlencode({
-              'grant_type': 'client_credentials',
-              'client_id': client_id,
-              'client_secret': client_secret,
-              'scope': f'{env_url}/.default'
-          }).encode()
-          dv_token_req = urllib.request.Request(
-              f'https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token',
-              data=dv_token_data
-          )
-          dv_token = json.loads(urllib.request.urlopen(dv_token_req).read())['access_token']
-          print('Got Dataverse token')
+          # Step 2: Get environment ID by listing environments via PowerApps API
+          env_list_url = 'https://europe.api.powerapps.com/providers/Microsoft.PowerApps/environments?api-version=2016-11-01'
+          env_list_req = urllib.request.Request(env_list_url)
+          env_list_req.add_header('Authorization', f'Bearer {powerapps_token}')
+          env_list_req.add_header('Accept', 'application/json')
+          env_list_resp = json.loads(urllib.request.urlopen(env_list_req).read())
 
-          # Step 3: Get environment ID from Dataverse
-          org_url = f'{env_url}/api/data/v9.2/organizations?$select=environmentid'
-          org_req = urllib.request.Request(org_url)
-          org_req.add_header('Authorization', f'Bearer {dv_token}')
-          org_req.add_header('Accept', 'application/json')
-          org_resp = json.loads(urllib.request.urlopen(org_req).read())
-          env_id = org_resp['value'][0]['environmentid']
+          env_id = None
+          normalized_url = env_url.lower().rstrip('/')
+          for env in env_list_resp.get('value', []):
+              props = env.get('properties', {})
+              linked = props.get('linkedEnvironmentMetadata', {})
+              instance_url = linked.get('instanceUrl', '').lower().rstrip('/')
+              if instance_url == normalized_url:
+                  env_id = env['name']
+                  break
+
+          if not env_id:
+              print(f'ERROR: Could not find environment matching {env_url}')
+              print('Available environments:')
+              for env in env_list_resp.get('value', []):
+                  props = env.get('properties', {})
+                  linked = props.get('linkedEnvironmentMetadata', {})
+                  print(f'  {props.get("displayName", "?")} -> {linked.get("instanceUrl", "?")}')
+              sys.exit(1)
           print(f'Environment ID: {env_id}')
 
-          # Step 4: Check if a valid Dataverse SPN connection already exists
+          # Step 3: Check if a valid Dataverse SPN connection already exists
           list_url = f'https://europe.api.powerapps.com/providers/Microsoft.PowerApps/connections?api-version=2016-11-01&$filter=environment%20eq%20%27{env_id}%27'
           list_req = urllib.request.Request(list_url)
           list_req.add_header('Authorization', f'Bearer {powerapps_token}')
@@ -116,7 +120,7 @@ jobs:
                   break
 
           if not existing_conn_id:
-              # Step 5: Create a new Dataverse connection via PUT
+              # Step 4: Create a new Dataverse connection via PUT
               connection_id = str(uuid.uuid4())
               create_url = f'https://europe.api.powerapps.com/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps/connections/{connection_id}?api-version=2016-11-01&%24filter=environment%20eq%20%27{env_id}%27'
               body = {
@@ -150,7 +154,7 @@ jobs:
                   print(f'Failed to create connection: {e.code} - {e.read().decode()[:500]}')
                   sys.exit(1)
 
-          # Step 6: Write connection ID to env file for Claude to use
+          # Step 5: Write connection ID to env file for Claude to use
           conn_id_formatted = f'shared-commondataser-{existing_conn_id}'
           with open(os.environ.get('GITHUB_ENV', '/dev/null'), 'a') as f:
               f.write(f'DATAVERSE_CONNECTION_ID={conn_id_formatted}\n')
