@@ -45,14 +45,119 @@ jobs:
             --environment ${{ secrets.PP_ENVIRONMENT_URL }}
           pac org who
 
-      - name: Create Dataverse Connection for Service Principal
+      - name: Create Dataverse Connection via REST API
+        env:
+          PP_CLIENT_ID: ${{ secrets.PP_CLIENT_ID }}
+          PP_CLIENT_SECRET: ${{ secrets.PP_CLIENT_SECRET }}
+          PP_TENANT_ID: ${{ secrets.PP_TENANT_ID }}
+          PP_ENVIRONMENT_URL: ${{ secrets.PP_ENVIRONMENT_URL }}
         run: |
-          pac connection create \
-            --tenant-id ${{ secrets.PP_TENANT_ID }} \
-            --name "Dataverse" \
-            --application-id ${{ secrets.PP_CLIENT_ID }} \
-            --client-secret ${{ secrets.PP_CLIENT_SECRET }} \
-            --environment ${{ secrets.PP_ENVIRONMENT_URL }} || echo "Connection may already exist, continuing..."
+          python3 << 'PYEOF'
+          import urllib.request, urllib.parse, json, uuid, os, sys
+
+          client_id = os.environ['PP_CLIENT_ID']
+          client_secret = os.environ['PP_CLIENT_SECRET']
+          tenant_id = os.environ['PP_TENANT_ID']
+          env_url = os.environ['PP_ENVIRONMENT_URL'].rstrip('/')
+
+          # Step 1: Get token for PowerApps service (to create connection)
+          token_data = urllib.parse.urlencode({
+              'grant_type': 'client_credentials',
+              'client_id': client_id,
+              'client_secret': client_secret,
+              'scope': 'https://service.powerapps.com/.default'
+          }).encode()
+          token_req = urllib.request.Request(
+              f'https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token',
+              data=token_data
+          )
+          powerapps_token = json.loads(urllib.request.urlopen(token_req).read())['access_token']
+          print('Got PowerApps token')
+
+          # Step 2: Get token for Dataverse (to query environment ID)
+          dv_token_data = urllib.parse.urlencode({
+              'grant_type': 'client_credentials',
+              'client_id': client_id,
+              'client_secret': client_secret,
+              'scope': f'{env_url}/.default'
+          }).encode()
+          dv_token_req = urllib.request.Request(
+              f'https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token',
+              data=dv_token_data
+          )
+          dv_token = json.loads(urllib.request.urlopen(dv_token_req).read())['access_token']
+          print('Got Dataverse token')
+
+          # Step 3: Get environment ID from Dataverse
+          org_url = f'{env_url}/api/data/v9.2/organizations?$select=environmentid'
+          org_req = urllib.request.Request(org_url)
+          org_req.add_header('Authorization', f'Bearer {dv_token}')
+          org_req.add_header('Accept', 'application/json')
+          org_resp = json.loads(urllib.request.urlopen(org_req).read())
+          env_id = org_resp['value'][0]['environmentid']
+          print(f'Environment ID: {env_id}')
+
+          # Step 4: Check if a valid Dataverse SPN connection already exists
+          list_url = f'https://europe.api.powerapps.com/providers/Microsoft.PowerApps/connections?api-version=2016-11-01&$filter=environment%20eq%20%27{env_id}%27'
+          list_req = urllib.request.Request(list_url)
+          list_req.add_header('Authorization', f'Bearer {powerapps_token}')
+          list_req.add_header('Accept', 'application/json')
+          list_resp = json.loads(urllib.request.urlopen(list_req).read())
+
+          existing_conn_id = None
+          for conn in list_resp.get('value', []):
+              props = conn.get('properties', {})
+              api_id = props.get('apiId', '')
+              statuses = props.get('statuses', [])
+              is_connected = any(s.get('status') == 'Connected' for s in statuses)
+              if 'shared_commondataserviceforapps' in api_id and is_connected:
+                  existing_conn_id = conn['name']
+                  print(f'Found existing valid Dataverse connection: {existing_conn_id}')
+                  break
+
+          if not existing_conn_id:
+              # Step 5: Create a new Dataverse connection via PUT
+              connection_id = str(uuid.uuid4())
+              create_url = f'https://europe.api.powerapps.com/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps/connections/{connection_id}?api-version=2016-11-01&%24filter=environment%20eq%20%27{env_id}%27'
+              body = {
+                  "properties": {
+                      "environment": {
+                          "id": f"/providers/Microsoft.PowerApps/environments/{env_id}",
+                          "name": env_id
+                      },
+                      "connectionParametersSet": {
+                          "name": "ServicePrincipalOauth",
+                          "values": {
+                              "token:clientId": {"value": client_id},
+                              "token:clientSecret": {"value": client_secret},
+                              "token:TenantId": {"value": tenant_id},
+                              "token:grantType": {"value": "client_credentials"}
+                          }
+                      }
+                  }
+              }
+              create_req = urllib.request.Request(create_url, data=json.dumps(body).encode(), method='PUT')
+              create_req.add_header('Content-Type', 'application/json')
+              create_req.add_header('Accept', 'application/json')
+              create_req.add_header('Authorization', f'Bearer {powerapps_token}')
+              try:
+                  create_resp = json.loads(urllib.request.urlopen(create_req).read())
+                  existing_conn_id = create_resp['name']
+                  statuses = create_resp.get('properties', {}).get('statuses', [])
+                  status_str = ', '.join(s.get('status', '?') for s in statuses)
+                  print(f'Created Dataverse connection: {existing_conn_id} (status: {status_str})')
+              except urllib.error.HTTPError as e:
+                  print(f'Failed to create connection: {e.code} - {e.read().decode()[:500]}')
+                  sys.exit(1)
+
+          # Step 6: Write connection ID to env file for Claude to use
+          conn_id_formatted = f'shared-commondataser-{existing_conn_id}'
+          with open(os.environ.get('GITHUB_ENV', '/dev/null'), 'a') as f:
+              f.write(f'DATAVERSE_CONNECTION_ID={conn_id_formatted}\n')
+              f.write(f'PP_ENVIRONMENT_ID={env_id}\n')
+          print(f'Exported DATAVERSE_CONNECTION_ID={conn_id_formatted}')
+          print(f'Exported PP_ENVIRONMENT_ID={env_id}')
+          PYEOF
 
       - uses: anthropics/claude-code-action@v1
         with:
@@ -63,3 +168,5 @@ jobs:
           PP_CLIENT_SECRET: ${{ secrets.PP_CLIENT_SECRET }}
           PP_TENANT_ID: ${{ secrets.PP_TENANT_ID }}
           PP_ENVIRONMENT_URL: ${{ secrets.PP_ENVIRONMENT_URL }}
+          DATAVERSE_CONNECTION_ID: ${{ env.DATAVERSE_CONNECTION_ID }}
+          PP_ENVIRONMENT_ID: ${{ env.PP_ENVIRONMENT_ID }}
