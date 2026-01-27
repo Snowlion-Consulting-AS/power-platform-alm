@@ -344,6 +344,8 @@ The workflow provides pre-created connection IDs via environment variables:
 
 **IMPORTANT:** Do NOT try to use `pac connection create` or `pac connection list` — they fail on Linux due to keyring issues. Do NOT try to create connections via the PowerApps REST API — the SPN lacks a user plan. Just use the pre-created IDs from the environment variables.
 
+**CRITICAL: Connection ID format must be GUID-only** (e.g., `10b747de-5528-47fa-bbcf-ec5b229a7ec2`), NOT the full prefixed format (e.g., `shared-commondataser-10b747de-...`). The Dataverse Web API rejects the prefixed format with `ConnectionNotFound`.
+
 ```bash
 # Use the Dataverse Web API to find null connection references and update them
 
