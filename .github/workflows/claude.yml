@@ -48,7 +48,7 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          claude_args: '--allowedTools "Bash(unzip:*)" "Bash(zip:*)" "Bash(mkdir:*)" "Bash(rm:*)" "Bash(find:*)" "Bash(sed:*)" "Bash(grep:*)" "Bash(cat:*)" "Bash(cp:*)" "Bash(mv:*)" "Bash(ls:*)" "Bash(head:*)" "Bash(tail:*)" "Bash(cd:*)" "Bash(pac:*)" "Bash(dotnet:*)" "Bash(python3:*)" "Bash(export:*)"'
+          claude_args: '--allowedTools "Bash(unzip:*)" "Bash(zip:*)" "Bash(mkdir:*)" "Bash(rm:*)" "Bash(find:*)" "Bash(sed:*)" "Bash(grep:*)" "Bash(cat:*)" "Bash(cp:*)" "Bash(mv:*)" "Bash(ls:*)" "Bash(head:*)" "Bash(tail:*)" "Bash(cd:*)" "Bash(pac:*)" "Bash(dotnet:*)" "Bash(python3:*)" "Bash(export:*)" "Bash(curl:*)"'
         env:
           PP_CLIENT_ID: ${{ secrets.PP_CLIENT_ID }}
           PP_CLIENT_SECRET: ${{ secrets.PP_CLIENT_SECRET }}

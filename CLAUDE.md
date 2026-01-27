@@ -335,6 +335,67 @@ pac solution publish
 ```
 
 ### Full Workflow for Fixing a Connection
+
+**Method 1: Using Dataverse Web API (Recommended for Service Principal)**
+
+When `pac connection list` doesn't work with service principal auth, use the Dataverse Web API to query and update connection references directly:
+
+```bash
+# 1. Verify auth is working
+pac org who
+
+# 2. Get the environment URL
+ENV_URL="$PP_ENVIRONMENT_URL"  # e.g., https://snowlion-demo.crm4.dynamics.com
+
+# 3. Get an access token for Dataverse
+TOKEN=$(python3 -c "
+import urllib.request, urllib.parse, json, os
+data = urllib.parse.urlencode({
+    'grant_type': 'client_credentials',
+    'client_id': os.environ['PP_CLIENT_ID'],
+    'client_secret': os.environ['PP_CLIENT_SECRET'],
+    'scope': '${ENV_URL}/.default'
+}).encode()
+req = urllib.request.Request('https://login.microsoftonline.com/${PP_TENANT_ID}/oauth2/v2.0/token', data=data)
+resp = json.loads(urllib.request.urlopen(req).read())
+print(resp['access_token'])
+")
+
+# 4. Query connection references in the environment
+python3 -c "
+import urllib.request, json
+url = '${ENV_URL}/api/data/v9.2/connectionreferences?\$select=connectionreferenceid,connectionreferencelogicalname,connectorid,connectionid,statuscode'
+req = urllib.request.Request(url)
+req.add_header('Authorization', 'Bearer ${TOKEN}')
+req.add_header('OData-MaxVersion', '4.0')
+req.add_header('OData-Version', '4.0')
+req.add_header('Accept', 'application/json')
+resp = json.loads(urllib.request.urlopen(req).read())
+for cr in resp.get('value', []):
+    print(json.dumps(cr, indent=2))
+"
+
+# 5. Update a connection reference to point to a valid connection
+# Replace CONNECTION_REF_ID and NEW_CONNECTION_ID with actual values
+python3 -c "
+import urllib.request, json
+url = '${ENV_URL}/api/data/v9.2/connectionreferences(CONNECTION_REF_ID)'
+data = json.dumps({'connectionid': 'NEW_CONNECTION_ID'}).encode()
+req = urllib.request.Request(url, data=data, method='PATCH')
+req.add_header('Authorization', 'Bearer ${TOKEN}')
+req.add_header('Content-Type', 'application/json')
+req.add_header('OData-MaxVersion', '4.0')
+req.add_header('OData-Version', '4.0')
+urllib.request.urlopen(req)
+print('Connection reference updated successfully')
+"
+
+# 6. Publish changes
+pac solution publish
+```
+
+**Method 2: Re-import with Deployment Settings**
+
 ```bash
 # 1. Verify auth is working
 pac org who
@@ -358,6 +419,14 @@ pac solution import --path /tmp/sol.zip --force-overwrite true --settings-file /
 # 8. Publish
 pac solution publish
 ```
+
+### If `pac connection list` Fails with Service Principal
+
+The `pac connection list` command may fail with `AuthProfileSpnSecretNotFoundWithLinuxFallback` because it requires Power Platform Management API access which only supports delegated permissions. In this case:
+
+1. **Use the Dataverse Web API** (Method 1 above) to query `connectionreferences` entity directly
+2. **Query connections via API**: `GET {env_url}/api/data/v9.2/connections?$select=connectionid,name,connectorid,statuscode`
+3. **Create a new connection** if needed, or use the service principal's own connection that gets created automatically when it authenticates
 
 ## Troubleshooting
 
