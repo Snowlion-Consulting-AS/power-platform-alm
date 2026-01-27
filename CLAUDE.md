@@ -336,15 +336,16 @@ pac solution publish
 
 ### Full Workflow for Fixing a Connection
 
-**Method 0: Using Pre-Created Connection + Dataverse Web API (PREFERRED)**
+**Method 0: Using Pre-Created Connection IDs + Dataverse Web API (PREFERRED)**
 
-The workflow creates a Dataverse connection at startup via REST API and exports `DATAVERSE_CONNECTION_ID` as an environment variable. Use this to update null connection references.
+The workflow provides pre-created connection IDs via environment variables:
+- `DATAVERSE_CONNECTION_ID` — for Dataverse (`shared_commondataserviceforapps`) connection references
+- `CONTENT_CONVERSION_CONNECTION_ID` — for Content Conversion (`shared_conversionservice`) connection references
 
-**IMPORTANT:** The `DATAVERSE_CONNECTION_ID` environment variable is set by the workflow. Use it directly — do NOT try to use `pac connection create` or `pac connection list` (they fail on Linux due to keyring issues).
+**IMPORTANT:** Do NOT try to use `pac connection create` or `pac connection list` — they fail on Linux due to keyring issues. Do NOT try to create connections via the PowerApps REST API — the SPN lacks a user plan. Just use the pre-created IDs from the environment variables.
 
 ```bash
-# The DATAVERSE_CONNECTION_ID env var is already set by the workflow (e.g., "shared-commondataser-<guid>")
-# Just use the Dataverse Web API to find null connection references and update them
+# Use the Dataverse Web API to find null connection references and update them
 
 python3 << 'PYEOF'
 import urllib.request, urllib.parse, json, os
@@ -353,7 +354,15 @@ env_url = os.environ['PP_ENVIRONMENT_URL'].rstrip('/')
 client_id = os.environ['PP_CLIENT_ID']
 client_secret = os.environ['PP_CLIENT_SECRET']
 tenant_id = os.environ['PP_TENANT_ID']
-connection_id = os.environ['DATAVERSE_CONNECTION_ID']
+dataverse_conn_id = os.environ['DATAVERSE_CONNECTION_ID']
+content_conv_conn_id = os.environ.get('CONTENT_CONVERSION_CONNECTION_ID', '')
+
+# Map connector IDs to their pre-created connection IDs
+connector_map = {
+    '/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps': dataverse_conn_id,
+}
+if content_conv_conn_id:
+    connector_map['/providers/Microsoft.PowerApps/apis/shared_conversionservice'] = content_conv_conn_id
 
 # Get Dataverse token
 data = urllib.parse.urlencode({
@@ -372,25 +381,30 @@ headers = {
     'Accept': 'application/json'
 }
 
-# Find Dataverse connection references with null connectionid
-url = f"{env_url}/api/data/v9.2/connectionreferences?$select=connectionreferenceid,connectionreferencelogicalname,connectorid,connectionid&$filter=connectorid eq '/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps' and connectionid eq null"
+# Find ALL connection references with null connectionid
+url = f"{env_url}/api/data/v9.2/connectionreferences?$select=connectionreferenceid,connectionreferencelogicalname,connectorid,connectionid&$filter=connectionid eq null"
 req = urllib.request.Request(url)
 for k, v in headers.items():
     req.add_header(k, v)
 null_refs = json.loads(urllib.request.urlopen(req).read()).get('value', [])
-print(f'Found {len(null_refs)} null Dataverse connection references')
+print(f'Found {len(null_refs)} null connection references')
 
-# Update each null reference with the pre-created connection
+# Update each null reference with the matching pre-created connection
 for ref in null_refs:
+    connector_id = ref.get('connectorid', '')
+    conn_id = connector_map.get(connector_id)
+    if not conn_id:
+        print(f'SKIP: No connection for connector {connector_id} ({ref["connectionreferencelogicalname"]})')
+        continue
     ref_id = ref['connectionreferenceid']
     patch_url = f'{env_url}/api/data/v9.2/connectionreferences({ref_id})'
-    patch_data = json.dumps({'connectionid': connection_id}).encode()
+    patch_data = json.dumps({'connectionid': conn_id}).encode()
     patch_req = urllib.request.Request(patch_url, data=patch_data, method='PATCH')
     for k, v in headers.items():
         patch_req.add_header(k, v)
     patch_req.add_header('Content-Type', 'application/json')
     urllib.request.urlopen(patch_req)
-    print(f'Updated {ref["connectionreferencelogicalname"]} with connection {connection_id}')
+    print(f'Updated {ref["connectionreferencelogicalname"]} with connection {conn_id}')
 
 print('Done!')
 PYEOF
