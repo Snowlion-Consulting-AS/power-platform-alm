@@ -1,0 +1,32 @@
+<appaction uniquename="sl__AddProducts!ab9bdec7485a4956930117bc3fb58b7c!sl_Demo!sl_orderitem!2">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Add Products">
+    <label description="Add Products" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>sl_orderitem</logicalname>
+  </contextentity>
+  <contextvalue>sl_orderitem</contextvalue>
+  <fonticon>$clientsvg:AddProduct</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>2</location>
+  <name>AddProducts!ab9bdec7485a4956930117bc3fb58b7c</name>
+  <onclickeventjavascriptfunctionname>LoadOrder</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>fe051cd8-a803-ef11-9f89-6045bd9dd44b</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100015.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

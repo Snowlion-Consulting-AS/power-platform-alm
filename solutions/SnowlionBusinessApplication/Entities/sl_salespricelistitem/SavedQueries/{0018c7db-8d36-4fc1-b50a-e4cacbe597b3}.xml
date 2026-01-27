@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{0018c7db-8d36-4fc1-b50a-e4cacbe597b3}</savedqueryid>
+    <layoutxml>
+      <grid name="sl_salespricelistitems" jump="sl_name" select="1" icon="1" preview="1">
+        <row name="sl_salespricelistitem" id="sl_salespricelistitemid">
+          <cell name="sl_assetno" width="108" />
+          <cell name="sl_name" width="300" />
+          <cell name="sl_amount" width="100" />
+          <cell name="sl_unitofmeasure" width="168" />
+          <cell name="sl_salespricelist" width="123" />
+          <cell name="transactioncurrencyid" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sl_salespricelistitem">
+          <attribute name="sl_salespricelistitemid" />
+          <attribute name="sl_name" />
+          <order attribute="sl_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="sl_assetno" />
+          <attribute name="sl_amount" />
+          <attribute name="sl_unitofmeasure" />
+          <attribute name="sl_salespricelist" />
+          <attribute name="transactioncurrencyid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Sales Price list item Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,2 @@
+sl_baseamount: =sl_quantity * Decimal(sl_priceperunit)
+sl_extendedamount: =sl_baseamount - (sl_discount * sl_baseamount / 100)

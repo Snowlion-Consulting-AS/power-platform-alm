@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{9f27d68d-56a5-ee11-be37-000d3ab1baf6}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sl_name" select="1" icon="1" preview="1">
+        <row name="result" id="sl_projectid">
+          <cell name="sl_projectnumber" width="126" />
+          <cell name="sl_name" width="300" />
+          <cell name="sl_activestagechoice" width="112" />
+          <cell name="sl_estrevenue" width="110" />
+          <cell name="sl_probability" width="103" />
+          <cell name="statecode" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sl_project">
+          <attribute name="sl_projectid" />
+          <attribute name="sl_name" />
+          <order attribute="sl_name" descending="false" />
+          <attribute name="sl_probability" />
+          <attribute name="sl_estrevenue" />
+          <attribute name="statecode" />
+          <attribute name="sl_projectnumber" />
+          <attribute name="sl_activestagechoice" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Projects" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

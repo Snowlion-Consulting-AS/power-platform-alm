@@ -1,0 +1,37 @@
+<appaction uniquename="sl__SubmittoERP!0653e10a05d746fc98ef28d29dfd68b4!sl_Demo!sl_order!0">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Submit to ERP">
+    <label description="Submit to ERP" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>sl_order</logicalname>
+  </contextentity>
+  <contextvalue>sl_order</contextvalue>
+  <fonticon>SendSelected</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>SubmittoERP!0653e10a05d746fc98ef28d29dfd68b4</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>sl_demodefaultcommandlibrary_d8db4</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>82f810ee9259412aa79762272e314513</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100015.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>sl_demodefaultcommandlibrary_d8db4</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>82f810ee9259412aa79762272e314513</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

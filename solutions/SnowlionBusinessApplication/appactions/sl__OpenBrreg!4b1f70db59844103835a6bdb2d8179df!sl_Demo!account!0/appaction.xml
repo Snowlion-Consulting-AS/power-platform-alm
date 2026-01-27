@@ -1,0 +1,32 @@
+<appaction uniquename="sl__OpenBrreg!4b1f70db59844103835a6bdb2d8179df!sl_Demo!account!0">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Open Brreg">
+    <label description="Open Brreg" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>account</logicalname>
+  </contextentity>
+  <contextvalue>account</contextvalue>
+  <fonticon>$clientsvg:Certificate</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>OpenBrreg!4b1f70db59844103835a6bdb2d8179df</name>
+  <onclickeventjavascriptfunctionname>onLoad</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>3e90fc3a-ab03-ef11-9f8a-000d3a28bd73</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100015.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{aa9c2e1e-fa68-4093-b446-a796641f8d36}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sl_name" select="1" icon="1" preview="1">
+        <row name="result" id="sl_orderid">
+          <cell name="sl_ordernumber" width="123" />
+          <cell name="sl_name" width="300" />
+          <cell name="sl_account" width="100" />
+          <cell name="sl_salespeople" width="157" />
+          <cell name="statuscode" width="119" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sl_order">
+          <attribute name="sl_orderid" />
+          <attribute name="sl_name" />
+          <order attribute="sl_name" descending="false" />
+          <attribute name="sl_ordernumber" />
+          <attribute name="statuscode" />
+          <attribute name="sl_account" />
+          <attribute name="sl_salespeople" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Orders" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

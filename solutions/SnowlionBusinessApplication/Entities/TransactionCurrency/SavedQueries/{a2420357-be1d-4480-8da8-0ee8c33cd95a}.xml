@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery unmodified="1">
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{a2420357-be1d-4480-8da8-0ee8c33cd95a}</savedqueryid>
+    <queryapi></queryapi>
+    <layoutxml>
+      <grid name="resultset" jump="currencyname" select="1" icon="1" preview="1">
+        <row name="result" id="transactioncurrencyid">
+          <cell name="currencyname" width="200" />
+          <cell name="isocurrencycode" width="125" />
+          <cell name="currencysymbol" width="100" />
+          <cell name="exchangerate" width="100" />
+          <cell name="currencyprecision" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="transactioncurrency">
+          <attribute name="transactioncurrencyid" />
+          <attribute name="currencyname" />
+          <attribute name="isocurrencycode" />
+          <attribute name="currencysymbol" />
+          <attribute name="exchangerate" />
+          <attribute name="currencyprecision" />
+          <order attribute="currencyname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Currencies" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

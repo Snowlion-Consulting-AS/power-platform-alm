@@ -1,0 +1,32 @@
+<appaction uniquename="sl__NewfromBrreg!a5c1a4dfe11043d4b00ef7a29d2e4b3b!sl_Demo!account!1">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="New from Brreg">
+    <label description="New from Brreg" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>account</logicalname>
+  </contextentity>
+  <contextvalue>account</contextvalue>
+  <fonticon>CreateInvoice</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>1</location>
+  <name>NewfromBrreg!a5c1a4dfe11043d4b00ef7a29d2e4b3b</name>
+  <onclickeventjavascriptfunctionname>loadBrreg</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>3e90fc3a-ab03-ef11-9f8a-000d3a28bd73</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>1000100010.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>
