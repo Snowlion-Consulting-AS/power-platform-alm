@@ -74,31 +74,15 @@ jobs:
           powerapps_token = json.loads(urllib.request.urlopen(token_req).read())['access_token']
           print('Got PowerApps token')
 
-          # Step 2: Get environment ID by listing environments via PowerApps API
-          env_list_url = 'https://europe.api.powerapps.com/providers/Microsoft.PowerApps/environments?api-version=2016-11-01'
-          env_list_req = urllib.request.Request(env_list_url)
-          env_list_req.add_header('Authorization', f'Bearer {powerapps_token}')
-          env_list_req.add_header('Accept', 'application/json')
-          env_list_resp = json.loads(urllib.request.urlopen(env_list_req).read())
-
-          env_id = None
-          normalized_url = env_url.lower().rstrip('/')
-          for env in env_list_resp.get('value', []):
-              props = env.get('properties', {})
-              linked = props.get('linkedEnvironmentMetadata', {})
-              instance_url = linked.get('instanceUrl', '').lower().rstrip('/')
-              if instance_url == normalized_url:
-                  env_id = env['name']
-                  break
-
-          if not env_id:
-              print(f'ERROR: Could not find environment matching {env_url}')
-              print('Available environments:')
-              for env in env_list_resp.get('value', []):
-                  props = env.get('properties', {})
-                  linked = props.get('linkedEnvironmentMetadata', {})
-                  print(f'  {props.get("displayName", "?")} -> {linked.get("instanceUrl", "?")}')
+          # Step 2: Get environment ID from pac org who
+          import subprocess, re
+          pac_output = subprocess.check_output(['pac', 'org', 'who'], text=True)
+          env_match = re.search(r'Environment ID:\s+([0-9a-f-]+)', pac_output)
+          if not env_match:
+              print(f'ERROR: Could not find Environment ID in pac org who output:')
+              print(pac_output)
               sys.exit(1)
+          env_id = env_match.group(1)
           print(f'Environment ID: {env_id}')
 
           # Step 3: Check if a valid Dataverse SPN connection already exists
