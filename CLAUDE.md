@@ -222,7 +222,28 @@ Controls have `Rules` arrays that define property values:
 }
 ```
 
-To change a color, find the control by Name, then update the `InvariantScript` for the `Fill` property.
+### CRITICAL: Changing Colors in Canvas Apps
+
+When changing a control's color, you **MUST update ALL fill-related properties**, not just `Fill`. Controls have multiple fill states:
+
+- `Fill` - Normal state
+- `HoverFill` - Mouse hover state
+- `PressedFill` - Click/pressed state
+- `DisabledFill` - Disabled state
+- `FocusedBorderColor` - Focus border
+- `BorderColor` - Border color
+
+**If you only change `Fill`, the control will still appear in the old color** because `HoverFill`, `PressedFill`, or `DisabledFill` may override it at runtime.
+
+Also check for **other controls that reference the target control's properties**. For example, `Rectangle3.Fill = shp_headerBackground.DisabledFill` means Rectangle3 inherits from the header's disabled fill. Update these references too (e.g., change `.DisabledFill` to `.Fill`).
+
+**Steps to change a control's color:**
+1. Find the control by `Name` in the JSON
+2. Update `InvariantScript` for ALL of: `Fill`, `HoverFill`, `PressedFill`, `DisabledFill`
+3. Search the entire control tree for any controls referencing the target control (e.g., `grep` for the control name)
+4. Update those references if they point to old color values
+
+**Important:** The JSON structure starts with `content['TopParent']` - always begin traversal there.
 
 ### Common Color Values
 - Theme primary: `App.Theme.Colors.Primary` (resolves at runtime)
