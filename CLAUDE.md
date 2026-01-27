@@ -278,6 +278,87 @@ git push -u origin feature/my-change
 gh pr create --title "My change" --body "Description"
 ```
 
+## Managing Connections and Connection References
+
+Connections in Power Platform can become invalidated when:
+- The authentication token expires (~2 years)
+- The connected user account no longer exists
+- The connection needs re-authentication
+
+This environment is pre-authenticated with a **service principal** via PAC CLI. The auth profile is created during CI setup.
+
+### Check Current Auth
+```bash
+pac auth list
+pac org who
+```
+
+### Connection References in Solutions
+Connection references are stored in `ConnectionReferences/` within unpacked solutions. They map connectors to specific connections.
+
+### Updating a Cloud Flow's Connector
+Cloud flows are in `Workflows/*.json`. The connector API name for Dataverse is `shared_commondataserviceforapps`.
+
+To fix a broken flow connection:
+1. Export the solution containing the flow
+2. Identify the connection reference used by the flow
+3. Update connection reference mapping during import using deployment settings
+4. Re-import and publish
+
+### Using PAC CLI for Connection Management
+```bash
+# List connections in the environment
+pac connection list
+
+# List connection references in a solution
+pac solution list
+
+# Import with connection mapping (deployment settings)
+pac solution import --path /tmp/solution.zip --force-overwrite true --settings-file /tmp/deployment-settings.json
+
+# Publish after import
+pac solution publish
+```
+
+### Deployment Settings File Format
+```json
+{
+  "EnvironmentVariables": [],
+  "ConnectionReferences": [
+    {
+      "LogicalName": "new_sharedcommondataserviceforapps_xxxxx",
+      "ConnectionId": "shared-commondataser-xxxxxxxx-xxxx-xxxx",
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+    }
+  ]
+}
+```
+
+### Full Workflow for Fixing a Connection
+```bash
+# 1. Verify auth is working
+pac org who
+
+# 2. Export the solution
+pac solution export --name "SolutionName" --path /tmp/sol.zip --managed false
+
+# 3. Unpack to inspect
+pac solution unpack --zipfile /tmp/sol.zip --folder /tmp/sol_unpacked --allowWrite true
+
+# 4. Check connection references
+cat /tmp/sol_unpacked/ConnectionReferences/*.json
+
+# 5. List available connections to find a valid one
+pac connection list
+
+# 6. Create deployment settings with correct connection mapping
+# 7. Re-import with deployment settings
+pac solution import --path /tmp/sol.zip --force-overwrite true --settings-file /tmp/deployment-settings.json
+
+# 8. Publish
+pac solution publish
+```
+
 ## Troubleshooting
 
 ### PAC command not found

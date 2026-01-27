@@ -26,7 +26,31 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Install PAC CLI
+        run: dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+
+      - name: Authenticate PAC CLI with Service Principal
+        run: |
+          export PATH="$PATH:$HOME/.dotnet/tools"
+          pac auth create \
+            --applicationId ${{ secrets.PP_CLIENT_ID }} \
+            --clientSecret ${{ secrets.PP_CLIENT_SECRET }} \
+            --tenant ${{ secrets.PP_TENANT_ID }} \
+            --environment ${{ secrets.PP_ENVIRONMENT_URL }}
+          pac org who
+
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          claude_args: '--allowedTools "Bash(unzip:*)" "Bash(zip:*)" "Bash(mkdir:*)" "Bash(rm:*)" "Bash(find:*)" "Bash(sed:*)" "Bash(grep:*)" "Bash(cat:*)" "Bash(cp:*)" "Bash(mv:*)" "Bash(ls:*)" "Bash(head:*)" "Bash(tail:*)" "Bash(cd:*)" "Bash(pac:*)" "Bash(dotnet:*)" "Bash(python3:*)"'
+          claude_args: '--allowedTools "Bash(unzip:*)" "Bash(zip:*)" "Bash(mkdir:*)" "Bash(rm:*)" "Bash(find:*)" "Bash(sed:*)" "Bash(grep:*)" "Bash(cat:*)" "Bash(cp:*)" "Bash(mv:*)" "Bash(ls:*)" "Bash(head:*)" "Bash(tail:*)" "Bash(cd:*)" "Bash(pac:*)" "Bash(dotnet:*)" "Bash(python3:*)" "Bash(export:*)"'
+        env:
+          PATH: ${{ env.PATH }}:$HOME/.dotnet/tools
+          PP_CLIENT_ID: ${{ secrets.PP_CLIENT_ID }}
+          PP_CLIENT_SECRET: ${{ secrets.PP_CLIENT_SECRET }}
+          PP_TENANT_ID: ${{ secrets.PP_TENANT_ID }}
+          PP_ENVIRONMENT_URL: ${{ secrets.PP_ENVIRONMENT_URL }}
