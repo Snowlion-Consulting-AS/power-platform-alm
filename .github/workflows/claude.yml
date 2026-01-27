@@ -45,6 +45,15 @@ jobs:
             --environment ${{ secrets.PP_ENVIRONMENT_URL }}
           pac org who
 
+      - name: Create Dataverse Connection for Service Principal
+        run: |
+          pac connection create \
+            --tenant-id ${{ secrets.PP_TENANT_ID }} \
+            --name "Dataverse" \
+            --application-id ${{ secrets.PP_CLIENT_ID }} \
+            --client-secret ${{ secrets.PP_CLIENT_SECRET }} \
+            --environment ${{ secrets.PP_ENVIRONMENT_URL }} || echo "Connection may already exist, continuing..."
+
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}

@@ -336,6 +336,109 @@ pac solution publish
 
 ### Full Workflow for Fixing a Connection
 
+**Method 0: Using `pac connection create` + Dataverse Web API (PREFERRED)**
+
+This is the most reliable method for CI/CD. The workflow already creates a Dataverse connection at startup. You just need to find the connection ID and update the connection reference.
+
+```bash
+# 1. The connection was already created by the workflow step "Create Dataverse Connection".
+#    It uses: pac connection create --tenant-id ... --name "Dataverse" --application-id ... --client-secret ...
+#    If you need to create it manually:
+pac connection create \
+  --tenant-id "$PP_TENANT_ID" \
+  --name "Dataverse" \
+  --application-id "$PP_CLIENT_ID" \
+  --client-secret "$PP_CLIENT_SECRET" \
+  --environment "$PP_ENVIRONMENT_URL" || echo "Connection may already exist"
+
+# 2. Get OAuth token for Dataverse Web API
+ENV_URL="$PP_ENVIRONMENT_URL"
+TOKEN=$(python3 -c "
+import urllib.request, urllib.parse, json, os
+data = urllib.parse.urlencode({
+    'grant_type': 'client_credentials',
+    'client_id': os.environ['PP_CLIENT_ID'],
+    'client_secret': os.environ['PP_CLIENT_SECRET'],
+    'scope': os.environ['PP_ENVIRONMENT_URL'] + '/.default'
+}).encode()
+req = urllib.request.Request('https://login.microsoftonline.com/' + os.environ['PP_TENANT_ID'] + '/oauth2/v2.0/token', data=data)
+resp = json.loads(urllib.request.urlopen(req).read())
+print(resp['access_token'])
+")
+
+# 3. Find the connection reference with null connectionid AND find the new connection
+python3 << 'PYEOF'
+import urllib.request, json, os
+
+env_url = os.environ['PP_ENVIRONMENT_URL'].rstrip('/')
+token = os.environ.get('TOKEN', '')  # You may need to pass TOKEN as env var
+# If TOKEN isn't set, recalculate it:
+if not token:
+    import urllib.parse
+    data = urllib.parse.urlencode({
+        'grant_type': 'client_credentials',
+        'client_id': os.environ['PP_CLIENT_ID'],
+        'client_secret': os.environ['PP_CLIENT_SECRET'],
+        'scope': env_url + '/.default'
+    }).encode()
+    req = urllib.request.Request('https://login.microsoftonline.com/' + os.environ['PP_TENANT_ID'] + '/oauth2/v2.0/token', data=data)
+    token = json.loads(urllib.request.urlopen(req).read())['access_token']
+
+headers = {
+    'Authorization': f'Bearer {token}',
+    'OData-MaxVersion': '4.0',
+    'OData-Version': '4.0',
+    'Accept': 'application/json'
+}
+
+# Find connection references with null connectionid for Dataverse connector
+url = f'{env_url}/api/data/v9.2/connectionreferences?$select=connectionreferenceid,connectionreferencelogicalname,connectorid,connectionid&$filter=connectorid eq \'/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps\' and connectionid eq null'
+req = urllib.request.Request(url)
+for k, v in headers.items():
+    req.add_header(k, v)
+resp = json.loads(urllib.request.urlopen(req).read())
+null_refs = resp.get('value', [])
+print(f'Found {len(null_refs)} Dataverse connection references with null connectionid')
+for ref in null_refs:
+    print(f'  - {ref["connectionreferencelogicalname"]} (ID: {ref["connectionreferenceid"]})')
+
+# Find the Dataverse connection that was created by pac connection create
+# It should be the one with connectorid containing 'shared_commondataserviceforapps'
+url2 = f'{env_url}/api/data/v9.2/connectionreferences?$select=connectionreferenceid,connectionreferencelogicalname,connectorid,connectionid&$filter=connectorid eq \'/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps\' and connectionid ne null'
+req2 = urllib.request.Request(url2)
+for k, v in headers.items():
+    req2.add_header(k, v)
+resp2 = json.loads(urllib.request.urlopen(req2).read())
+valid_refs = resp2.get('value', [])
+connection_id = None
+if valid_refs:
+    connection_id = valid_refs[0]['connectionid']
+    print(f'Found valid connection ID: {connection_id}')
+
+if not connection_id:
+    # pac connection create outputs the connection name; we need to find it
+    # Query all connections via Power Apps API or check pac connection list output
+    print('WARNING: No valid Dataverse connection found. Need to check pac connection list or Power Apps API.')
+else:
+    # Update all null connection references to use this connection
+    for ref in null_refs:
+        ref_id = ref['connectionreferenceid']
+        patch_url = f'{env_url}/api/data/v9.2/connectionreferences({ref_id})'
+        patch_data = json.dumps({'connectionid': connection_id}).encode()
+        patch_req = urllib.request.Request(patch_url, data=patch_data, method='PATCH')
+        for k, v in headers.items():
+            patch_req.add_header(k, v)
+        patch_req.add_header('Content-Type', 'application/json')
+        urllib.request.urlopen(patch_req)
+        print(f'Updated {ref["connectionreferencelogicalname"]} with connection {connection_id}')
+
+print('Done! Run: pac solution publish')
+PYEOF
+
+# 4. Publish changes
+pac solution publish
+```
+
 **Method 1: Using Dataverse Web API (Recommended for Service Principal)**
 
 When `pac connection list` doesn't work with service principal auth, use the Dataverse Web API to query and update connection references directly:
