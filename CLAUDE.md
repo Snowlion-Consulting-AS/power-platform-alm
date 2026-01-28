@@ -72,17 +72,23 @@ After publishing, verify your change was applied using the Dataverse Web API or 
 
 After the change is deployed and verified, **always comment on the issue with a direct link** where the user can review the change in the Power Platform environment. This lets the user verify the result without having to navigate there themselves.
 
-Construct the link based on the type of change:
-- **Table/Column changes:** Link to the table in the Power Apps Maker Portal:
-  `https://make.powerapps.com/environments/{environment-id}/entities/{table-logical-name}/columns`
-- **Form changes:** Link to the form editor:
-  `https://make.powerapps.com/environments/{environment-id}/entities/{table-logical-name}/forms`
-- **Solution changes:** Link to the solution:
-  `https://make.powerapps.com/environments/{environment-id}/solutions/{solution-id}`
-- **General:** At minimum, link to the environment's Maker Portal:
-  `https://make.powerapps.com/environments/{environment-id}`
+Get the environment ID from `pac org who` (the "Environment ID" field). Then construct the most relevant link based on **whatever was changed**:
 
-Get the environment ID from `pac org who` (the "Environment ID" field). Always include this link in your completion comment on the issue.
+| What was changed | Link to provide |
+|---|---|
+| Table / Columns | `https://make.powerapps.com/environments/{env-id}/entities/{table-logical-name}/columns` |
+| Form | `https://make.powerapps.com/environments/{env-id}/entities/{table-logical-name}/forms` |
+| Model-driven app | `https://make.powerapps.com/environments/{env-id}/apps` |
+| Canvas app | `https://make.powerapps.com/environments/{env-id}/apps` |
+| Cloud flow | `https://make.powerapps.com/environments/{env-id}/flows` |
+| Dashboard | `https://make.powerapps.com/environments/{env-id}/dashboards` |
+| Security role | `https://make.powerapps.com/environments/{env-id}/security/roles` |
+| Web resource / JS | `https://make.powerapps.com/environments/{env-id}/solutions/{solution-id}` |
+| PCF component | `https://make.powerapps.com/environments/{env-id}/solutions/{solution-id}` |
+| Solution (general) | `https://make.powerapps.com/environments/{env-id}/solutions/{solution-id}` |
+| Anything else | `https://make.powerapps.com/environments/{env-id}` |
+
+If multiple types of components were changed, provide **multiple links** — one for each. Always include at least one review link in the completion comment.
 
 ### NEVER Do This
 
