@@ -23,11 +23,14 @@ Use the output of `pac org who` to determine the environment URL, org name, and 
 **If the issue or task does not clearly specify which solution, table, form, or section to modify — STOP and ask for clarification by commenting on the issue.** Do not guess or assume.
 
 Specifically, ask before proceeding if any of these are unclear:
+- Which **tenant** the change should target (e.g. Snowlion, Norbygg, etc.)
+- Which **environment** is intended (e.g. Dev, Test, Demo, Production)
 - Which **solution** to export and modify
 - Which **table** (entity) to add columns to
 - Which **form** or **section** to place fields in
-- Which **environment** is intended (if multiple are available)
 - What **type** of field/column to create (text, number, lookup, etc.)
+
+Even if the PAC CLI is already authenticated to an environment, **do not assume that is the correct target** for the task. If the issue mentions a different tenant or environment than what `pac org who` returns, stop and ask for clarification.
 
 It is always better to ask a clarifying question than to make a wrong assumption.
 
@@ -64,6 +67,22 @@ pac solution publish
 ### Step 5: Verify the Change
 
 After publishing, verify your change was applied using the Dataverse Web API or by re-exporting the solution.
+
+### Step 6: Provide a Review Link
+
+After the change is deployed and verified, **always comment on the issue with a direct link** where the user can review the change in the Power Platform environment. This lets the user verify the result without having to navigate there themselves.
+
+Construct the link based on the type of change:
+- **Table/Column changes:** Link to the table in the Power Apps Maker Portal:
+  `https://make.powerapps.com/environments/{environment-id}/entities/{table-logical-name}/columns`
+- **Form changes:** Link to the form editor:
+  `https://make.powerapps.com/environments/{environment-id}/entities/{table-logical-name}/forms`
+- **Solution changes:** Link to the solution:
+  `https://make.powerapps.com/environments/{environment-id}/solutions/{solution-id}`
+- **General:** At minimum, link to the environment's Maker Portal:
+  `https://make.powerapps.com/environments/{environment-id}`
+
+Get the environment ID from `pac org who` (the "Environment ID" field). Always include this link in your completion comment on the issue.
 
 ### NEVER Do This
 
