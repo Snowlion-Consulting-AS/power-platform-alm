@@ -77,7 +77,86 @@ Even if the PAC CLI is already authenticated to an environment, **do not assume 
 
 **The goal is to minimize back-and-forth.** The user expects you to do the investigation, not to ask them to do it for you.
 
-### Step 2: Export Fresh From the Environment
+### FAST PATH: Use Dataverse Web API for Simple Changes
+
+For simple metadata operations (adding columns, updating labels, querying data), **skip the solution export/import cycle** and use the Dataverse Web API directly. This is **10x faster** (~5 seconds vs 1-5 minutes).
+
+**Use the Web API when:**
+- Adding a new column to a table
+- Updating column/table display names or descriptions
+- Querying entities, forms, or views
+- Creating or updating records
+- Updating connection references
+
+**Use the full solution cycle (Steps 2-5) when:**
+- Modifying forms, views, or dashboards
+- Adding fields to forms (not just creating columns)
+- Working with Canvas apps, Cloud flows, or PCF components
+- Any change that requires XML file editing
+
+#### Web API Quick Reference
+
+```python
+python3 << 'PYEOF'
+import urllib.request, urllib.parse, json, os
+
+# Get credentials from prefixed env vars (e.g., SNOWLION_PP_CLIENT_ID)
+prefix = "SNOWLION"  # Change based on tenant
+env_url = os.environ[f'{prefix}_PP_ENVIRONMENT_URL'].rstrip('/')
+client_id = os.environ[f'{prefix}_PP_CLIENT_ID']
+client_secret = os.environ[f'{prefix}_PP_CLIENT_SECRET']
+tenant_id = os.environ[f'{prefix}_PP_TENANT_ID']
+
+# Get access token
+data = urllib.parse.urlencode({
+    'grant_type': 'client_credentials',
+    'client_id': client_id,
+    'client_secret': client_secret,
+    'scope': f'{env_url}/.default'
+}).encode()
+req = urllib.request.Request(f'https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token', data=data)
+token = json.loads(urllib.request.urlopen(req).read())['access_token']
+
+headers = {
+    'Authorization': f'Bearer {token}',
+    'OData-MaxVersion': '4.0',
+    'OData-Version': '4.0',
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+}
+
+# Example: Create a new text column on account table
+column_def = {
+    "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+    "SchemaName": "new_mytextfield",
+    "DisplayName": {"@odata.type": "Microsoft.Dynamics.CRM.Label", "LocalizedLabels": [{"@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel", "Label": "My Text Field", "LanguageCode": 1033}]},
+    "RequiredLevel": {"Value": "None"},
+    "MaxLength": 100,
+    "FormatName": {"Value": "Text"}
+}
+
+url = f"{env_url}/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes"
+req = urllib.request.Request(url, data=json.dumps(column_def).encode(), method='POST')
+for k, v in headers.items():
+    req.add_header(k, v)
+resp = urllib.request.urlopen(req)
+print(f"Column created: {resp.status}")
+PYEOF
+```
+
+#### Common Web API Operations
+
+| Operation | Endpoint | Method |
+|-----------|----------|--------|
+| List tables | `/api/data/v9.2/EntityDefinitions?$select=LogicalName,DisplayName` | GET |
+| List columns | `/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes` | GET |
+| Create column | `/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes` | POST |
+| Query forms | `/api/data/v9.2/systemforms?$filter=objecttypecode eq 'account'` | GET |
+| Update connection ref | `/api/data/v9.2/connectionreferences({id})` | PATCH |
+
+After making Web API changes, always run `pac solution publish` to publish customizations.
+
+### Step 2: Export Fresh From the Environment (Full Cycle)
 
 **DO NOT blindly trust solution files already in the repo.** They may be outdated or from a different project entirely. Always export fresh:
 
