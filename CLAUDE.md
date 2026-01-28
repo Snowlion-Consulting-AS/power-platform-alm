@@ -59,19 +59,23 @@ Use `pac solution list` to find the correct unmanaged solution to work with.
 
 ### When to Ask for Clarification
 
-**If the issue or task does not clearly specify which solution, table, form, or section to modify — STOP and ask for clarification by commenting on the issue.** Do not guess or assume.
+**Do NOT immediately ask the user a list of questions.** Instead, follow this approach:
 
-Specifically, ask before proceeding if any of these are unclear:
-- Which **tenant** the change should target (e.g. Snowlion, Norbygg, etc.)
-- Which **environment** is intended (e.g. Dev, Test, Demo, Production)
-- Which **solution** to export and modify
-- Which **table** (entity) to add columns to
-- Which **form** or **section** to place fields in
-- What **type** of field/column to create (text, number, lookup, etc.)
+1. **Explore first.** Use the Dataverse Web API, export solutions, and inspect the environment to find the most likely match for what the user is asking. For example, if the user says "PCF test section", search tables, forms, and sections for anything matching "PCF" or "test".
+
+2. **Propose your plan.** Once you have found a likely match, comment on the issue with what you found and what you plan to do. For example: *"I found a section called 'PCF Test' on the main form of the 'Account' table in the SnowlionBusinessApplication solution. I'll add the text field there. Let me know if this is wrong, otherwise I'll proceed."*
+
+3. **Wait for confirmation only if truly ambiguous.** If there are multiple equally plausible matches, present the options and ask which one. If there is one clear match, state your plan and **proceed immediately** — don't wait for a reply.
+
+4. **Only stop and ask when you genuinely cannot determine** these critical items:
+   - Which **tenant** the change should target (e.g. Snowlion, Norbygg, etc.)
+   - Which **environment** is intended (e.g. Dev, Test, Demo, Production)
+
+   For everything else (solution, table, form, section, field type), **explore the environment to find the answer yourself** before asking the user.
 
 Even if the PAC CLI is already authenticated to an environment, **do not assume that is the correct target** for the task. If the issue mentions a different tenant or environment than what `pac org who` returns, stop and ask for clarification.
 
-It is always better to ask a clarifying question than to make a wrong assumption.
+**The goal is to minimize back-and-forth.** The user expects you to do the investigation, not to ask them to do it for you.
 
 ### Step 2: Export Fresh From the Environment
 
