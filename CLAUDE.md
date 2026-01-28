@@ -16,7 +16,20 @@ pac org who
 pac solution list
 ```
 
-Use the output of `pac org who` to determine the environment URL, org name, and tenant. Use `pac solution list` to find the correct unmanaged solution to work with. The issue or task description may specify which solution to use — if not, pick the primary unmanaged solution from the list.
+Use the output of `pac org who` to determine the environment URL, org name, and tenant. Use `pac solution list` to find the correct unmanaged solution to work with.
+
+### When to Ask for Clarification
+
+**If the issue or task does not clearly specify which solution, table, form, or section to modify — STOP and ask for clarification by commenting on the issue.** Do not guess or assume.
+
+Specifically, ask before proceeding if any of these are unclear:
+- Which **solution** to export and modify
+- Which **table** (entity) to add columns to
+- Which **form** or **section** to place fields in
+- Which **environment** is intended (if multiple are available)
+- What **type** of field/column to create (text, number, lookup, etc.)
+
+It is always better to ask a clarifying question than to make a wrong assumption.
 
 ### Step 2: Export Fresh From the Environment
 
