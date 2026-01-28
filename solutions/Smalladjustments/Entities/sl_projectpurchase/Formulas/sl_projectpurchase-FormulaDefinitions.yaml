@@ -1,1 +1,0 @@
-sl_differanse: =Decimal(sl_netcost) - Decimal(sl_contractedamount) - Decimal(sl_risiko)

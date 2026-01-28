@@ -2,6 +2,73 @@
 
 You are helping develop Power Platform solutions (Dynamics 365, Power Apps, Dataverse) using a Git-based ALM workflow.
 
+## CRITICAL: Target Environment
+
+This repository is connected to the **Snowlion Demo** environment:
+- **Environment URL:** `https://snowlion-demo.crm4.dynamics.com/`
+- **Tenant ID:** `664b9f74-6876-4101-a2b4-7651d24a27de`
+- **Organization:** Snowlion Consulting AS
+- **SPN App ID:** `314cd34d-3252-481e-911d-8ee7454f3dc4`
+
+The PAC CLI in the GitHub Actions workflow is pre-authenticated to this environment via the service principal.
+
+### Which Solution to Use
+
+When making changes to Dataverse tables, columns, forms, flows, etc., use the **`SnowlionBusinessApplication`** solution. This is the main unmanaged solution in the environment.
+
+**DO NOT blindly trust solution files already in the repo.** The repo may contain stale or leftover solution files from other projects. Always follow this workflow:
+
+1. **Run `pac org who`** to confirm you are connected to `snowlion-demo.crm4.dynamics.com`
+2. **Run `pac solution list`** to see what solutions exist in the environment
+3. **Export fresh from the environment** before making any changes:
+   ```bash
+   pac solution export --name "SnowlionBusinessApplication" --path /tmp/solution.zip --managed false
+   pac solution unpack --zipfile /tmp/solution.zip --folder ./solutions/SnowlionBusinessApplication --allowWrite true --allowDelete true
+   ```
+4. Make your changes on the freshly exported files
+5. Pack, import, and publish
+
+### NEVER Do This
+
+- **NEVER edit solution files in the repo without first exporting from the environment.** The repo files may be outdated or from a different project entirely.
+- **NEVER assume a table, column, or form exists** just because files are in the repo. Always verify against the live environment.
+- **NEVER use the `Smalladjustments` solution** — it contains entities from a different project (Norbygg) and is not part of the Snowlion demo environment.
+
+### Verifying Entities Exist
+
+Before adding a column to a table or a field to a form, verify the entity exists in the target environment:
+
+```bash
+# Use Dataverse Web API to check if a table exists
+python3 -c "
+import urllib.request, urllib.parse, json, os
+env_url = os.environ['PP_ENVIRONMENT_URL'].rstrip('/')
+client_id = os.environ['PP_CLIENT_ID']
+client_secret = os.environ['PP_CLIENT_SECRET']
+tenant_id = os.environ['PP_TENANT_ID']
+
+# Get token
+data = urllib.parse.urlencode({
+    'grant_type': 'client_credentials',
+    'client_id': client_id,
+    'client_secret': client_secret,
+    'scope': f'{env_url}/.default'
+}).encode()
+req = urllib.request.Request(f'https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token', data=data)
+token = json.loads(urllib.request.urlopen(req).read())['access_token']
+
+# Query entity definitions
+url = f'{env_url}/api/data/v9.2/EntityDefinitions?\$select=LogicalName,DisplayName&\$filter=LogicalName eq %27TABLE_LOGICAL_NAME%27'
+req = urllib.request.Request(url)
+req.add_header('Authorization', f'Bearer {token}')
+req.add_header('OData-MaxVersion', '4.0')
+req.add_header('OData-Version', '4.0')
+req.add_header('Accept', 'application/json')
+result = json.loads(urllib.request.urlopen(req).read())
+print(json.dumps(result.get('value', []), indent=2))
+"
+```
+
 ## Quick Start
 
 ```bash
