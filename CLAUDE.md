@@ -4,19 +4,58 @@ You are helping develop Power Platform solutions (Dynamics 365, Power Apps, Data
 
 ## CRITICAL: Mandatory Workflow for ALL Changes
 
-### Step 1: Discover Your Environment
+### Step 1: Identify the Tenant and Authenticate
 
-The PAC CLI is pre-authenticated. **Always start by discovering** which environment and solutions you are working with — never assume or hardcode them:
+This repo supports **multiple Power Platform tenants**. The PAC CLI is NOT pre-authenticated — you must authenticate to the correct tenant yourself.
+
+#### 1a. Read `tenants.json`
+
+The file `tenants.json` in the repo root lists all available tenants and their secret prefix:
+
+```json
+{
+  "tenants": {
+    "snowlion": {
+      "display_name": "Snowlion",
+      "secret_prefix": "SNOWLION",
+      "environments": ["demo"]
+    }
+  }
+}
+```
+
+#### 1b. Determine the target tenant from the issue
+
+Read the issue title and body to identify which tenant is being targeted. Match it against the keys in `tenants.json` (case-insensitive). If the issue does not clearly specify a tenant, **ask for clarification** by commenting on the issue.
+
+#### 1c. Authenticate using prefixed environment variables
+
+Each tenant's credentials are available as environment variables using the `secret_prefix` from `tenants.json`:
 
 ```bash
-# 1. Discover which environment you are connected to
-pac org who
+# For a tenant with secret_prefix "SNOWLION":
+pac auth create \
+  --applicationId "$SNOWLION_PP_CLIENT_ID" \
+  --clientSecret "$SNOWLION_PP_CLIENT_SECRET" \
+  --tenant "$SNOWLION_PP_TENANT_ID" \
+  --environment "$SNOWLION_PP_ENVIRONMENT_URL"
 
-# 2. Discover which solutions exist in the environment
+pac org who
+```
+
+The pattern is always `{PREFIX}_PP_CLIENT_ID`, `{PREFIX}_PP_CLIENT_SECRET`, `{PREFIX}_PP_TENANT_ID`, `{PREFIX}_PP_ENVIRONMENT_URL`.
+
+For connection references, the env vars are `{PREFIX}_DATAVERSE_CONNECTION_ID` and `{PREFIX}_CONTENT_CONVERSION_CONNECTION_ID`.
+
+#### 1d. Discover solutions
+
+After authenticating, discover which solutions exist:
+
+```bash
 pac solution list
 ```
 
-Use the output of `pac org who` to determine the environment URL, org name, and tenant. Use `pac solution list` to find the correct unmanaged solution to work with.
+Use `pac solution list` to find the correct unmanaged solution to work with.
 
 ### When to Ask for Clarification
 
@@ -433,9 +472,11 @@ pac solution publish
 
 **Method 0: Using Pre-Created Connection IDs + Dataverse Web API (PREFERRED)**
 
-The workflow provides pre-created connection IDs via environment variables:
-- `DATAVERSE_CONNECTION_ID` — for Dataverse (`shared_commondataserviceforapps`) connection references
-- `CONTENT_CONVERSION_CONNECTION_ID` — for Content Conversion (`shared_conversionservice`) connection references
+Pre-created connection IDs are available as environment variables, **prefixed by tenant** (see `tenants.json`):
+- `{PREFIX}_DATAVERSE_CONNECTION_ID` — for Dataverse (`shared_commondataserviceforapps`) connection references
+- `{PREFIX}_CONTENT_CONVERSION_CONNECTION_ID` — for Content Conversion (`shared_conversionservice`) connection references
+
+For example, for the Snowlion tenant (prefix `SNOWLION`): `SNOWLION_DATAVERSE_CONNECTION_ID`, `SNOWLION_CONTENT_CONVERSION_CONNECTION_ID`.
 
 **IMPORTANT:** Do NOT try to use `pac connection create` or `pac connection list` — they fail on Linux due to keyring issues. Do NOT try to create connections via the PowerApps REST API — the SPN lacks a user plan. Just use the pre-created IDs from the environment variables.
 

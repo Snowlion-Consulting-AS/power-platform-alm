@@ -1,0 +1,9 @@
+{
+  "tenants": {
+    "snowlion": {
+      "display_name": "Snowlion",
+      "secret_prefix": "SNOWLION",
+      "environments": ["demo"]
+    }
+  }
+}

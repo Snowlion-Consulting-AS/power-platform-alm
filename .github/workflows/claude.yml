@@ -36,23 +36,25 @@ jobs:
           dotnet tool install --global Microsoft.PowerApps.CLI.Tool
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
-      - name: Authenticate PAC CLI with Service Principal
-        run: |
-          pac auth create \
-            --applicationId ${{ secrets.PP_CLIENT_ID }} \
-            --clientSecret ${{ secrets.PP_CLIENT_SECRET }} \
-            --tenant ${{ secrets.PP_TENANT_ID }} \
-            --environment ${{ secrets.PP_ENVIRONMENT_URL }}
-          pac org who
+      # NOTE: No pre-authentication here. Claude will authenticate itself
+      # to the correct tenant based on the issue context and tenants.json.
 
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: '--allowedTools "Bash(unzip:*)" "Bash(zip:*)" "Bash(mkdir:*)" "Bash(rm:*)" "Bash(find:*)" "Bash(sed:*)" "Bash(grep:*)" "Bash(cat:*)" "Bash(cp:*)" "Bash(mv:*)" "Bash(ls:*)" "Bash(head:*)" "Bash(tail:*)" "Bash(cd:*)" "Bash(pac:*)" "Bash(dotnet:*)" "Bash(python3:*)" "Bash(export:*)" "Bash(curl:*)"'
         env:
-          PP_CLIENT_ID: ${{ secrets.PP_CLIENT_ID }}
-          PP_CLIENT_SECRET: ${{ secrets.PP_CLIENT_SECRET }}
-          PP_TENANT_ID: ${{ secrets.PP_TENANT_ID }}
-          PP_ENVIRONMENT_URL: ${{ secrets.PP_ENVIRONMENT_URL }}
-          DATAVERSE_CONNECTION_ID: ${{ secrets.DATAVERSE_CONNECTION_ID }}
-          CONTENT_CONVERSION_CONNECTION_ID: ${{ secrets.CONTENT_CONVERSION_CONNECTION_ID }}
+          # Snowlion tenant credentials (maps existing secrets to prefixed env vars)
+          SNOWLION_PP_CLIENT_ID: ${{ secrets.PP_CLIENT_ID }}
+          SNOWLION_PP_CLIENT_SECRET: ${{ secrets.PP_CLIENT_SECRET }}
+          SNOWLION_PP_TENANT_ID: ${{ secrets.PP_TENANT_ID }}
+          SNOWLION_PP_ENVIRONMENT_URL: ${{ secrets.PP_ENVIRONMENT_URL }}
+          SNOWLION_DATAVERSE_CONNECTION_ID: ${{ secrets.DATAVERSE_CONNECTION_ID }}
+          SNOWLION_CONTENT_CONVERSION_CONNECTION_ID: ${{ secrets.CONTENT_CONVERSION_CONNECTION_ID }}
+          # To add another tenant, add a new set of GitHub secrets and map them here:
+          # {PREFIX}_PP_CLIENT_ID: ${{ secrets.{PREFIX}_PP_CLIENT_ID }}
+          # {PREFIX}_PP_CLIENT_SECRET: ${{ secrets.{PREFIX}_PP_CLIENT_SECRET }}
+          # {PREFIX}_PP_TENANT_ID: ${{ secrets.{PREFIX}_PP_TENANT_ID }}
+          # {PREFIX}_PP_ENVIRONMENT_URL: ${{ secrets.{PREFIX}_PP_ENVIRONMENT_URL }}
+          # {PREFIX}_DATAVERSE_CONNECTION_ID: ${{ secrets.{PREFIX}_DATAVERSE_CONNECTION_ID }}
+          # {PREFIX}_CONTENT_CONVERSION_CONNECTION_ID: ${{ secrets.{PREFIX}_CONTENT_CONVERSION_CONNECTION_ID }}
