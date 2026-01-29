@@ -970,10 +970,12 @@ For example, for the Snowlion tenant (prefix `SNOWLION`): `SNOWLION_DATAVERSE_CO
 
 **CRITICAL: Connection ID format must be GUID-only** (e.g., `10b747de-5528-47fa-bbcf-ec5b229a7ec2`), NOT the full prefixed format (e.g., `shared-commondataser-10b747de-...`). The Dataverse Web API rejects the prefixed format with `ConnectionNotFound`.
 
-```bash
-# Use the Dataverse Web API to find null connection references and update them
+**IMPORTANT: Use the Write tool to create the Python script, then execute with Bash.**
 
-python3 << 'PYEOF'
+1. Use the **Write tool** to create `/tmp/fix_connections.py`:
+
+```python
+# /tmp/fix_connections.py - Save this using the Write tool
 import urllib.request, urllib.parse, json, os
 
 env_url = os.environ['PP_ENVIRONMENT_URL'].rstrip('/')
@@ -1033,9 +1035,12 @@ for ref in null_refs:
     print(f'Updated {ref["connectionreferencelogicalname"]} with connection {conn_id}')
 
 print('Done!')
-PYEOF
+```
 
-# Publish changes
+2. Then execute with Bash:
+
+```bash
+python3 /tmp/fix_connections.py
 pac solution publish
 ```
 
