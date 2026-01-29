@@ -139,6 +139,25 @@ main (protected)
 | Canvas Apps | .msapp (zip) | Limited |
 | PCF Controls | TypeScript | Yes (rebuild required) |
 
+## Currently Not Supported
+
+The following Power Platform components are **not yet supported** by this workflow:
+
+| Component | Reason |
+|-----------|--------|
+| **Plugins (C#)** | Requires Visual Studio compilation, ILMerge, and plugin registration tool |
+| **Business Rules** | Stored as complex XAML; best edited in the UI |
+| **Dashboards** | XML structure is complex; easier to edit in UI |
+| **Charts** | XML-based but tightly coupled to views |
+| **Ribbon/Command Bar** | RibbonDiffXml is complex and error-prone to edit manually |
+| **SSRS Reports** | Requires Report Authoring Extension and RDL knowledge |
+| **Power BI Embedded** | Managed through Power BI service, not solution files |
+| **Power Pages (Portals)** | Separate deployment model with PAC CLI paportal commands |
+| **Copilot Studio** | Separate service with its own ALM |
+| **AI Builder** | Models managed through AI Builder interface |
+
+These components can still be included in solutions but are better managed through their native interfaces.
+
 ## Documentation
 
 - **[CLAUDE.md](./CLAUDE.md)** - Quick reference for Claude Code
