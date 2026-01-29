@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.26013.135" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26013.135" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26013.00138">
+  <SolutionManifest>
+    <UniqueName>SnowlionBusinessApplication</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Snowlion Business Application" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Source of the core Snowlion Business Application solution. [CI/CD verified]" languagecode="1033" />
+    </Descriptions>
+    <Version>1.0.0.6</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>Snowlion</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Snowlion" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="Snowlion" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>demo</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>20101</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="account" behavior="2" />
+      <RootComponent type="1" schemaName="contact" behavior="2" />
+      <RootComponent type="1" schemaName="processsession" behavior="2" />
+      <RootComponent type="1" schemaName="sl_item" behavior="0" />
+      <RootComponent type="1" schemaName="sl_itemcategory" behavior="0" />
+      <RootComponent type="1" schemaName="sl_object" behavior="0" />
+      <RootComponent type="1" schemaName="sl_offer" behavior="0" />
+      <RootComponent type="1" schemaName="sl_offeritem" behavior="0" />
+      <RootComponent type="1" schemaName="sl_order" behavior="0" />
+      <RootComponent type="1" schemaName="sl_orderitem" behavior="0" />
+      <RootComponent type="1" schemaName="sl_paymentterm" behavior="0" />
+      <RootComponent type="1" schemaName="sl_pipeline" behavior="0" />
+      <RootComponent type="1" schemaName="sl_project" behavior="0" />
+      <RootComponent type="1" schemaName="sl_projectitem" behavior="0" />
+      <RootComponent type="1" schemaName="sl_resource" behavior="0" />
+      <RootComponent type="1" schemaName="sl_salesinvoice" behavior="0" />
+      <RootComponent type="1" schemaName="sl_salesinvoiceitem" behavior="0" />
+      <RootComponent type="1" schemaName="sl_salespeople" behavior="0" />
+      <RootComponent type="1" schemaName="sl_salespricelist" behavior="0" />
+      <RootComponent type="1" schemaName="sl_salespricelistitem" behavior="0" />
+      <RootComponent type="1" schemaName="sl_shipmentmethod" behavior="0" />
+      <RootComponent type="1" schemaName="sl_unitofmeasure" behavior="0" />
+      <RootComponent type="1" schemaName="sl_vat" behavior="0" />
+      <RootComponent type="1" schemaName="syncerror" behavior="2" />
+      <RootComponent type="1" schemaName="systemuser" behavior="2" />
+      <RootComponent type="1" schemaName="transactioncurrency" behavior="2" />
+      <RootComponent type="20" id="{514fea2a-6de1-ee11-904c-000d3adcf49c}" behavior="0" />
+      <RootComponent type="29" id="{32d858ea-56a5-ee11-be37-000d3ab1b304}" behavior="0" />
+      <RootComponent type="29" id="{45ab484c-09d7-ee11-9079-000d3ab1b304}" behavior="0" />
+      <RootComponent type="29" id="{6fa07514-3cd6-ee11-904d-000d3ab1bc57}" behavior="0" />
+      <RootComponent type="29" id="{95813c8f-c5a4-ee11-be37-000d3ab1b304}" behavior="0" />
+      <RootComponent type="29" id="{d38d4d3a-89e1-ee11-904c-000d3adcf49c}" behavior="0" />
+      <RootComponent type="29" id="{efed654c-b7d5-ee11-9079-000d3ab1b304}" behavior="0" />
+      <RootComponent type="29" id="{f8cf9878-a6a4-ee11-be37-000d3ab1bc57}" behavior="0" />
+      <RootComponent type="29" id="{fdb0d76f-2fd0-ee11-9079-000d3ab1b304}" behavior="0" />
+      <RootComponent type="300" schemaName="cr334_b360defaultcommandlibrary_14c76" behavior="0" />
+      <RootComponent type="300" schemaName="sl_addsalesproducts_42b7d" behavior="0" />
+      <RootComponent type="300" schemaName="sl_brregpage_2be5f" behavior="0" />
+      <RootComponent type="300" schemaName="sl_demodefaultcommandlibrary_d8db4" behavior="0" />
+      <RootComponent type="300" schemaName="sl_manageproductspage_22e55" behavior="0" />
+      <RootComponent type="431" schemaName="sl_item sl_itempicture" behavior="0" />
+      <RootComponent type="432" schemaName="sl_item" behavior="0" />
+      <RootComponent type="61" schemaName="sl_itemsicon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_logo" behavior="0" />
+      <RootComponent type="61" schemaName="sl_logo_transparent" behavior="0" />
+      <RootComponent type="61" schemaName="sl_objectsicon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_offericon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_ordericon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_Payment_Terms_Icon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_projecticon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_s360apptheme" behavior="0" />
+      <RootComponent type="61" schemaName="sl_sales_price_list_icon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_Sales_Price_List_Items_icon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_salesinvoiceicon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_Shipment_Methods_icon" behavior="0" />
+      <RootComponent type="61" schemaName="sl_Unit_of_Measure_icon" behavior="0" />
+      <RootComponent type="62" schemaName="sl_Demo" behavior="0" />
+      <RootComponent type="80" schemaName="sl_Demo" behavior="0" />
+      <RootComponent type="9" schemaName="processstage_category" behavior="0" />
+      <RootComponent type="9" schemaName="sl_country" behavior="0" />
+      <RootComponent type="9" schemaName="sl_installation" behavior="0" />
+      <RootComponent type="9" schemaName="sl_objecttype" behavior="0" />
+      <RootComponent type="9" schemaName="sl_pipelinetype" behavior="0" />
+      <RootComponent type="9" schemaName="sl_prepaymentrequired" behavior="0" />
+      <RootComponent type="9" schemaName="sl_probability" behavior="0" />
+      <RootComponent type="9" schemaName="sl_progress" behavior="0" />
+      <RootComponent type="9" schemaName="sl_projecttype" behavior="0" />
+      <RootComponent type="9" schemaName="sl_received" behavior="0" />
+      <RootComponent type="9" schemaName="sl_scheduled" behavior="0" />
+      <RootComponent type="9" schemaName="sl_sent" behavior="0" />
+      <RootComponent type="9" schemaName="sl_type" behavior="0" />
+      <RootComponent type="9" schemaName="sl_wallcovering" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="processsession" displayName="ProcessSession" parentSchemaName="" solution="System (5.0)" />
+        <Dependent type="1" schemaName="processsession" displayName="ProcessSession" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="syncerror" displayName="SyncError" parentSchemaName="" solution="System (5.0)" />
+        <Dependent type="1" schemaName="syncerror" displayName="SyncError" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="systemuser" displayName="SystemUser" parentSchemaName="" solution="msdyn_UserShareSecuredFields (1.0.0.0)" />
+        <Dependent type="1" schemaName="systemuser" displayName="SystemUser" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="accountid" displayName="accountid" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="accountid" displayName="accountid" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="accountnumber" displayName="accountnumber" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="accountnumber" displayName="accountnumber" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_city" displayName="address1_city" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_city" displayName="address1_city" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_country" displayName="address1_country" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_country" displayName="address1_country" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_county" displayName="address1_county" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_county" displayName="address1_county" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_line1" displayName="address1_line1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_line1" displayName="address1_line1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_line2" displayName="address1_line2" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_line2" displayName="address1_line2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_postalcode" displayName="address1_postalcode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_postalcode" displayName="address1_postalcode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_city" displayName="address2_city" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_city" displayName="address2_city" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_country" displayName="address2_country" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_country" displayName="address2_country" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_county" displayName="address2_county" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_county" displayName="address2_county" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_line1" displayName="address2_line1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_line1" displayName="address2_line1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_postalcode" displayName="address2_postalcode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_postalcode" displayName="address2_postalcode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="businesstypecode" displayName="businesstypecode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="businesstypecode" displayName="businesstypecode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="creditlimit" displayName="creditlimit" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="creditlimit" displayName="creditlimit" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="currencyname" displayName="currencyname" parentSchemaName="transactioncurrency" solution="System (5.0)" />
+        <Dependent type="2" schemaName="currencyname" displayName="currencyname" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="currencysymbol" displayName="currencysymbol" parentSchemaName="transactioncurrency" solution="System (5.0)" />
+        <Dependent type="2" schemaName="currencysymbol" displayName="currencysymbol" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="customertypecode" displayName="customertypecode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="customertypecode" displayName="customertypecode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="description" displayName="description" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="description" displayName="description" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="emailaddress1" displayName="emailaddress1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="emailaddress1" displayName="emailaddress1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="firstname" displayName="firstname" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="firstname" displayName="firstname" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="isocurrencycode" displayName="isocurrencycode" parentSchemaName="transactioncurrency" solution="System (5.0)" />
+        <Dependent type="2" schemaName="isocurrencycode" displayName="isocurrencycode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lastname" displayName="lastname" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="lastname" displayName="lastname" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="middlename" displayName="middlename" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="middlename" displayName="middlename" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="mobilephone" displayName="mobilephone" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="mobilephone" displayName="mobilephone" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="name" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="name" displayName="name" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="numberofemployees" displayName="numberofemployees" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="numberofemployees" displayName="numberofemployees" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentcustomerid" displayName="parentcustomerid" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="parentcustomerid" displayName="parentcustomerid" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="primarycontactid" displayName="primarycontactid" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="primarycontactid" displayName="primarycontactid" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="regardingobjectid" displayName="regardingobjectid" parentSchemaName="processsession" solution="System (5.0)" />
+        <Dependent type="2" schemaName="regardingobjectid" displayName="regardingobjectid" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="statecode" displayName="statecode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="statecode" displayName="statecode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="telephone1" displayName="telephone1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="telephone1" displayName="telephone1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="telephone2" displayName="telephone2" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="telephone2" displayName="telephone2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="territorycode" displayName="territorycode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="territorycode" displayName="territorycode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="transactioncurrencyid" displayName="transactioncurrencyid" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="transactioncurrencyid" displayName="transactioncurrencyid" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="websiteurl" displayName="websiteurl" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="websiteurl" displayName="websiteurl" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="All Accounts" displayName="All Accounts" parentSchemaName="account" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{65ffaf9a-e8c5-432d-860b-32f841b00d87}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="26" schemaName="All Accounts" displayName="All Accounts" parentSchemaName="account" parentDisplayName="Account" id="{65ffaf9a-e8c5-432d-860b-32f841b00d87}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="All Contacts" displayName="All Contacts" parentSchemaName="contact" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="sl_Demo" displayName="Demo" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="372" schemaName="sl_5Fbusiness-20unit-20registry" displayName="Business Unit Registry" solution="Active" id="{d3c0b1de-3421-4e46-a860-50be6adf1b0a}" />
+        <Dependent type="300" schemaName="sl_brregpage_2be5f" displayName="BrregPage" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Account Reference Panel" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{098ae145-1567-41ec-8398-86dbaac70c9b}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="sl_Demo" displayName="Demo" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Contact" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Contact" parentDisplayName="Contact" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Social Profiles" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{2205c86d-ed88-4a2f-a447-3b86a8781f2e}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="sl_Demo" displayName="Demo" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Account Hierarchy Tile Form" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{69cff312-cfb6-4289-9631-249ab85d2c62}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="sl_Demo" displayName="Demo" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Account" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="account card" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{b028db32-3619-48a5-ac51-cf3f947b0ef3}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="sl_Demo" displayName="Demo" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Account Quick Create" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b}">
+          <package appName="msdynce_AppCommon" version="9.0.24095.10001">msdynce_AppCommonAnchor (9.0.24095.10001)</package>
+          <package appName="Dynamics 365 Application Common" version="9.0.24124.10001">msdynce_AppCommonAnchor (9.0.24124.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="sl_Demo" displayName="Demo" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Administration.svg" displayName="Administration.svg" solution="PowerPlatformEnvironmentSettings (1.1.1.2945)" />
+        <Dependent type="62" schemaName="sl_Demo" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
+          <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
+        </Required>
+        <Dependent type="80" schemaName="sl_Demo" displayName="Demo" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sl_LoadManageProducts" displayName="sl_LoadManageProducts" solution="Active" />
+        <Dependent type="appaction" displayName="sl__ManageProducts!5dbb0a468f2c4f67b2000ce66209fa2f!sl_Demo!sl_orderitem!2" id.uniquename="sl__ManageProducts!5dbb0a468f2c4f67b2000ce66209fa2f!sl_Demo!sl_orderitem!2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sl_LoadManageProducts" displayName="sl_LoadManageProducts" solution="Active" />
+        <Dependent type="appaction" displayName="sl__ManageProducts!aa6a77a994574026a3a28d26430e6209!sl_Demo!sl_projectitem!2" id.uniquename="sl__ManageProducts!aa6a77a994574026a3a28d26430e6209!sl_Demo!sl_projectitem!2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sl_LoadManageProducts" displayName="sl_LoadManageProducts" solution="Active" />
+        <Dependent type="appaction" displayName="sl__ManageProducts!f098d6931e6d4e5da622a080cbd97a76!sl_Demo!sl_offeritem!2" id.uniquename="sl__ManageProducts!f098d6931e6d4e5da622a080cbd97a76!sl_Demo!sl_offeritem!2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sl_OpenAddProducts" displayName="sl_OpenAddProducts" solution="Active" />
+        <Dependent type="appaction" displayName="sl__AddProducts!303fa69169a04ef7891f23d283018e6a!sl_Demo!sl_projectitem!2" id.uniquename="sl__AddProducts!303fa69169a04ef7891f23d283018e6a!sl_Demo!sl_projectitem!2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sl_OpenAddProducts" displayName="sl_OpenAddProducts" solution="Active" />
+        <Dependent type="appaction" displayName="sl__AddProducts!8e4ebf01c2aa4ce290e209177a9d4178!sl_Demo!sl_offeritem!2" id.uniquename="sl__AddProducts!8e4ebf01c2aa4ce290e209177a9d4178!sl_Demo!sl_offeritem!2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sl_OpenAddProducts" displayName="sl_OpenAddProducts" solution="Active" />
+        <Dependent type="appaction" displayName="sl__AddProducts!ab9bdec7485a4956930117bc3fb58b7c!sl_Demo!sl_orderitem!2" id.uniquename="sl__AddProducts!ab9bdec7485a4956930117bc3fb58b7c!sl_Demo!sl_orderitem!2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sl_OpenBrreg" displayName="sl_OpenBrreg" solution="Active" />
+        <Dependent type="appaction" displayName="sl__NewfromBrreg!a5c1a4dfe11043d4b00ef7a29d2e4b3b!sl_Demo!account!1" id.uniquename="sl__NewfromBrreg!a5c1a4dfe11043d4b00ef7a29d2e4b3b!sl_Demo!account!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sl_OpenBrreg" displayName="sl_OpenBrreg" solution="Active" />
+        <Dependent type="appaction" displayName="sl__OpenBrreg!4b1f70db59844103835a6bdb2d8179df!sl_Demo!account!0" id.uniquename="sl__OpenBrreg!4b1f70db59844103835a6bdb2d8179df!sl_Demo!account!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Offer quick create form" parentDisplayName="Offer" id="{0af4a90a-f9b9-ee11-a569-000d3ab1baf6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Information" parentDisplayName="Offer" id="{0bf762ad-7a08-415f-88d4-d989e3b3fd20}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Order quick create form" parentDisplayName="Order" id="{25a098a6-8ac7-ee11-9079-000d3ab1b954}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Project main form" parentDisplayName="Project" id="{2a074a23-59e0-ee11-904d-000d3ab1baf6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Project main form" parentDisplayName="Project" id="{3b8f3f63-a1fa-f011-8407-000d3ab7b7ce}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Information" parentDisplayName="Order" id="{4801f461-58cf-4403-83d6-006e62f15abd}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Project Service" parentDisplayName="Project" id="{7879abfe-4dbf-ee11-9079-000d3ab1baf6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2601.3011)">
+          <package appName="Base Custom Controls" version="9.0.2601.3011">BaseCustomControlsCore (9.0.2601.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Information" parentDisplayName="Objectives" id="{c717d29b-24a7-4586-ac78-6b727ade7da7}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="sl_SnowlionControls.AddProductsControl" displayName="sl_SnowlionControls.AddProductsControl" solution="Active" />
+        <Dependent type="60" displayName="Project main form" parentDisplayName="Project" id="{2a074a23-59e0-ee11-904d-000d3ab1baf6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="sl_SnowlionControls.AddProductsControl" displayName="sl_SnowlionControls.AddProductsControl" solution="Active" />
+        <Dependent type="60" displayName="Project main form" parentDisplayName="Project" id="{3b8f3f63-a1fa-f011-8407-000d3ab7b7ce}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.CreateSelectedEntityPermission!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.CreateSelectedEntityPermission!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.CreateSelectedEntityPermission!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.CreateSelectedEntityPermission!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.CreateSelectedEntityPermission!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.CreateSelectedEntityPermission!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.CreateSelectedEntityPermission!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.HideAddressEntities!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.HideAddressEntities!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.HideAddressEntities!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.HideAddressEntities!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.HideAddressEntities!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.HideAddressEntities!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.HideAddressEntities!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.HideAddressEntities!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.HideAddressEntities!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.HideAddressEntities!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.HideAddressEntities!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.HideAddressEntities!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.HideNewForChildEntities!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.HideNewForChildEntities!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.HideNewForChildEntities!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.HideNewForChildEntities!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.HideNewForChildEntities!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.HideNewForChildEntities!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.HideNewForChildEntities!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.HideNewForChildEntities!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.HideNewForChildEntities!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.HideNewForChildEntities!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.HideNewForChildEntities!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.HideNewForChildEntities!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsNotActivityPointer!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsNotActivityPointer!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.IsNotActivityPointer!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsNotActivityPointer!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsNotActivityPointer!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsNotActivityPointer!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.IsNotActivityPointer!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsNotActivityPointer!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsNotActivityPointer!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsNotActivityPointer!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.IsNotActivityPointer!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsNotActivityPointer!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsValidForHierarchyPageInUC!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.IsValidForHierarchyPageInUC!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsValidForHierarchyPageInUC!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.IsValidForHierarchyPageInUC!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsValidForHierarchyPageInUC!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.IsValidForHierarchyPageInUC!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyPageInUC!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsValidForHierarchyView!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.IsValidForHierarchyView!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsValidForHierarchyView!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.IsValidForHierarchyView!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsValidForHierarchyView!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.IsValidForHierarchyView!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.IsValidForHierarchyView!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.PrimaryIsNotActivityHomePageGrid!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.SelectedEntityIsNotBPFEntity!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_offeritem!2,appactionruleid.uniquename=msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_offeritem!2" id.appactionruleid.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_orderitem!2,appactionruleid.uniquename=msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_orderitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=sl__Mscrm.SubGrid.%7B!EntityLogicalName%7D.NewRecord!sl_Demo!sl_projectitem!2,appactionruleid.uniquename=msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" id.appactionid.uniquename="sl__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!sl_Demo!sl_projectitem!2" id.appactionruleid.uniquename="msdyn_Mscrm.ShowForNonRelationshipBoundGrids!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AllowNotificationsEarlyAccess" solution="AppNotifications (10.0.0.16)" id.uniquename="AllowNotificationsEarlyAccess">
+          <package appName="PowerAppsUnifiedClientExtensionApp Package" version="1.0.0.62">msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=sl_Demo,settingdefinitionid.uniquename=AllowNotificationsEarlyAccess" id.parentappmoduleid.uniquename="sl_Demo" id.settingdefinitionid.uniquename="AllowNotificationsEarlyAccess" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.15)" id.uniquename="AppChannel">
+          <package appName="PowerAppsAppFramework Package" version="1.0.0.25">PowerAppsAppFramework_Anchor (1.0.0.25)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=sl_Demo,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="sl_Demo" id.settingdefinitionid.uniquename="AppChannel" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

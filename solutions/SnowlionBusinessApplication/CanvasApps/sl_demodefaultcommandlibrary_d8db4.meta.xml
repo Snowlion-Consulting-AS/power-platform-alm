@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>sl_demodefaultcommandlibrary_d8db4</Name>
+  <AppVersion>2026-01-28T11:42:50Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24112.10.0</CreatedByClientVersion>
+  <MinClientVersion>0.0.0.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","sienaVersion":"20241121T194336Z-3.24112.10.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.24112.10","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","showStatusBar":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(251,101,60,1)</BackgroundColor>
+  <DisplayName>Demo_DefaultCommandLibrary</DisplayName>
+  <Description></Description>
+  <CommitMessage>Saved by Command designer.</CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds"},"dataSources":{"Offers":{"entitySetName":"sl_offers","logicalName":"sl_offer"},"Contacts":{"entitySetName":"contacts","logicalName":"contact"},"Payment Terms":{"entitySetName":"sl_paymentterms","logicalName":"sl_paymentterm"},"Projects":{"entitySetName":"sl_projects","logicalName":"sl_project"},"Sales Price lists":{"entitySetName":"sl_salespricelists","logicalName":"sl_salespricelist"},"Shipment Methods":{"entitySetName":"sl_shipmentmethods","logicalName":"sl_shipmentmethod"},"Currencies":{"entitySetName":"transactioncurrencies","logicalName":"transactioncurrency"},"VATS":{"entitySetName":"sl_vats","logicalName":"sl_vat"},"Salespeople":{"entitySetName":"sl_salespeoples","logicalName":"sl_salespeople"},"Orders":{"entitySetName":"sl_orders","logicalName":"sl_order"},"Accounts":{"entitySetName":"accounts","logicalName":"account"},"Project items":{"entitySetName":"sl_projectitems","logicalName":"sl_projectitem"},"Order items":{"entitySetName":"sl_orderitems","logicalName":"sl_orderitem"},"Offer items":{"entitySetName":"sl_offeritems","logicalName":"sl_offeritem"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>1</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"componenttype":1,"logicalname":"sl_offer"},{"componenttype":1,"logicalname":"contact"},{"componenttype":1,"logicalname":"sl_paymentterm"},{"componenttype":1,"logicalname":"sl_project"},{"componenttype":1,"logicalname":"sl_salespricelist"},{"componenttype":1,"logicalname":"sl_shipmentmethod"},{"componenttype":1,"logicalname":"transactioncurrency"},{"componenttype":1,"logicalname":"sl_vat"},{"componenttype":1,"logicalname":"sl_salespeople"},{"componenttype":1,"logicalname":"sl_order"},{"componenttype":1,"logicalname":"account"},{"componenttype":1,"logicalname":"sl_projectitem"},{"componenttype":1,"logicalname":"sl_orderitem"},{"componenttype":1,"logicalname":"sl_offeritem"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/sl_demodefaultcommandlibrary_d8db4_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/sl_demodefaultcommandlibrary_d8db4_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

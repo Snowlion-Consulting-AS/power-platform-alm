@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{f8cf9878-a6a4-ee11-be37-000d3ab1bc57}" Name="Pipeline" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/Pipeline-F8CF9878-A6A4-EE11-BE37-000D3AB1BC57.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>sl_pipeline</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>sl_project</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Pipeline" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{577c3e7f-93ba-4851-92e1-0e5106963555}">
+      <label languagecode="1033" description="Request" />
+    </steplabels>
+    <steplabels id="{4d08b88f-fec0-4f88-a555-62f176e613a2}">
+      <label languagecode="1033" description="Created On" />
+    </steplabels>
+    <steplabels id="{4f13b03d-6f57-4705-a135-2bf9cbb37434}">
+      <label languagecode="1033" description="Clarification" />
+    </steplabels>
+    <steplabels id="{b33b7417-5266-43c7-aef3-f603e975e669}">
+      <label languagecode="1033" description="Created On" />
+    </steplabels>
+    <steplabels id="{6b7469e6-93c4-41c5-ac43-e74c60a2f052}">
+      <label languagecode="1033" description="Prepare Offers" />
+    </steplabels>
+    <steplabels id="{cb92b201-9634-4f0c-9ea5-7b53f26d7c2d}">
+      <label languagecode="1033" description="Created On" />
+    </steplabels>
+    <steplabels id="{4ee8a32f-1d69-4f2c-ae66-1812e334d5e8}">
+      <label languagecode="1033" description="Negotiation" />
+    </steplabels>
+    <steplabels id="{a386b01e-d673-4188-86d9-fbaa2dac309a}">
+      <label languagecode="1033" description="Qualify" />
+    </steplabels>
+    <steplabels id="{b43dd9a0-1fbe-4001-856e-a61cd24737ed}">
+      <label languagecode="1033" description="Accept" />
+    </steplabels>
+    <steplabels id="{335ad26e-a928-4a31-9963-56255f42c00c}">
+      <label languagecode="1033" description="Order received" />
+    </steplabels>
+    <steplabels id="{c51355c7-b770-4350-92c1-d8505e47de43}">
+      <label languagecode="1033" description="Confirmation sent" />
+    </steplabels>
+    <steplabels id="{09d5d2fc-6ef5-4f04-951b-c2b852bf5bb6}">
+      <label languagecode="1033" description="Refusal" />
+    </steplabels>
+    <steplabels id="{e3cc79da-54bd-44c5-b953-c35f89bd013e}">
+      <label languagecode="1033" description="Lessons learned" />
+    </steplabels>
+  </labels>
+</Workflow>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{4e16b546-3f8b-41e1-83b5-f748d83c0140}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{577c3e7f-93ba-4851-92e1-0e5106963555}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{a00af175-e8c9-49f8-b98b-83136b72340f}">
+          <labels>
+            <label description="Request" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{33f52df5-dcbb-6d90-43ad-87dfe58b60ba}" name="StageStep3_section1" labelid="{324a8b7b-983a-4db0-a3a6-0147fc682927}">
+                  <labels>
+                    <label description="Request" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4d08b88f-fec0-4f88-a555-62f176e613a2}" showlabel="true" visible="true" labelid="{c0c693c5-87a1-4e67-af7e-a7a14ff1d6a5}">
+                        <labels>
+                          <label description="Created On" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_sl_project_sl_pipeline:createdon" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="createdon" disabled="false" relationship="bpf_sl_project_sl_pipeline" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4f13b03d-6f57-4705-a135-2bf9cbb37434}" name="StageStep7" locklevel="0" expanded="true" visible="false" labelid="{fc3cf220-3801-45a5-966b-aa365d4e9f93}">
+          <labels>
+            <label description="Clarification" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{a5605022-0c43-ac30-5921-ebf150f77d26}" name="StageStep7_section1" labelid="{03a2e91a-fc59-4c8f-be72-0137ffe3ff63}">
+                  <labels>
+                    <label description="Clarification" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b33b7417-5266-43c7-aef3-f603e975e669}" showlabel="true" visible="true" labelid="{75074b16-f93b-42cb-99ef-9e7be2ff75f9}">
+                        <labels>
+                          <label description="Created On" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_sl_project_sl_pipeline:createdon" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="createdon" disabled="false" relationship="bpf_sl_project_sl_pipeline" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{6b7469e6-93c4-41c5-ac43-e74c60a2f052}" name="StageStep11" locklevel="0" expanded="true" visible="false" labelid="{9fc03174-6806-4b40-8608-82c0c942f306}">
+          <labels>
+            <label description="Prepare Offers" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{41cd418b-0802-d555-eac5-3cee7c118391}" name="StageStep11_section1" labelid="{20ef4b05-1de9-436a-b508-358d7777dc29}">
+                  <labels>
+                    <label description="Prepare Offers" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cb92b201-9634-4f0c-9ea5-7b53f26d7c2d}" showlabel="true" visible="true" labelid="{7a8dc78e-e348-42b7-b3f5-5fbddff06fe7}">
+                        <labels>
+                          <label description="Created On" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_sl_project_sl_pipeline:createdon" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="createdon" disabled="false" relationship="bpf_sl_project_sl_pipeline" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4ee8a32f-1d69-4f2c-ae66-1812e334d5e8}" name="StageStep15" locklevel="0" expanded="true" visible="false" labelid="{5b949655-dadf-4934-af45-302c4d02e23d}">
+          <labels>
+            <label description="Negotiation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{dcae55e9-c58c-e1d5-e372-07d8f8d07057}" name="StageStep15_section1" labelid="{7035d6d3-b5d9-41e2-95e4-27f2ac2640c5}">
+                  <labels>
+                    <label description="Negotiation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a386b01e-d673-4188-86d9-fbaa2dac309a}" showlabel="true" visible="true" labelid="{0be48e02-c073-4481-a03a-1e07da1fd928}">
+                        <labels>
+                          <label description="Qualify" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_sl_project_sl_pipeline:sl_qualify" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="sl_qualify" disabled="false" relationship="bpf_sl_project_sl_pipeline" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b43dd9a0-1fbe-4001-856e-a61cd24737ed}" name="StageStep19" locklevel="0" expanded="true" visible="false" labelid="{e09d8956-b2e5-4454-92b7-a9b0324f72a6}">
+          <labels>
+            <label description="Accept" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{efe21715-1581-0dde-8fdb-20800cf3bb95}" name="StageStep19_section1" labelid="{b2db0e80-f84c-4ad7-a816-5eb4d68cbfed}">
+                  <labels>
+                    <label description="Accept" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{335ad26e-a928-4a31-9963-56255f42c00c}" showlabel="true" visible="true" labelid="{1f568644-3db7-4796-a849-ab87d61d4aed}">
+                        <labels>
+                          <label description="Order received" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_sl_project_sl_pipeline:sl_orderreceived" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="sl_orderreceived" disabled="false" relationship="bpf_sl_project_sl_pipeline" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c51355c7-b770-4350-92c1-d8505e47de43}" showlabel="true" visible="true" labelid="{8f309591-daee-4ed1-a67e-28f3dba8f9c5}">
+                        <labels>
+                          <label description="Confirmation sent" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_sl_project_sl_pipeline:sl_confirmationsent" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="sl_confirmationsent" relationship="bpf_sl_project_sl_pipeline" isrequired="true" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{09d5d2fc-6ef5-4f04-951b-c2b852bf5bb6}" name="StageStep25" locklevel="0" expanded="true" visible="false" labelid="{ef5aa1bf-8457-4736-a175-f9dfe4d87b35}">
+          <labels>
+            <label description="Refusal" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{5ba9a4f7-307c-02bb-336b-f8e6c33edde0}" name="StageStep25_section1" labelid="{9a68b826-15f0-4238-bc0d-ef6de021e9f0}">
+                  <labels>
+                    <label description="Refusal" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e3cc79da-54bd-44c5-b953-c35f89bd013e}" showlabel="true" visible="true" labelid="{a2e60e68-8df2-4bb8-9dc9-c9d22269b8cf}">
+                        <labels>
+                          <label description="Lessons learned" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_sl_project_sl_pipeline:sl_lessonslearned" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="sl_lessonslearned" disabled="false" relationship="bpf_sl_project_sl_pipeline" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

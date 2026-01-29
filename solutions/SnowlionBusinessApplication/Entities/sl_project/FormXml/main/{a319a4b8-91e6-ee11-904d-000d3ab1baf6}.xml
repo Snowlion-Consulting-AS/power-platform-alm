@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a319a4b8-91e6-ee11-904d-000d3ab1baf6}</formid>
+    <IntroducedVersion>1.0.0.12</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{c71b6a7d-2366-4491-bf4b-5aac4301dd1f}" IsUserDefined="1" name="general" labelid="{7d080c16-1f8a-4ca2-9571-d144234333aa}">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="66%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{f127d682-e7b7-4e8d-b6c0-6b03603cd651}" columns="1" name="general" labelid="{c8e2f70e-7bbd-4bcf-837a-8fee517c9cc0}" visible="true">
+                  <labels>
+                    <label description="Timeline" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{1018f806-d0a4-474f-a930-e25e8c5c7be8}" showlabel="false" labelid="{63165aa3-a03c-41ee-80d3-eef2610f351c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section name="_section_415" id="505e14e5-eff3-4a35-b4a2-c20ad83030df" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{4fa34dc0-5dc8-42b5-84b6-fbbfecc5ff45}">
+                  <labels>
+                    <label description="Project" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3457a10d-103b-4222-921d-3cc43ea29036}" colspan="1" rowspan="1" labelid="{cc770d5b-f0e1-4652-973c-b4bbd4669e7f}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="sl_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sl_name" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="general_section_6" id="a0bc7ef3-7af3-42f4-aa35-dbe407037618" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{8ec05f13-e3b9-4938-880e-039ebc4e3329}">
+                  <labels>
+                    <label description="Delivery" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{9736eb0b-d3b4-4c12-916a-fc4b416643a8}" locklevel="0" colspan="1" rowspan="1" labelid="{b2d5cd54-68c5-4862-bad1-b903b61e4e01}">
+                        <labels>
+                          <label description="Est. Delivery Date" languagecode="1033" />
+                        </labels>
+                        <control id="sl_estdeliverydate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_estdeliverydate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{099a29e0-0b40-450b-bd27-0c8a69bba9e4}" locklevel="0" colspan="1" rowspan="1" labelid="{433450be-a994-4863-8e57-a9965442eadb}">
+                        <labels>
+                          <label description="Exp. Signing" languagecode="1033" />
+                        </labels>
+                        <control id="sl_expsigning" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_expsigning" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="general_section_4" id="249477da-6b88-43d3-b9a5-3f13a99d67f4" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{81c33cd7-324e-4bf1-a6ed-6ae1f90bf35b}">
+                  <labels>
+                    <label description="Financial " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{445f0e29-4116-4eef-ae79-728c6d8d7b5a}" locklevel="0" colspan="1" rowspan="1" labelid="{3fb2c441-e7a8-4174-a58d-481f6c96f9a3}">
+                        <labels>
+                          <label description="Service Agreement" languagecode="1033" />
+                        </labels>
+                        <control id="sl_serviceagreement" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="sl_serviceagreement" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c9030af0-d439-48ae-9076-ded971f362a9}" locklevel="0" colspan="1" rowspan="1" labelid="{e43a1bb9-23ce-4663-971f-e1544c2d10f2}">
+                        <labels>
+                          <label description="Service Agreement Signing Date" languagecode="1033" />
+                        </labels>
+                        <control id="sl_serviceagreementsigningdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sl_serviceagreementsigningdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5474167f-2235-4b40-84da-fe06bc7b2cf5}" locklevel="0" colspan="1" rowspan="1" labelid="{6b454400-dd00-4b0f-bfd8-faebfa9cce65}">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                        </labels>
+                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{67dcf6e7-dd58-4bd6-b779-2d4aab99127c}" locklevel="0" colspan="1" rowspan="1" labelid="{d9b94a69-a52a-426e-9234-f13bd1a21e08}">
+                        <labels>
+                          <label description="Est. Revenue" languagecode="1033" />
+                        </labels>
+                        <control id="sl_estrevenue" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sl_estrevenue" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{50b19890-b436-403f-b7b0-d22a9ee4ddb5}" locklevel="0" colspan="1" rowspan="1" labelid="{4fb0072a-4d46-4f1c-85ae-032490f75673}">
+                        <labels>
+                          <label description="VAT" languagecode="1033" />
+                        </labels>
+                        <control id="sl_vat" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_vat" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="general_section_5" id="c9119cd4-b44f-4c5a-85e7-c9842380933f" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{22e50888-ce09-4bd6-a55e-f8d670d98453}">
+                  <labels>
+                    <label description="Description" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{197584e8-50ac-4e78-9dfd-54153cceb829}" locklevel="0" colspan="1" rowspan="1" labelid="{4f88fd33-7889-4956-80cf-d134bad76d91}" showlabel="false">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="sl_description" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="sl_description" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_3" id="7312e459-5cda-46f8-a8d6-93e0b8ac72c6" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{0a186e83-e773-4fa3-8101-a7c0fa02390a}">
+          <labels>
+            <label description="Address" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section name="tab_3_section_1" id="1d9c0d00-5322-4cca-9316-9a645842c38a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{f61e7930-2565-4039-b4e7-fe92ea984988}">
+                  <labels>
+                    <label description="Shipping Address" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{c556d2a8-1722-4f3a-85bd-dd14a4e6aae0}" locklevel="0" colspan="1" rowspan="1" labelid="{d0301e78-8823-42a5-b2bf-f612d8351956}">
+                        <labels>
+                          <label description="Ship to Phone" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shiptophone" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_shiptophone" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8dd8a862-afc7-493c-b6bd-32cafe8f6522}" locklevel="0" colspan="1" rowspan="1" labelid="{ea1d8e7a-f704-4324-a135-7cf2a0e7e887}">
+                        <labels>
+                          <label description="Ship to Email" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shiptoemail" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="sl_shiptoemail" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e500f869-341e-4c70-935f-26acf17cd26e}" locklevel="0" colspan="1" rowspan="1" labelid="{1d998f5c-3b12-4f89-96fe-5d26ee61c15b}">
+                        <labels>
+                          <label description="Ship to Street 1" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shiptostreet1" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_shiptostreet1" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d8cd7697-a32c-4242-bb29-d1d386a2d9d4}" locklevel="0" colspan="1" rowspan="1" labelid="{a3d7870a-55eb-402b-a944-a2bca6d5bf13}">
+                        <labels>
+                          <label description="Ship to Street 2" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shiptostreet2" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_shiptostreet2" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1e3c5641-badb-4201-aab9-f9a7bfbf82fb}" locklevel="0" colspan="1" rowspan="1" labelid="{5064d2ca-760d-47cf-9429-51e437e0f5e7}">
+                        <labels>
+                          <label description="Ship to City" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shiptocity" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_shiptocity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{397ba95b-55f9-4559-8be7-144e89fcac51}" locklevel="0" colspan="1" rowspan="1" labelid="{c87f9b54-ca30-462b-a6b8-95874941acdb}">
+                        <labels>
+                          <label description="Ship to ZIP/Postal code" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shiptozippostalcode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_shiptozippostalcode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6047fcb3-7760-41ea-b8e0-af20dd47b69e}" locklevel="0" colspan="1" rowspan="1" labelid="{4b9d6de0-e7d7-4dbe-9cdf-948b75502a87}">
+                        <labels>
+                          <label description="Ship to Country" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shiptocountry" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_shiptocountry" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7998afe2-c512-4759-bda9-9d933c52a80c}" locklevel="0" colspan="1" rowspan="1" labelid="{43238d6f-4d91-4718-8452-8f1b53d4d004}">
+                        <labels>
+                          <label description="Ship to Contact" languagecode="1033" />
+                        </labels>
+                        <control id="sl_shiptoname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_shiptoname" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="tab_3_section_2" id="586d02b0-894b-490a-9533-7013968635ca" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{9503f28b-8d34-427a-a998-ce042164bcfd}">
+                  <labels>
+                    <label description="Billing Address" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{7d9cec1a-f674-4445-b764-2b6bf9c30447}" locklevel="0" colspan="1" rowspan="1" labelid="{1ea455ce-3cd7-44bf-951f-17d0f293d0ae}">
+                        <labels>
+                          <label description="Bill to Street 1" languagecode="1033" />
+                        </labels>
+                        <control id="sl_billtostreet1" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_billtostreet1" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{80eae799-93c4-4778-a82f-6df0525d9509}" locklevel="0" colspan="1" rowspan="1" labelid="{7a99821f-57c5-4736-a444-7ca035a9ecf4}">
+                        <labels>
+                          <label description="Bill to Street 2" languagecode="1033" />
+                        </labels>
+                        <control id="sl_billtostreet2" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_billtostreet2" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d66539e1-2512-425b-bd74-c4a9707fbac9}" locklevel="0" colspan="1" rowspan="1" labelid="{718a79af-2596-4d0e-b2c0-f6a18d821a91}">
+                        <labels>
+                          <label description="Bill to City" languagecode="1033" />
+                        </labels>
+                        <control id="sl_billtocity" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_billtocity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2b9fab0b-12b1-4a59-a8d4-f4571ae8428b}" locklevel="0" colspan="1" rowspan="1" labelid="{417b7f80-9ed9-46ea-81a2-ae848e5a6035}">
+                        <labels>
+                          <label description="Bill to ZIP/Postal Code" languagecode="1033" />
+                        </labels>
+                        <control id="sl_billtozippostalcode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_billtozippostalcode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{930b871a-bca3-4595-b888-9c39897242d2}" locklevel="0" colspan="1" rowspan="1" labelid="{3ba32a02-d091-4140-8517-c634274bd6bf}">
+                        <labels>
+                          <label description="Bill to Country" languagecode="1033" />
+                        </labels>
+                        <control id="sl_billtocountry" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sl_billtocountry" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e0cfb087-15ac-4d37-85f0-e004802a4410}" locklevel="0" colspan="1" rowspan="1" labelid="{a8b636ac-c327-4a34-939c-009239e25671}">
+                        <labels>
+                          <label description="Bill to Contact" languagecode="1033" />
+                        </labels>
+                        <control id="sl_billtocontact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sl_billtocontact" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="3b02ec01-47cd-485e-b74b-df3fd0369c6b" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{fd1c1e0e-8cf9-4691-9e9c-21f92943c27a}">
+          <labels>
+            <label description="Project Items" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="f184e342-f8b1-477e-98f9-b7797c8adfca" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{751cfc2c-67ec-46d6-9ac8-dd2d9ce71f26}">
+                  <labels>
+                    <label description="Sales Price List Lookup View" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_2_section_4" id="45b6e5f5-50fd-4408-aa98-c46321572886" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Subgrid Project items (Project) lookup" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_2_section_3" id="81f52e92-0a8e-4c91-bdbc-e9b5efffa7fd" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{9e9d5b8a-2750-4942-95fa-a1a861adda6e}">
+                  <labels>
+                    <label description="Discount and Amount" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{b4398ff3-25fd-4747-b7df-14bffc804aa4}" locklevel="0" colspan="1" rowspan="1" labelid="{ff31dc85-5655-41ba-bae8-2d4516017e92}">
+                        <labels>
+                          <label description="Project Discount (%)" languagecode="1033" />
+                        </labels>
+                        <control id="sl_discountpercentage" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="sl_discountpercentage" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_4" id="19bf0dad-a93a-4548-b808-3691de45dc12" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{c89042d8-debf-40de-813e-c0b254be4ee0}">
+          <labels>
+            <label description="Sales" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_4_section_1" id="27d1f3ae-3854-4422-938d-2902159d460d" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{76e0df73-0471-4f6f-a7e0-2d6bbbba24fc}">
+                  <labels>
+                    <label description="Subgrid Offers (Project)" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_4_section_3" id="f0136f85-e97f-43a4-b2dd-cab75540399d" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{0a044fed-c6e2-4162-9a4e-94ca190a5193}">
+                  <labels>
+                    <label description="Subgrid Orders (Project)" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_5" id="50c76ae8-b5e8-49ba-a521-474535213c35" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{c57774c5-1421-495a-b955-e6b18bfbf24e}">
+          <labels>
+            <label description="Documents" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_5_section_1" id="e0d110e5-aa68-442c-805d-9cd9ddb1ff04" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{bf5728e0-8a5b-4f12-9cf1-fa3c2ff553cd}">
+                  <labels>
+                    <label description="SharePoint" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_6" id="69f2ff80-e710-477e-953c-054318350841" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{0ecca7c7-7581-4c3b-8aca-c3c883b9162d}">
+          <labels>
+            <label description="Planning" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section name="tab_6_section_1" id="124fb6b0-bd6d-48ef-af96-fec3256a03e1" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{75fc6c9d-6a1a-424d-ad50-c0341b5d7f68}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="tab_6_section_2" id="8c2da535-a1b8-4fc0-bce9-c406ab735f08" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{8b238cc4-4ab9-4e9b-8156-247c0055fc3e}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{f497d805-52bc-4860-8801-071b0f91224d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ba6b043a-2bff-4737-8aff-950a900ff4d6}" showlabel="false" labelid="{32751b9a-bfe9-4344-9ec5-1e5a79551cb1}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0f115417-d812-4259-b880-9bac9bd5d0fc}" showlabel="false" labelid="{a25c1403-f577-401e-9a1d-77167b35c003}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{07c2720c-c0d3-4025-b0ff-3f580070bfaf}" showlabel="false" labelid="{4ddc2992-13c0-4b9f-9444-bc554261715a}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell locklevel="0" id="{f41672ec-91de-4081-9de3-ca3563eecb3c}" labelid="{1572faa4-17b5-4d0a-a4e1-f3255150a38e}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell locklevel="0" id="{6460beed-0cac-49a3-898c-a9b5746a4f99}" labelid="{a7420baa-8dd1-41e1-99ae-49e73d659c6d}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell locklevel="0" id="{3795ef56-0865-4897-a962-763a20a5852f}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell locklevel="0" id="{092c36c5-a11d-4efd-bfa1-e2a7187681a7}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{02503c68-f2a2-426f-b1b3-432217670d3e}" colspan="1" rowspan="1" labelid="{6c0c7514-2a83-48d1-8504-0165ed39a0a6}">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{c6690a42-ab2a-4fa3-b1d8-9d00bf3629d7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{81ab94c6-028b-4c0b-bd2f-435a3f82b2d9}" showlabel="false" labelid="{8afa6872-cf0a-4047-bc95-1466f3c02e5a}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{aea515ff-602c-4d64-a4d3-f7c0446ba07a}" showlabel="false" labelid="{d4946c10-a864-4e87-b4df-d3392f75f86c}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{f81c686d-3221-4a86-9910-b3418f173d1e}" showlabel="false" labelid="{fdd3b571-91bd-4dfe-b492-aca2babb47a6}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <controlDescriptions />
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <DisplayConditions Order="3" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Copy from 360 - Project main form" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

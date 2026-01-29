@@ -1,0 +1,37 @@
+<appaction uniquename="sl__CreateOrder!028b8b01599c4a7ba7ab4b7c93965b3f!sl_Demo!sl_offer!0">
+  <appmoduleid>
+    <uniquename>sl_Demo</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Create Order">
+    <label description="Create Order" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>sl_offer</logicalname>
+  </contextentity>
+  <contextvalue>sl_offer</contextvalue>
+  <fonticon>CreateOrder</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>CreateOrder!028b8b01599c4a7ba7ab4b7c93965b3f</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>sl_demodefaultcommandlibrary_d8db4</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>79e8105632fd4adab19b1b2cbdae03b9</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100017.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>sl_demodefaultcommandlibrary_d8db4</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>79e8105632fd4adab19b1b2cbdae03b9</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>
