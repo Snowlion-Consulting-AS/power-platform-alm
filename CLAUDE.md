@@ -289,8 +289,8 @@ Get the environment ID from `pac org who` (the "Environment ID" field). Then con
 
 | What was changed | Link to provide |
 |---|---|
-| Table / Columns | `https://make.powerapps.com/environments/{env-id}/entities/{table-logical-name}/columns` |
-| Form | `https://make.powerapps.com/environments/{env-id}/entities/{table-logical-name}/forms` |
+| Table / Columns | `https://make.powerapps.com/environments/{env-id}/tables/{table-logical-name}/columns` |
+| Form | `https://make.powerapps.com/environments/{env-id}/tables/{table-logical-name}/forms` |
 | Model-driven app | `https://make.powerapps.com/environments/{env-id}/apps` |
 | Canvas app | `https://make.powerapps.com/environments/{env-id}/apps` |
 | Cloud flow | `https://make.powerapps.com/environments/{env-id}/flows` |
