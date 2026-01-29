@@ -46,7 +46,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           model: claude-sonnet-4-5-20250929
-          claude_args: '--allowedTools "Bash(unzip:*)" "Bash(zip:*)" "Bash(mkdir:*)" "Bash(rm:*)" "Bash(find:*)" "Bash(sed:*)" "Bash(grep:*)" "Bash(cat:*)" "Bash(cp:*)" "Bash(mv:*)" "Bash(ls:*)" "Bash(head:*)" "Bash(tail:*)" "Bash(cd:*)" "Bash(pac:*)" "Bash(dotnet:*)" "Bash(python3:*)" "Bash(export:*)" "Bash(curl:*)"'
+          claude_args: '--allowedTools "Bash(unzip:*)" "Bash(zip:*)" "Bash(mkdir:*)" "Bash(rm:*)" "Bash(find:*)" "Bash(sed:*)" "Bash(grep:*)" "Bash(cat:*)" "Bash(cp:*)" "Bash(mv:*)" "Bash(ls:*)" "Bash(head:*)" "Bash(tail:*)" "Bash(cd:*)" "Bash(pac:*)" "Bash(dotnet:*)" "Bash(python3:*)" "Bash(export:*)" "Bash(curl:*)" "Bash(npm:*)"'
         env:
           # Snowlion tenant credentials (maps existing secrets to prefixed env vars)
           SNOWLION_PP_CLIENT_ID: ${{ secrets.PP_CLIENT_ID }}
