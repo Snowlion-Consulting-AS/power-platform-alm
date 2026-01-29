@@ -61,6 +61,8 @@ Clone this repo and Claude Code will automatically read `CLAUDE.md` for context 
 - "Edit the JavaScript in WebResources/validateForm.js to add email validation"
 - "Show me what tables are in the SnowlionBusinessApplication solution"
 - "Export the current solution from my dev environment"
+- "Build and deploy the AddProductsControl PCF component"
+- "Modify the PCF to change the color scheme"
 
 Claude can:
 - Edit form layouts (XML)
@@ -85,8 +87,9 @@ power-platform-alm/
 │       ├── WebResources/  # JavaScript, CSS, HTML
 │       ├── Workflows/     # Cloud Flows
 │       └── ...
-├── pcf-components/        # PCF component projects
-│   └── MyControl/
+├── pcf-components/        # PCF component projects (TypeScript)
+│   ├── MyControl/         # PCF control source
+│   └── Solutions/         # Solution projects for deploying PCFs
 ├── scripts/               # Helper scripts
 │   ├── pp-auth.sh         # Authentication helper
 │   ├── pp-export.sh       # Export & unpack solution
