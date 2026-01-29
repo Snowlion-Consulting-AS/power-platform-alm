@@ -285,23 +285,19 @@ After publishing, verify your change was applied using the Dataverse Web API or 
 
 After the change is deployed and verified, **always comment on the issue with a direct link** where the user can review the change in the Power Platform environment. This lets the user verify the result without having to navigate there themselves.
 
-Get the environment ID from `pac org who` (the "Environment ID" field). Then construct the most relevant link based on **whatever was changed**:
+Get the environment ID from `pac org who` (the "Environment ID" field). Provide a link to the environment home page where the user can navigate to review the changes:
 
 | What was changed | Link to provide |
 |---|---|
-| Table / Columns | `https://make.powerapps.com/environments/{env-id}/tables/{table-logical-name}/columns` |
-| Form | `https://make.powerapps.com/environments/{env-id}/tables/{table-logical-name}/forms` |
-| Model-driven app | `https://make.powerapps.com/environments/{env-id}/apps` |
-| Canvas app | `https://make.powerapps.com/environments/{env-id}/apps` |
-| Cloud flow | `https://make.powerapps.com/environments/{env-id}/flows` |
-| Dashboard | `https://make.powerapps.com/environments/{env-id}/dashboards` |
-| Security role | `https://make.powerapps.com/environments/{env-id}/security/roles` |
-| Web resource / JS | `https://make.powerapps.com/environments/{env-id}/solutions/{solution-id}` |
-| PCF component | `https://make.powerapps.com/environments/{env-id}/solutions/{solution-id}` |
-| Solution (general) | `https://make.powerapps.com/environments/{env-id}/solutions/{solution-id}` |
-| Anything else | `https://make.powerapps.com/environments/{env-id}` |
+| Any change | `https://make.powerapps.com/environments/{env-id}` |
 
-If multiple types of components were changed, provide **multiple links** — one for each. Always include at least one review link in the completion comment.
+Then describe where to find it:
+- **Table/Columns/Forms**: Go to **Tables** in the left nav, search for the table name, then click **Columns** or **Forms**
+- **Apps**: Go to **Apps** in the left nav
+- **Cloud flows**: Go to **Flows** in the left nav
+- **Solutions**: Go to **Solutions** in the left nav
+
+**Important**: Direct deep links to specific tables (like `/tables/{table-name}/columns`) don't work reliably in Power Apps. Always use the environment home page link and provide navigation instructions.
 
 ### NEVER Do This
 
