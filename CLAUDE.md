@@ -92,6 +92,288 @@ Even if the PAC CLI is already authenticated to an environment, **do not assume 
 
 **The goal is to minimize back-and-forth while avoiding wrong implementations.** The user expects you to investigate and propose a plan, then implement correctly — not to ask unnecessary questions OR to implement in the wrong place.
 
+---
+
+## Natural Language Request Handling by Component Type
+
+Users will describe changes in natural language. This section shows how to interpret requests for EVERY Power Platform component type.
+
+### Interpreting User Intent
+
+| User says... | Component type | What to do |
+|--------------|---------------|------------|
+| "add a field", "add column", "new attribute" | **Column/Attribute** | Use Web API to add column to table |
+| "add to form", "show on form", "display field" | **Form** | Use SystemForm API to modify formxml |
+| "create a flow", "automate when...", "trigger on..." | **Cloud Flow** | Edit Workflows/*.json |
+| "change the view", "filter the list", "show only active" | **View** | Edit SavedQueries/*.xml |
+| "add validation", "run script when...", "on save..." | **Web Resource (JS)** | Edit WebResources/*.js |
+| "change permissions", "give access", "restrict..." | **Security Role** | Edit Roles/*.xml |
+| "add to the app", "show in navigation", "add menu item" | **Model-driven App** | Edit AppModules/*.xml |
+| "add dropdown option", "new choice value" | **Option Set** | Edit OptionSets/*.xml or use Web API |
+| "change the setting", "update config", "environment value" | **Environment Variable** | Edit environmentvariabledefinitions/ |
+| "update the app", "change screen", "modify button" | **Canvas App** | Edit .msapp (use Python zipfile!) |
+| "create a table", "new entity" | **Table/Entity** | Use Web API or edit Entity.xml |
+
+### Component-Specific Guidance
+
+#### 1. Tables (Entities) - Creating or Modifying
+
+**Natural language examples:**
+- "Create a Projects table"
+- "Add a new entity for tracking invoices"
+- "I need a table to store customer feedback"
+
+**How to handle:**
+1. Use Web API to create the table (faster than solution cycle):
+```python
+table_def = {
+    "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+    "SchemaName": "new_Project",
+    "DisplayName": {"@odata.type": "Microsoft.Dynamics.CRM.Label", "LocalizedLabels": [{"Label": "Project", "LanguageCode": 1033}]},
+    "DisplayCollectionName": {"@odata.type": "Microsoft.Dynamics.CRM.Label", "LocalizedLabels": [{"Label": "Projects", "LanguageCode": 1033}]},
+    "PrimaryNameAttribute": "new_name",
+    "OwnershipType": "UserOwned"
+}
+# POST to /api/data/v9.2/EntityDefinitions
+```
+2. After creating, add the primary name column and any other columns
+
+#### 2. Columns (Attributes)
+
+**Natural language examples:**
+- "Add a budget field to Projects"
+- "I need a date column for due date"
+- "Add a lookup to the Account table"
+
+**How to handle:**
+- Use Dataverse Web API (fast path) - see existing section
+- Map user language to column types:
+  | User says | Column type | OData type |
+  |-----------|-------------|------------|
+  | "text", "name", "description" | Single line text | StringAttributeMetadata |
+  | "number", "amount", "count" | Whole number | IntegerAttributeMetadata |
+  | "money", "price", "cost", "budget" | Currency | MoneyAttributeMetadata |
+  | "date", "when", "due date" | Date only | DateTimeAttributeMetadata |
+  | "yes/no", "checkbox", "is active" | Two options | BooleanAttributeMetadata |
+  | "dropdown", "choice", "status" | Choice | PicklistAttributeMetadata |
+  | "lookup", "related to", "link to" | Lookup | LookupAttributeMetadata |
+
+#### 3. Forms - Adding/Modifying Fields
+
+**Natural language examples:**
+- "Add the budget field to the main form"
+- "Show email on the contact form"
+- "Put the status dropdown in the header"
+
+**How to handle:**
+- Use SystemForm API (fast path) - see existing section
+- Find the correct form by searching for key terms
+- Parse formxml, find target section, add cell with control
+
+#### 4. Views (Saved Queries)
+
+**Natural language examples:**
+- "Show only active projects in the list"
+- "Add the budget column to the view"
+- "Filter to show my records only"
+- "Sort by created date descending"
+
+**How to handle:**
+1. Query views via Web API:
+```python
+url = f"{env_url}/api/data/v9.2/savedqueries?$filter=returnedtypecode eq 'new_project'&$select=savedqueryid,name,fetchxml,layoutxml"
+```
+2. Modify the view XML:
+   - **Add column**: Add `<cell name="fieldname" width="100" />` to layoutxml
+   - **Add filter**: Add `<condition attribute="statecode" operator="eq" value="0" />` to fetchxml
+   - **Change sort**: Modify `<order attribute="createdon" descending="true" />` in fetchxml
+3. PATCH the view and publish
+
+**View XML structure:**
+```xml
+<!-- layoutxml - controls columns shown -->
+<grid><row><cell name="new_name" width="200" /><cell name="new_budget" width="100" /></row></grid>
+
+<!-- fetchxml - controls filtering and data -->
+<fetch><entity name="new_project">
+  <attribute name="new_name" />
+  <filter><condition attribute="statecode" operator="eq" value="0" /></filter>
+  <order attribute="createdon" descending="true" />
+</entity></fetch>
+```
+
+#### 5. Cloud Flows (Power Automate)
+
+**Natural language examples:**
+- "When a project is created, send an email"
+- "Add approval before the record is updated"
+- "If amount > 10000, notify the manager"
+
+**How to handle:**
+1. Export solution and find the flow in `Workflows/*.json`
+2. Flows are stored as JSON with this structure:
+```json
+{
+  "properties": {
+    "definition": {
+      "triggers": { ... },
+      "actions": { ... }
+    }
+  }
+}
+```
+3. **Add a condition**: Insert a new action with `"type": "If"` and `"expression": {...}`
+4. **Add an action**: Add to the `actions` object with proper `runAfter` dependencies
+5. **Modify trigger**: Edit the `triggers` object
+6. Pack, import, publish
+
+**Common flow patterns:**
+- Trigger: `"When_a_record_is_created"` with `"type": "OpenApiConnectionWebhook"`
+- Condition: `"type": "If"` with `"expression": {"equals": [...]}`
+- Email: `"type": "OpenApiConnection"` with `"Send_an_email_(V2)"`
+
+#### 6. Web Resources (JavaScript/CSS/HTML)
+
+**Natural language examples:**
+- "Add validation to the email field"
+- "Show a warning when status changes"
+- "Hide the budget field for non-managers"
+- "Change the form styling"
+
+**How to handle:**
+1. Find the web resource in `WebResources/` folder
+2. Edit the JavaScript/CSS/HTML directly
+3. Pack, import, publish
+
+**Common JavaScript patterns:**
+```javascript
+// Form validation
+function validateEmail(executionContext) {
+    var formContext = executionContext.getFormContext();
+    var email = formContext.getAttribute("emailaddress1").getValue();
+    if (email && !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        formContext.ui.setFormNotification("Invalid email format", "ERROR", "email_validation");
+        return false;
+    }
+    formContext.ui.clearFormNotification("email_validation");
+    return true;
+}
+
+// Hide field based on security role
+function hideFieldForNonManagers(executionContext) {
+    var formContext = executionContext.getFormContext();
+    var userRoles = Xrm.Utility.getGlobalContext().userSettings.roles;
+    var isManager = userRoles.get().some(r => r.name === "Manager");
+    formContext.getControl("new_budget").setVisible(isManager);
+}
+
+// OnChange handler
+function onStatusChange(executionContext) {
+    var formContext = executionContext.getFormContext();
+    var status = formContext.getAttribute("statuscode").getValue();
+    if (status === 2) { // Inactive
+        formContext.ui.setFormNotification("This record is inactive", "WARNING", "status_warning");
+    }
+}
+```
+
+#### 7. Security Roles
+
+**Natural language examples:**
+- "Give sales reps read access to projects"
+- "Managers should be able to delete invoices"
+- "Restrict the budget field to admins only"
+
+**How to handle:**
+1. Find the role in `Roles/*.xml`
+2. Modify the privilege definitions:
+```xml
+<RolePrivilege name="prvReadnew_project" level="Basic" />  <!-- User level -->
+<RolePrivilege name="prvWritenew_project" level="Local" />  <!-- Business Unit -->
+<RolePrivilege name="prvDeletenew_invoice" level="Deep" />  <!-- Parent: Child BU -->
+```
+3. Privilege levels: None=0, Basic=1 (User), Local=2 (BU), Deep=4 (Parent:Child), Global=8 (Org)
+4. Pack, import, publish
+
+**Privilege naming pattern:** `prv{Action}{EntityName}`
+- Actions: Create, Read, Write, Delete, Append, AppendTo, Assign, Share
+
+#### 8. Model-driven Apps
+
+**Natural language examples:**
+- "Add Projects to the main app"
+- "Create a new area for Reporting"
+- "Add a dashboard to the navigation"
+
+**How to handle:**
+1. Find the app in `AppModules/` (XML format)
+2. Modify the sitemap to add areas, groups, and subareas:
+```xml
+<SiteMap>
+  <Area Id="Projects" Title="Projects">
+    <Group Id="ProjectGroup" Title="Project Management">
+      <SubArea Id="new_project" Entity="new_project" Title="Projects" />
+    </Group>
+  </Area>
+</SiteMap>
+```
+3. Add components to the app definition
+4. Pack, import, publish
+
+#### 9. Option Sets (Choices)
+
+**Natural language examples:**
+- "Add 'Pending Review' to the status dropdown"
+- "Create a priority choice with High, Medium, Low"
+
+**How to handle:**
+1. For global option sets, use Web API:
+```python
+# Add option to existing option set
+option_data = {
+    "Value": 100000003,
+    "Label": {"@odata.type": "Microsoft.Dynamics.CRM.Label", "LocalizedLabels": [{"Label": "Pending Review", "LanguageCode": 1033}]}
+}
+# POST to /api/data/v9.2/InsertOptionValue
+```
+2. For local option sets (on specific column), update the column metadata
+3. Publish after changes
+
+#### 10. Environment Variables
+
+**Natural language examples:**
+- "Set the API URL to https://api.example.com"
+- "Add a setting for the notification email"
+
+**How to handle:**
+1. Find in `environmentvariabledefinitions/` folder
+2. Structure:
+```json
+{
+  "schemaname": "new_APIEndpoint",
+  "displayname": "API Endpoint",
+  "type": 100000000,  // String
+  "defaultvalue": "https://api.example.com"
+}
+```
+3. For current values, update `environmentvariablevalues/`
+4. Or use Web API to update directly
+
+#### 11. Canvas Apps (.msapp)
+
+**Natural language examples:**
+- "Change the header color to blue"
+- "Add a button to submit the form"
+- "Update the logo image"
+
+**How to handle:**
+- See existing "Canvas App Editing" section
+- **CRITICAL**: Use Python zipfile, never unzip/zip commands
+- Update ALL fill states (Fill, HoverFill, PressedFill, DisabledFill)
+- Search for control references before changing properties
+
+---
+
 ### FAST PATH: Use Dataverse Web API for Simple Changes
 
 For simple metadata operations (adding columns, updating labels, querying data), **skip the solution export/import cycle** and use the Dataverse Web API directly. This is **10x faster** (~5 seconds vs 1-5 minutes).
@@ -110,10 +392,47 @@ For simple metadata operations (adding columns, updating labels, querying data),
 - Working with PCF components
 - Changes that absolutely require solution packaging
 
+#### IMPORTANT: CI/CD Environment Constraints
+
+When running in GitHub Actions (claude-code-action), bash commands using heredocs (`<< 'EOF'`) may be blocked by allowedTools patterns. Instead of:
+```bash
+# This may be blocked in CI:
+python3 << 'PYEOF'
+...code...
+PYEOF
+```
+
+**Use this pattern instead - write to file then execute:**
+```bash
+# Write Python script to file
+cat > /tmp/api_script.py << 'PYEOF'
+import urllib.request, urllib.parse, json, os
+# ... your code ...
+PYEOF
+
+# Execute the script
+python3 /tmp/api_script.py
+```
+
+Or use **curl** for simple GET requests:
+```bash
+# Get token
+TOKEN=$(curl -s -X POST "https://login.microsoftonline.com/$TENANT_ID/oauth2/v2.0/token" \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&scope=$ENV_URL/.default" \
+  | python3 -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
+
+# Query API
+curl -s "$ENV_URL/api/data/v9.2/EntityDefinitions" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "OData-MaxVersion: 4.0" \
+  -H "Accept: application/json"
+```
+
 #### Web API Quick Reference
 
-```python
-python3 << 'PYEOF'
+```bash
+# Write Python script to file, then execute
+cat > /tmp/create_column.py << 'PYEOF'
 import urllib.request, urllib.parse, json, os
 
 # Get credentials from prefixed env vars (e.g., SNOWLION_PP_CLIENT_ID)
@@ -158,6 +477,9 @@ for k, v in headers.items():
 resp = urllib.request.urlopen(req)
 print(f"Column created: {resp.status}")
 PYEOF
+
+# Execute the script
+python3 /tmp/create_column.py
 ```
 
 #### Common Web API Operations
@@ -177,8 +499,9 @@ After making Web API changes, always run `pac solution publish` to publish custo
 
 The `systemform` table has an updatable `formxml` column. This lets you modify forms **directly via Web API** without the slow solution export/import cycle (~30 seconds vs 5+ minutes).
 
-```python
-python3 << 'PYEOF'
+```bash
+# Write Python script to file, then execute
+cat > /tmp/update_form.py << 'PYEOF'
 import urllib.request, urllib.parse, json, os, re
 
 # Get credentials from prefixed env vars
@@ -250,6 +573,9 @@ for k, v in headers.items():
 urllib.request.urlopen(patch_req)
 print(f"Form XML updated successfully")
 PYEOF
+
+# Execute the script
+python3 /tmp/update_form.py
 
 # 4. Publish customizations
 pac solution publish
