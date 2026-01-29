@@ -63,28 +63,34 @@ Use `pac solution list` to find the correct unmanaged solution to work with.
 
 1. **Explore first.** Use the Dataverse Web API, export solutions, and inspect the environment to find the most likely match for what the user is asking. For example, if the user says "PCF test section", search tables, forms, and sections for anything matching "PCF" or "test".
 
-2. **CRITICAL: Require EXACT matches.** When the user specifies a name (section, field, table, etc.), you must find an **exact match** (case-insensitive). Partial or similar matches are NOT acceptable:
-   - User asks for "PCF test section" → you MUST find a section literally named "PCF test" (or "PCF Test", "pcf test", etc.)
-   - Finding "PCF COMPONENT" or "PCF Controls" is NOT a match — these are different sections
-   - If no exact match exists, **STOP and ask for clarification**. Do NOT proceed with a "close enough" match.
+2. **Find the BEST match, not just any match.** Users may not know the exact name of elements. When searching:
+   - Look for sections/fields/tables that contain the key terms the user mentioned
+   - If user says "PCF test section", look for sections containing BOTH "PCF" AND "test" (e.g., "PCF test", "PCF Test Section", "Test PCF Area")
+   - A section called "PCF COMPONENT" does NOT match "PCF test" — it's missing "test"
+   - A section called "General" does NOT match "PCF test" — it's missing both terms
 
-3. **Propose your plan.** Once you have found an **exact** match, comment on the issue with what you found and what you plan to do. For example: *"I found a section called 'PCF Test' on the main form of the 'sl_project' table in the SnowlionBusinessApplication solution. I'll add the text field there. Let me know if this is wrong, otherwise I'll proceed."*
+3. **ALWAYS propose your plan before implementing.** Comment on the issue with:
+   - What you found and what you plan to do
+   - The exact name of the section/table/field you will modify
+   - Example: *"I found a section called 'PCF test' on the Project form. I'll add the 'Heisann' text field there. Proceeding now — comment if this is wrong."*
 
-4. **Wait for confirmation if no exact match.** If you cannot find an exact match for what the user specified:
-   - List what you DID find (e.g., "I found sections named 'PCF COMPONENT' and 'General', but no 'PCF test' section")
-   - Ask which one they meant, or if the section needs to be created first
+4. **If multiple possible matches exist, ask which one.** For example:
+   - *"I found two sections that might match: 'PCF test' and 'PCF COMPONENT'. Which one should I add the field to?"*
+   - **Do NOT guess** — wait for clarification
+
+5. **If NO good match exists, stop and ask.** List what you DID find:
+   - *"I searched the Project form and found sections: 'General', 'Timeline', 'PCF COMPONENT'. None of these match 'PCF test'. Did you mean one of these, or should I create a new section?"*
    - **Do NOT implement anything until you have clarity**
 
-5. **Only stop and ask when you genuinely cannot determine** these critical items:
+6. **Critical items that ALWAYS require clarity:**
    - Which **tenant** the change should target (e.g. Snowlion, Norbygg, etc.)
    - Which **environment** is intended (e.g. Dev, Test, Demo, Production)
-   - **Any named element (section, field, table) that doesn't have an exact match**
 
    For everything else (solution, table, form, section, field type), **explore the environment to find the answer yourself** before asking the user.
 
 Even if the PAC CLI is already authenticated to an environment, **do not assume that is the correct target** for the task. If the issue mentions a different tenant or environment than what `pac org who` returns, stop and ask for clarification.
 
-**The goal is to minimize back-and-forth.** The user expects you to do the investigation, not to ask them to do it for you.
+**The goal is to minimize back-and-forth while avoiding wrong implementations.** The user expects you to investigate and propose a plan, then implement correctly — not to ask unnecessary questions OR to implement in the wrong place.
 
 ### FAST PATH: Use Dataverse Web API for Simple Changes
 
@@ -314,7 +320,7 @@ Then describe where to find it:
 - **NEVER edit solution files in the repo without first exporting from the environment**
 - **NEVER assume a table, column, or form exists** just because files are in the repo — always verify against the live environment
 - **NEVER hardcode environment URLs or solution names** — always discover them dynamically via `pac org who` and `pac solution list`
-- **NEVER implement changes to a "similar" or "close enough" match** — if the user asks for "PCF test section" and you find "PCF COMPONENT", that is NOT a match. Stop and ask for clarification instead of proceeding with a wrong target.
+- **NEVER implement changes without proposing your plan first** — always comment on the issue with the exact element you found and plan to modify. If the user asks for "PCF test section" and you only find "PCF COMPONENT", that is NOT a match (missing "test"). List what you found and ask for clarification.
 
 ## Quick Start
 
