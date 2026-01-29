@@ -112,6 +112,7 @@ Users will describe changes in natural language. This section shows how to inter
 | "change the setting", "update config", "environment value" | **Environment Variable** | Edit environmentvariabledefinitions/ |
 | "update the app", "change screen", "modify button" | **Canvas App** | Edit .msapp (use Python zipfile!) |
 | "create a table", "new entity" | **Table/Entity** | Use Web API or edit Entity.xml |
+| "custom control", "PCF component", "code component" | **PCF Control** | Edit TypeScript in pcf-components/, npm build, dotnet build, pac import |
 
 ### Component-Specific Guidance
 
@@ -719,21 +720,77 @@ solutions/MySolution/
 
 ## PCF Components
 
-PCF (Power Apps Component Framework) components live in separate folders:
+PCF (Power Apps Component Framework) components are custom controls built with TypeScript/React that can be used in model-driven apps, canvas apps, and portals.
+
+### PCF Project Structure
+
+```
+pcf-components/
+├── MyControl/
+│   ├── index.ts                    # Main control class
+│   ├── MyControl.manifest.xml      # Control manifest (properties, resources)
+│   ├── css/MyControl.css           # Styles
+│   ├── package.json
+│   └── tsconfig.json
+├── pcf-components.pcfproj          # PCF project file
+└── Solutions/
+    └── MyControlSolution/
+        └── MyControlSolution.cdsproj   # Solution project referencing PCF
+```
+
+### Natural Language Examples
+
+- "Create a custom slider control for the percentage field"
+- "Build a React component that shows a product picker grid"
+- "Add a custom visualization for the sales data"
+- "Modify the PCF to change how dates are displayed"
+
+### How to Build and Deploy PCFs
 
 ```bash
-# Build PCF
+# 1. Navigate to the PCF control folder
 cd pcf-components/MyControl
+
+# 2. Install dependencies (if needed)
+npm install
+
+# 3. Build the PCF control
 npm run build
 
-# Build solution containing PCF
-cd Solutions/MySolution
+# 4. Build the solution containing the PCF
+cd ../Solutions/MyControlSolution
 dotnet build
 
-# Deploy
-pac solution import --path bin/Debug/MySolution.zip --force-overwrite true
+# 5. Deploy to environment
+pac solution import --path bin/Debug/MyControlSolution.zip --force-overwrite true
 pac solution publish
 ```
+
+### Modifying an Existing PCF
+
+1. **Find the control**: Look in `pcf-components/{ControlName}/index.ts`
+2. **Edit TypeScript/React code**: Modify the control logic
+3. **Update manifest if needed**: `{ControlName}.manifest.xml` defines properties and resources
+4. **Rebuild**: `npm run build` in the control folder
+5. **Rebuild solution**: `dotnet build` in the Solutions folder
+6. **Deploy**: `pac solution import` + `pac solution publish`
+
+### PCF Manifest Properties
+
+The manifest defines what properties your control exposes:
+
+```xml
+<property name="sampleProperty" display-name-key="Property_Display_Key"
+          of-type="SingleLine.Text" usage="bound" required="true" />
+```
+
+### Adding PCF to a Form
+
+After deploying, add the PCF control to a form:
+1. Open the form in the form designer
+2. Select a field that matches the PCF's bound property type
+3. Change the control to your custom PCF control
+4. Save and publish the form
 
 ## Environment Setup
 
