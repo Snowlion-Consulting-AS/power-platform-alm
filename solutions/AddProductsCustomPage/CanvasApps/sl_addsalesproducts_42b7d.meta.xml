@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>sl_addsalesproducts_42b7d</Name>
-  <AppVersion>2025-01-15T19:52:06Z</AppVersion>
+  <AppVersion>2026-01-29T09:35:45Z</AppVersion>
   <Status>Ready</Status>
   <CreatedByClientVersion>3.25012.4.0</CreatedByClientVersion>
   <MinClientVersion>3.25012.4.0</MinClientVersion>
@@ -11,7 +11,7 @@
   <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
   <DisplayName>Add Sales Products</DisplayName>
   <Description>Fix project account</Description>
-  <CommitMessage xsi:nil="true"></CommitMessage>
+  <CommitMessage></CommitMessage>
   <Publisher></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
   <ConnectionReferences>{}</ConnectionReferences>
@@ -24,7 +24,7 @@
   <AdminControlBypassConsent>0</AdminControlBypassConsent>
   <EmbeddedApp xsi:nil="true"></EmbeddedApp>
   <IntroducedVersion>1.0</IntroducedVersion>
-  <CdsDependencies>{"cdsdependencies":[{"logicalname":"sl_salespricelistitem","componenttype":1},{"logicalname":"sl_salespricelist","componenttype":1},{"logicalname":"sl_offer","componenttype":1},{"logicalname":"sl_itemcategory","componenttype":1},{"logicalname":"sl_item","componenttype":1},{"logicalname":"sl_order","componenttype":1},{"logicalname":"sl_offeritem","componenttype":1},{"logicalname":"account","componenttype":1},{"logicalname":"sl_project","componenttype":1},{"logicalname":"sl_projectitem","componenttype":1},{"logicalname":"sl_orderitem","componenttype":1},{"logicalname":"sl_resource","componenttype":1}]}</CdsDependencies>
+  <CdsDependencies>{"cdsdependencies":[{"componenttype":1,"logicalname":"sl_salespricelistitem"},{"componenttype":1,"logicalname":"sl_salespricelist"},{"componenttype":1,"logicalname":"sl_offer"},{"componenttype":1,"logicalname":"sl_itemcategory"},{"componenttype":1,"logicalname":"sl_item"},{"componenttype":1,"logicalname":"sl_order"},{"componenttype":1,"logicalname":"sl_offeritem"},{"componenttype":1,"logicalname":"account"},{"componenttype":1,"logicalname":"sl_project"},{"componenttype":1,"logicalname":"sl_projectitem"},{"componenttype":1,"logicalname":"sl_orderitem"},{"componenttype":1,"logicalname":"sl_resource"}]}</CdsDependencies>
   <IsCustomizable>1</IsCustomizable>
   <BackgroundImageUri>/CanvasApps/sl_addsalesproducts_42b7d_BackgroundImageUri</BackgroundImageUri>
   <DocumentUri>/CanvasApps/sl_addsalesproducts_42b7d_DocumentUri.msapp</DocumentUri>
