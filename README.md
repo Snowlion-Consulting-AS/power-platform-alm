@@ -78,6 +78,7 @@ power-platform-alm/
 ├── README.md              # This file
 ├── COMPLETE-GUIDE.md      # Detailed documentation
 ├── WORKFLOW.md            # Step-by-step workflow guide
+├── tenants.json           # Multi-tenant configuration
 ├── solutions/             # Unpacked solution files (Git-tracked)
 │   └── MySolution/
 │       ├── Entities/      # Tables, forms, views
@@ -157,18 +158,50 @@ You can also use Claude for GitHub to make changes asynchronously:
 2. **Assign to Claude** - Claude will create a PR with the solution file changes
 3. **Review and merge** - Changes auto-deploy to Dataverse via GitHub Actions
 
+### Multi-Tenancy Support
+
+This repo supports **multiple Power Platform tenants** from a single GitHub repository. Each tenant is defined in `tenants.json` with a unique prefix for its credentials:
+
+```json
+{
+  "tenants": {
+    "snowlion": {
+      "display_name": "Snowlion",
+      "secret_prefix": "SNOWLION",
+      "environments": ["demo"]
+    },
+    "acme": {
+      "display_name": "Acme Corp",
+      "secret_prefix": "ACME",
+      "environments": ["dev", "prod"]
+    }
+  }
+}
+```
+
+When creating issues, mention the tenant name (e.g., "In the **Snowlion** demo environment..."). Claude will automatically authenticate to the correct tenant using the prefixed environment variables.
+
 ### GitHub Actions Setup
 
-To enable auto-deploy on merge, configure these secrets in your repository:
+For each tenant, configure secrets with the tenant's prefix:
 
-| Secret | Description |
-|--------|-------------|
-| `PP_CLIENT_ID` | Azure AD App Registration Client ID |
-| `PP_CLIENT_SECRET` | Azure AD App Registration Secret |
-| `PP_TENANT_ID` | Azure AD Tenant ID |
-| `PP_ENVIRONMENT_URL` | Dataverse URL (e.g., `https://org.crm4.dynamics.com`) |
+| Secret Pattern | Example for "SNOWLION" | Description |
+|----------------|------------------------|-------------|
+| `{PREFIX}_PP_CLIENT_ID` | `SNOWLION_PP_CLIENT_ID` | Azure AD App Client ID |
+| `{PREFIX}_PP_CLIENT_SECRET` | `SNOWLION_PP_CLIENT_SECRET` | Azure AD App Secret |
+| `{PREFIX}_PP_TENANT_ID` | `SNOWLION_PP_TENANT_ID` | Azure AD Tenant ID |
+| `{PREFIX}_PP_ENVIRONMENT_URL` | `SNOWLION_PP_ENVIRONMENT_URL` | Dataverse URL |
 
-**Creating the Service Principal:**
+Then map them in `.github/workflows/claude.yml`:
+
+```yaml
+env:
+  SNOWLION_PP_CLIENT_ID: ${{ secrets.SNOWLION_PP_CLIENT_ID }}
+  SNOWLION_PP_CLIENT_SECRET: ${{ secrets.SNOWLION_PP_CLIENT_SECRET }}
+  # ... etc
+```
+
+**Creating the Service Principal (per tenant):**
 
 ```bash
 # 1. Create App Registration in Azure AD
@@ -181,9 +214,9 @@ To enable auto-deploy on merge, configure these secrets in your repository:
 #    - Add the app as an Application User
 #    - Assign System Administrator role (or appropriate role)
 
-# 3. Add secrets to GitHub
+# 3. Add secrets to GitHub (with tenant prefix)
 #    - Go to repo Settings > Secrets and variables > Actions
-#    - Add each secret
+#    - Add each secret with the prefix (e.g., SNOWLION_PP_CLIENT_ID)
 ```
 
 ## License
