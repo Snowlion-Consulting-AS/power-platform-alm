@@ -87,12 +87,13 @@ For simple metadata operations (adding columns, updating labels, querying data),
 - Querying entities, forms, or views
 - Creating or updating records
 - Updating connection references
+- **Adding fields to forms** (via SystemForm API - see below)
 
-**Use the full solution cycle (Steps 2-5) when:**
-- Modifying forms, views, or dashboards
-- Adding fields to forms (not just creating columns)
-- Working with Canvas apps, Cloud flows, or PCF components
-- Any change that requires XML file editing
+**Use the full solution cycle (Steps 2-5) ONLY when:**
+- Working with Canvas apps (.msapp files)
+- Working with Cloud flows (complex JSON)
+- Working with PCF components
+- Changes that absolutely require solution packaging
 
 #### Web API Quick Reference
 
@@ -152,9 +153,99 @@ PYEOF
 | List columns | `/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes` | GET |
 | Create column | `/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes` | POST |
 | Query forms | `/api/data/v9.2/systemforms?$filter=objecttypecode eq 'account'` | GET |
+| Update form XML | `/api/data/v9.2/systemforms({formid})` | PATCH |
 | Update connection ref | `/api/data/v9.2/connectionreferences({id})` | PATCH |
 
 After making Web API changes, always run `pac solution publish` to publish customizations.
+
+#### FAST: Adding Fields to Forms via SystemForm API
+
+The `systemform` table has an updatable `formxml` column. This lets you modify forms **directly via Web API** without the slow solution export/import cycle (~30 seconds vs 5+ minutes).
+
+```python
+python3 << 'PYEOF'
+import urllib.request, urllib.parse, json, os, re
+
+# Get credentials from prefixed env vars
+prefix = "SNOWLION"  # Change based on tenant
+env_url = os.environ[f'{prefix}_PP_ENVIRONMENT_URL'].rstrip('/')
+client_id = os.environ[f'{prefix}_PP_CLIENT_ID']
+client_secret = os.environ[f'{prefix}_PP_CLIENT_SECRET']
+tenant_id = os.environ[f'{prefix}_PP_TENANT_ID']
+
+# Get access token
+data = urllib.parse.urlencode({
+    'grant_type': 'client_credentials',
+    'client_id': client_id,
+    'client_secret': client_secret,
+    'scope': f'{env_url}/.default'
+}).encode()
+req = urllib.request.Request(f'https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token', data=data)
+token = json.loads(urllib.request.urlopen(req).read())['access_token']
+
+headers = {
+    'Authorization': f'Bearer {token}',
+    'OData-MaxVersion': '4.0',
+    'OData-Version': '4.0',
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+}
+
+# 1. Find the form (e.g., main form for "account" table)
+table_name = "account"
+form_url = f"{env_url}/api/data/v9.2/systemforms?$filter=objecttypecode eq '{table_name}' and type eq 2&$select=formid,name,formxml"
+req = urllib.request.Request(form_url)
+for k, v in headers.items():
+    req.add_header(k, v)
+forms = json.loads(urllib.request.urlopen(req).read()).get('value', [])
+print(f"Found {len(forms)} main forms")
+
+# Pick the form to modify (e.g., first one, or filter by name)
+form = forms[0]
+form_id = form['formid']
+form_xml = form['formxml']
+print(f"Modifying form: {form['name']} ({form_id})")
+
+# 2. Parse and modify the XML to add a field
+# Find the target section (e.g., by label) and add a new row with the field
+# Example: Add field "new_mytextfield" to a section
+
+field_name = "new_mytextfield"
+field_cell = f'''<cell id="{{new-guid}}" showlabel="true" locklevel="0">
+  <labels><label description="{field_name}" languagecode="1033" /></labels>
+  <control id="{field_name}" classid="{{4273EDBD-AC1D-40d3-9FB2-095C621B552D}}" datafieldname="{field_name}" />
+</cell>'''
+
+# Find a section and add the field (simplified - adapt based on your form structure)
+# In practice, parse the XML properly and insert into the right <row>
+import uuid
+field_cell = field_cell.replace("{new-guid}", str(uuid.uuid4()))
+
+# Example: Insert before </rows> in the first section
+if '</rows>' in form_xml:
+    new_row = f'<row><cell id="{uuid.uuid4()}" showlabel="true" locklevel="0"><labels><label description="{field_name}" languagecode="1033" /></labels><control id="{field_name}" classid="{{4273EDBD-AC1D-40d3-9FB2-095C621B552D}}" datafieldname="{field_name}" /></cell></row>'
+    form_xml = form_xml.replace('</rows>', f'{new_row}</rows>', 1)
+
+# 3. PATCH the form with the modified XML
+patch_url = f"{env_url}/api/data/v9.2/systemforms({form_id})"
+patch_data = json.dumps({'formxml': form_xml}).encode()
+patch_req = urllib.request.Request(patch_url, data=patch_data, method='PATCH')
+for k, v in headers.items():
+    patch_req.add_header(k, v)
+urllib.request.urlopen(patch_req)
+print(f"Form XML updated successfully")
+PYEOF
+
+# 4. Publish customizations
+pac solution publish
+```
+
+**Key points for SystemForm API:**
+- `type eq 2` filters for main forms (type 2); quick view = 6, dashboard = 0
+- The `formxml` column contains the full XML layout of the form
+- Always generate new GUIDs for new elements (`id` attributes)
+- The text control classid is `{4273EDBD-AC1D-40d3-9FB2-095C621B552D}`
+- After PATCH, run `pac solution publish` to make changes visible
 
 ### Step 2: Export Fresh From the Environment (Full Cycle)
 
