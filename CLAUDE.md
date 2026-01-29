@@ -61,32 +61,43 @@ Use `pac solution list` to find the correct unmanaged solution to work with.
 
 **Do NOT immediately ask the user a list of questions.** Instead, follow this approach:
 
-1. **Explore first.** Use the Dataverse Web API, export solutions, and inspect the environment to find the most likely match for what the user is asking. For example, if the user says "PCF test section", search tables, forms, and sections for anything matching "PCF" or "test".
+1. **Explore first.** Use the Dataverse Web API, export solutions, and inspect the environment to find the most likely match for what the user is asking. For example, if the user says "PCF test section", search tables, forms, **tabs**, and sections for anything matching "PCF" or "test".
 
 2. **Find the BEST match, not just any match.** Users may not know the exact name of elements. When searching:
-   - Look for sections/fields/tables that contain the key terms the user mentioned
-   - If user says "PCF test section", look for sections containing BOTH "PCF" AND "test" (e.g., "PCF test", "PCF Test Section", "Test PCF Area")
+   - Look for **tabs, sections, and fields** that contain the key terms the user mentioned
+   - If user says "PCF test section", search BOTH **tab labels** AND **section labels** for matches
+   - A tab called "PCF test" IS a match — users often say "section" when they mean "tab"
    - A section called "PCF COMPONENT" does NOT match "PCF test" — it's missing "test"
    - A section called "General" does NOT match "PCF test" — it's missing both terms
 
-3. **ALWAYS propose your plan before implementing.** Comment on the issue with:
-   - What you found and what you plan to do
-   - The exact name of the section/table/field you will modify
-   - Example: *"I found a section called 'PCF test' on the Project form. I'll add the 'Heisann' text field there. Proceeding now — comment if this is wrong."*
+3. **CRITICAL: Search tabs AND sections.** Form XML has this hierarchy:
+   ```
+   Form → Tabs (with labels) → Sections (with labels) → Rows → Cells → Controls
+   ```
+   When the user says "in the X section", search:
+   - Tab labels (e.g., `<tab name="tab_9"><labels><label description="PCF test" ...>`)
+   - Section labels (e.g., `<section name="section_1"><labels><label description="General" ...>`)
 
-4. **If multiple possible matches exist, ask which one.** For example:
-   - *"I found two sections that might match: 'PCF test' and 'PCF COMPONENT'. Which one should I add the field to?"*
+   **Users often say "section" when they mean "tab"** — always search both!
+
+4. **ALWAYS propose your plan before implementing.** Comment on the issue with:
+   - What you found and what you plan to do
+   - The exact name of the **tab or section** you will modify
+   - Example: *"I found a tab called 'PCF test' on the Project form. I'll add the 'Heisann' text field there. Proceeding now — comment if this is wrong."*
+
+5. **If multiple possible matches exist, ask which one.** For example:
+   - *"I found two areas that might match: a tab called 'PCF test' and a section called 'PCF COMPONENT'. Which one should I add the field to?"*
    - **Do NOT guess** — wait for clarification
 
-5. **If NO good match exists, stop and ask.** List what you DID find:
-   - *"I searched the Project form and found sections: 'General', 'Timeline', 'PCF COMPONENT'. None of these match 'PCF test'. Did you mean one of these, or should I create a new section?"*
+6. **If NO good match exists, stop and ask.** List what you DID find:
+   - *"I searched the Project form and found tabs: 'General', 'Timeline', 'PCF test'. And sections: 'General', 'PCF COMPONENT'. Which area should I add the field to?"*
    - **Do NOT implement anything until you have clarity**
 
-6. **Critical items that ALWAYS require clarity:**
+7. **Critical items that ALWAYS require clarity:**
    - Which **tenant** the change should target (e.g. Snowlion, Norbygg, etc.)
    - Which **environment** is intended (e.g. Dev, Test, Demo, Production)
 
-   For everything else (solution, table, form, section, field type), **explore the environment to find the answer yourself** before asking the user.
+   For everything else (solution, table, form, tab, section, field type), **explore the environment to find the answer yourself** before asking the user.
 
 Even if the PAC CLI is already authenticated to an environment, **do not assume that is the correct target** for the task. If the issue mentions a different tenant or environment than what `pac org who` returns, stop and ask for clarification.
 
@@ -371,6 +382,84 @@ option_data = {
 - **CRITICAL**: Use Python zipfile, never unzip/zip commands
 - Update ALL fill states (Fill, HoverFill, PressedFill, DisabledFill)
 - Search for control references before changing properties
+
+---
+
+### Searching Form Tabs and Sections by Display Name
+
+When a user refers to a form area by display name (e.g., "PCF test section"), you must search BOTH tabs AND sections because users often use these terms interchangeably. Here's how to search form XML properly:
+
+```python
+import xml.etree.ElementTree as ET
+import re
+
+def search_form_for_area(form_xml, search_terms):
+    """
+    Search a form's XML for tabs and sections matching search terms.
+    Returns all matches with their type (tab/section), name, and label.
+
+    Args:
+        form_xml: The formxml string from SystemForm
+        search_terms: List of terms to search for (e.g., ["PCF", "test"])
+    """
+    root = ET.fromstring(form_xml)
+    matches = []
+
+    # Search TAB labels
+    for tab in root.findall('.//tab'):
+        tab_name = tab.get('name', '')
+        # Get tab label from <labels><label description="...">
+        label_elem = tab.find('.//labels/label[@description]')
+        tab_label = label_elem.get('description', '') if label_elem is not None else ''
+
+        # Check if ALL search terms are in the label (case-insensitive)
+        label_lower = tab_label.lower()
+        if all(term.lower() in label_lower for term in search_terms):
+            matches.append({
+                'type': 'tab',
+                'name': tab_name,
+                'label': tab_label,
+                'element': tab
+            })
+
+    # Search SECTION labels
+    for section in root.findall('.//section'):
+        section_name = section.get('name', '')
+        label_elem = section.find('.//labels/label[@description]')
+        section_label = label_elem.get('description', '') if label_elem is not None else ''
+
+        label_lower = section_label.lower()
+        if all(term.lower() in label_lower for term in search_terms):
+            # Find parent tab for context
+            parent_tab = None
+            for tab in root.findall('.//tab'):
+                if section in tab.iter():
+                    parent_tab = tab.get('name', '')
+                    break
+
+            matches.append({
+                'type': 'section',
+                'name': section_name,
+                'label': section_label,
+                'parent_tab': parent_tab,
+                'element': section
+            })
+
+    return matches
+
+# Example usage:
+# matches = search_form_for_area(form_xml, ["PCF", "test"])
+# This would find:
+#   - A tab labeled "PCF test" ✓
+#   - A section labeled "PCF test area" ✓
+#   - A section labeled "PCF COMPONENT" ✗ (missing "test")
+```
+
+**Key points:**
+- Users say "section" but might mean "tab" — **always search both**
+- Match ALL search terms (if user says "PCF test", require both words)
+- Return the logical name (e.g., `tab_9`) for use in form modifications
+- Include parent tab info for sections to give full context
 
 ---
 
