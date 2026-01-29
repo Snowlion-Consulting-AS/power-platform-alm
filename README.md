@@ -139,6 +139,23 @@ main (protected)
 | Canvas Apps | .msapp (zip) | Limited |
 | PCF Controls | TypeScript | Yes (rebuild required) |
 
+## Currently Supported
+
+| Component | Support Level | Method |
+|-----------|---------------|--------|
+| Tables/Columns | Full | Web API |
+| Forms | Full | SystemForm API |
+| Views | Full | XML + Web API |
+| Web Resources (JS/CSS/HTML) | Full | Direct edit |
+| Cloud Flows | Full | JSON edit |
+| Canvas Apps | Full | Python zipfile |
+| PCF Components | Full | npm + dotnet build |
+| Security Roles | Full | XML edit |
+| Option Sets/Choices | Full | Web API |
+| Environment Variables | Full | API or folder edit |
+| Connection References | Full | Web API |
+| Model-driven App SiteMap | Full | XML edit |
+
 ## Currently Not Supported
 
 The following Power Platform components are **not yet supported** by this workflow:
