@@ -63,13 +63,22 @@ Use `pac solution list` to find the correct unmanaged solution to work with.
 
 1. **Explore first.** Use the Dataverse Web API, export solutions, and inspect the environment to find the most likely match for what the user is asking. For example, if the user says "PCF test section", search tables, forms, and sections for anything matching "PCF" or "test".
 
-2. **Propose your plan.** Once you have found a likely match, comment on the issue with what you found and what you plan to do. For example: *"I found a section called 'PCF Test' on the main form of the 'Account' table in the SnowlionBusinessApplication solution. I'll add the text field there. Let me know if this is wrong, otherwise I'll proceed."*
+2. **CRITICAL: Require EXACT matches.** When the user specifies a name (section, field, table, etc.), you must find an **exact match** (case-insensitive). Partial or similar matches are NOT acceptable:
+   - User asks for "PCF test section" → you MUST find a section literally named "PCF test" (or "PCF Test", "pcf test", etc.)
+   - Finding "PCF COMPONENT" or "PCF Controls" is NOT a match — these are different sections
+   - If no exact match exists, **STOP and ask for clarification**. Do NOT proceed with a "close enough" match.
 
-3. **Wait for confirmation only if truly ambiguous.** If there are multiple equally plausible matches, present the options and ask which one. If there is one clear match, state your plan and **proceed immediately** — don't wait for a reply.
+3. **Propose your plan.** Once you have found an **exact** match, comment on the issue with what you found and what you plan to do. For example: *"I found a section called 'PCF Test' on the main form of the 'sl_project' table in the SnowlionBusinessApplication solution. I'll add the text field there. Let me know if this is wrong, otherwise I'll proceed."*
 
-4. **Only stop and ask when you genuinely cannot determine** these critical items:
+4. **Wait for confirmation if no exact match.** If you cannot find an exact match for what the user specified:
+   - List what you DID find (e.g., "I found sections named 'PCF COMPONENT' and 'General', but no 'PCF test' section")
+   - Ask which one they meant, or if the section needs to be created first
+   - **Do NOT implement anything until you have clarity**
+
+5. **Only stop and ask when you genuinely cannot determine** these critical items:
    - Which **tenant** the change should target (e.g. Snowlion, Norbygg, etc.)
    - Which **environment** is intended (e.g. Dev, Test, Demo, Production)
+   - **Any named element (section, field, table) that doesn't have an exact match**
 
    For everything else (solution, table, form, section, field type), **explore the environment to find the answer yourself** before asking the user.
 
@@ -305,6 +314,7 @@ Then describe where to find it:
 - **NEVER edit solution files in the repo without first exporting from the environment**
 - **NEVER assume a table, column, or form exists** just because files are in the repo — always verify against the live environment
 - **NEVER hardcode environment URLs or solution names** — always discover them dynamically via `pac org who` and `pac solution list`
+- **NEVER implement changes to a "similar" or "close enough" match** — if the user asks for "PCF test section" and you find "PCF COMPONENT", that is NOT a match. Stop and ask for clarification instead of proceeding with a wrong target.
 
 ## Quick Start
 
