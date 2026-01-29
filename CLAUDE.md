@@ -393,25 +393,16 @@ For simple metadata operations (adding columns, updating labels, querying data),
 
 #### IMPORTANT: CI/CD Environment Constraints
 
-When running in GitHub Actions (claude-code-action), bash commands using heredocs (`<< 'EOF'`) may be blocked by allowedTools patterns. Instead of:
-```bash
-# This may be blocked in CI:
-python3 << 'PYEOF'
-...code...
-PYEOF
-```
+When running in GitHub Actions (claude-code-action), bash commands using heredocs or redirects may be blocked by allowedTools patterns.
 
-**Use this pattern instead - write to file then execute:**
-```bash
-# Write Python script to file
-cat > /tmp/api_script.py << 'PYEOF'
-import urllib.request, urllib.parse, json, os
-# ... your code ...
-PYEOF
+**CRITICAL: Use the Write tool to create Python scripts, then execute with Bash:**
 
-# Execute the script
-python3 /tmp/api_script.py
-```
+1. First, use the **Write tool** to create `/tmp/api_script.py` with your Python code
+2. Then use **Bash** to execute: `python3 /tmp/api_script.py`
+
+**Do NOT use** `cat > /tmp/file.py << 'EOF'` - this pattern is blocked because `cat >` with redirects doesn't match `Bash(cat:*)`.
+
+**Do NOT use** `python3 << 'EOF'` heredocs - these are also blocked.
 
 Or use **curl** for simple GET requests:
 ```bash
@@ -429,9 +420,8 @@ curl -s "$ENV_URL/api/data/v9.2/EntityDefinitions" \
 
 #### Web API Quick Reference
 
-```bash
-# Write Python script to file, then execute
-cat > /tmp/create_column.py << 'PYEOF'
+**Step 1:** Use the **Write tool** to create `/tmp/create_column.py` with Python code like:
+```python
 import urllib.request, urllib.parse, json, os
 
 # Get credentials from prefixed env vars (e.g., SNOWLION_PP_CLIENT_ID)
@@ -475,11 +465,9 @@ for k, v in headers.items():
     req.add_header(k, v)
 resp = urllib.request.urlopen(req)
 print(f"Column created: {resp.status}")
-PYEOF
-
-# Execute the script
-python3 /tmp/create_column.py
 ```
+
+**Step 2:** Execute with Bash: `python3 /tmp/create_column.py`
 
 #### Common Web API Operations
 
@@ -498,10 +486,13 @@ After making Web API changes, always run `pac solution publish` to publish custo
 
 The `systemform` table has an updatable `formxml` column. This lets you modify forms **directly via Web API** without the slow solution export/import cycle (~30 seconds vs 5+ minutes).
 
-```bash
-# Write Python script to file, then execute
-cat > /tmp/update_form.py << 'PYEOF'
-import urllib.request, urllib.parse, json, os, re
+**IMPORTANT: Use the Write tool to create the Python script, then execute with Bash.**
+
+1. First, use the **Write tool** to create `/tmp/update_form.py` with your Python code:
+
+```python
+# /tmp/update_form.py - Save this using the Write tool
+import urllib.request, urllib.parse, json, os, uuid
 
 # Get credentials from prefixed env vars
 prefix = "SNOWLION"  # Change based on tenant
@@ -537,28 +528,14 @@ for k, v in headers.items():
 forms = json.loads(urllib.request.urlopen(req).read()).get('value', [])
 print(f"Found {len(forms)} main forms")
 
-# Pick the form to modify (e.g., first one, or filter by name)
+# Pick the form to modify (filter by name if needed)
 form = forms[0]
 form_id = form['formid']
 form_xml = form['formxml']
 print(f"Modifying form: {form['name']} ({form_id})")
 
-# 2. Parse and modify the XML to add a field
-# Find the target section (e.g., by label) and add a new row with the field
-# Example: Add field "new_mytextfield" to a section
-
+# 2. Add a field to the form XML
 field_name = "new_mytextfield"
-field_cell = f'''<cell id="{{new-guid}}" showlabel="true" locklevel="0">
-  <labels><label description="{field_name}" languagecode="1033" /></labels>
-  <control id="{field_name}" classid="{{4273EDBD-AC1D-40d3-9FB2-095C621B552D}}" datafieldname="{field_name}" />
-</cell>'''
-
-# Find a section and add the field (simplified - adapt based on your form structure)
-# In practice, parse the XML properly and insert into the right <row>
-import uuid
-field_cell = field_cell.replace("{new-guid}", str(uuid.uuid4()))
-
-# Example: Insert before </rows> in the first section
 if '</rows>' in form_xml:
     new_row = f'<row><cell id="{uuid.uuid4()}" showlabel="true" locklevel="0"><labels><label description="{field_name}" languagecode="1033" /></labels><control id="{field_name}" classid="{{4273EDBD-AC1D-40d3-9FB2-095C621B552D}}" datafieldname="{field_name}" /></cell></row>'
     form_xml = form_xml.replace('</rows>', f'{new_row}</rows>', 1)
@@ -571,12 +548,12 @@ for k, v in headers.items():
     patch_req.add_header(k, v)
 urllib.request.urlopen(patch_req)
 print(f"Form XML updated successfully")
-PYEOF
+```
 
-# Execute the script
+2. Then execute with Bash:
+
+```bash
 python3 /tmp/update_form.py
-
-# 4. Publish customizations
 pac solution publish
 ```
 
